@@ -1,1 +1,1 @@
-We had hour initial meeting for phase 1 on 1/31/22
+We had our initial meeting for phase 1 on 1/31/22
