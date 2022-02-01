@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.BottomNavigation?>
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<?import com.gluonhq.charm.glisten.control.CardPane?>
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="application.SampleController">
+   <center>
+      <CardPane BorderPane.alignment="CENTER">
+          <Label style="-fx-padding:10;" text="label1" />
+          <Label style="-fx-padding:10;" text="label2" />
+          <Label style="-fx-padding:10;" text="label3" />
+      </CardPane>
+   </center>
+   <bottom>
+      <BottomNavigation BorderPane.alignment="CENTER">
+          <actionItems>
+              <BottomNavigationButton selected="true" text="Recent">
+                  <graphic>
+                      <Icon content="RECENT_ACTORS" />
+                  </graphic>
+              </BottomNavigationButton>
+              <BottomNavigationButton text="Favourite">
+                  <graphic>
+                      <Icon content="FAVORITE" />
+                  </graphic>
+              </BottomNavigationButton>
+              <BottomNavigationButton text="Nearby">
+                  <graphic>
+                      <Icon content="NEAR_ME" />
+                  </graphic>
+              </BottomNavigationButton>
+          </actionItems>
+      </BottomNavigation>
+   </bottom>
+</BorderPane>
