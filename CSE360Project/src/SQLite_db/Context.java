@@ -3,9 +3,11 @@
  * 
  * Last Modified: 2/24/22
  * 
- * This class is holding all the global vars the application will need.
+ * This class is for handling all the data objects the application will need.
  * It also deals with all SQLite interactions.
  * Passing out and taking in User, Dish, and Transaction objects.
+ * 
+ * Requesting object(s) that are not in the database will throw an EntryNotFoundException
  */
 
 package SQLite_db;
@@ -46,47 +48,58 @@ public class Context {
 	/* REMOVE WHEN DATA CALSSES ARE ADDED
 	//Adds/updates a user to the database.
 	public void setUser(User u) {
-		
+		//search to see if user is in database
+		//if so update record
+		//if not then add new record
 	}
 	
 	//Adds/updates payment info for a user.
 	public void setPaymentInfo(User u) {
-		
+		//update user's CardNum, CCV, and EXPDate
 	}
 	
 	//Adds/updates a food item to the database
-	public void setFoodItem(FoodItem f) {
-		
+	public void setFoodItem(Menu m, FoodItem f) {
+		//search to see if FoodItem is in database
+		//if so update record
+		//if not then add new record
 	}
 	
 	//Adds/updates a food item to the database
 	public void addCoupon(Coupon c, User u) {
-		
+		//add new Coupon record
 	}
 	
 	//Deletes a coupon from the database
 	public void removeCoupon(Coupon c, User u) {
-		
+		//delete coupon record
 	}
 	
 	//Returns a new user obj from the database, searched by email. 
 	public User getUser(String email) {
-		
+		//search database for user by email
+		User u = new User();//make new user obj
+		//add in data
 	}
 	
 	//Returns a new menu obj from the database, searched by name.
 	public Menu getMenu(String menuName) {
-		
+		//search database for menu by name
+		//with menu id search for all related foodItems
 	}
 	
 	//Returns a new food item obj from the database, searched by name.
 	public FoodItem getFoodItem(String name) {
-		
+		//search database for foodItem by name
+		FoodItem f = new FoodItem();
+		//add in data
 	}
 	
 	//Returns a payment info obj, searched by user.
 	public Payment getPaymentInfo(User u) {
-		
+		//search database for user by email
+		payment p = new Payment();
+		//add data
 	}*/
 	
 	private void setData(String stmt) throws Exception {

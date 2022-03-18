@@ -1,0 +1,33 @@
+Reminders:
+
+We now have about 2 weeks to get the entire application done and tested. it's Due 4/5
+
+Since no one has updated the github ask to see peoples updates
+
+if not much progress has been made
+	let them know this-
+	I know that life and work can be busy but their work here not only affects their grade but all of our grades
+
+if progress has been made
+	then next jobs should be-
+	Make menu selection and cart scenes - Nathan & Om
+	Add in functionality for login and Account Creation - Johnny & Sophia
+	Finish up context class, and help with other jobs as needed - Andrew
+										(if help is needed just DM me)
+
+
+
+Andrew's updates:
+
+Data base now has all 10 food items.
+Photos of food are in src/Photos
+
+Ingreadents not added but it's in a word doc
+^----- need someone to look-over/edit. food is complex and this short-list is stil a bit long
+
+If we keep the ingreadents as is
+	Then I recommend that we have a button for a popup window listing the ingreadents for each menu item
+
+Context class skeleton added, will fill in when data objects are added
+
+My task for next week is to research and add in sqlite queries
