@@ -39,10 +39,14 @@ public class existingUser {
  		//show login error label
  	}
  	
- 	private void createAccount() throws IOException{
- 		Main m = new Main();
- 		
- 		//m.changeScene("createAccount.fxml");
+ 	public void createAccount(ActionEvent event) throws IOException{
+ 		createNew();
+ 	}
+ 	
+ 	private void createNew() throws IOException{
+		Main m = new Main();
+		 		
+		 		//m.changeScene("createAccount.fxml");
  	}
  	
  	
