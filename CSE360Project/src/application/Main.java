@@ -31,7 +31,7 @@ public class Main extends Application {
 	}
 	
 	public void changeScene(String fxml) throws IOException{
-		BorderPane pane = FXMLLoader.load(getClass().getResource(fxml));
+		Parent pane = FXMLLoader.load(getClass().getResource(fxml));
 		stg.getScene().setRoot(pane);
 	}
 	

@@ -17,7 +17,7 @@ public class existingUser {
 	@FXML
 	private Button createAccount;
 	@FXML
- 	private Button employeePortal;
+ 	private Button employeePortal; //is the database going to have a different storage for employees? if not just a generic login should be in place.
  	@FXML
  	private TextField email;
  	@FXML 
@@ -34,6 +34,15 @@ public class existingUser {
  		//check if password.getText.toString.equals(database password for that email)
  		
  		m.changeScene("whatever the following scene.fxml is");
+ 		
+ 		//else
+ 		//show login error label
+ 	}
+ 	
+ 	private void createAccount() throws IOException{
+ 		Main m = new Main();
+ 		
+ 		//m.changeScene("createAccount.fxml");
  	}
  	
  	
