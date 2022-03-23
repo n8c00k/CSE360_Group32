@@ -31,6 +31,8 @@ public class existingUser {
  		Main m = new Main();
  		
  		//if database contains email.getText().toString()
+ 		// if employee login blah blah
+ 		// change scene to employee page.fxml
  		//check if password.getText.toString.equals(database password for that email)
  		
  		m.changeScene("whatever the following scene.fxml is");
