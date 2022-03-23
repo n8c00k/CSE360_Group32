@@ -21,7 +21,7 @@ public class Main extends Application {
 		primaryStage.setResizable(false);
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/existingUserScene.fxml"));
-			Scene scene = new Scene(root,400,600);
+			Scene scene = new Scene(root,600,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
