@@ -1,5 +1,7 @@
 package application;
 	
+import java.io.IOException;
+
 import SQLite_db.Context;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -9,9 +11,13 @@ import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
+	
+	private static Stage stg;
 	@Override
 	public void start(Stage primaryStage) {
 		Context con= new Context();
+		stg = primaryStage;
+		primaryStage.setResizable(false);
 		try {
 			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("/application/Sample.fxml"));
 			Scene scene = new Scene(root,400,400);
@@ -21,6 +27,11 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void changeScene(String fxml) throws IOException{
+		BorderPane pane = FXMLLoader.load(getClass().getResource(fxml));
+		stg.getScene().setRoot(pane);
 	}
 	
 	public static void main(String[] args) {
