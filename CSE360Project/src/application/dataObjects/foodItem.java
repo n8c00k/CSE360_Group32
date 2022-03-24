@@ -6,11 +6,13 @@ public class foodItem {
     public String foodName;
     public String ingredients;
     public Double price;
+    public Integer userId;
     
-    public foodItem(String foodName, String ingredients, Double price) {
+    public foodItem(String foodName, String ingredients, Double price, Integer userId) {
 		this.foodName = foodName;
 		this.ingredients = ingredients;
 		this.price = price;
+		this.userId = userId;
 	}
     
     public void updateFoodItem(){
@@ -41,6 +43,10 @@ public class foodItem {
     
     public Double getPrice() {
     	return price;
+    }
+    
+    public Integer getUserId() {
+    	return userId;
     }
   
 	@Override

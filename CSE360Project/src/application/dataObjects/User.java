@@ -2,12 +2,14 @@ package application.dataObjects;
 
 public class User {
     
-    protected static Integer userId;
-    protected static String name;
-    protected static String email;
-    protected static String password;
+    protected Integer userId;
+    protected String name;
+    protected String email;
+    protected String password;
     
-    public User(String name, String email, String password) {
+    
+    public User(Integer userId, String name, String email, String password) {
+    	this.userId = userId;
     	this.name = name;
     	this.email = email;
     	this.password = password;

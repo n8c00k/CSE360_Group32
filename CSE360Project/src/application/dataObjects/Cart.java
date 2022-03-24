@@ -8,12 +8,13 @@ public class Cart {
 	public ArrayList<foodItem> foods;
     public ArrayList<Integer> quantity;
     public Double totalPrice;
+    public Integer userId;
     
     public Cart() {
     	foods = new ArrayList<foodItem>();
     	quantity = new ArrayList<Integer>();
 		totalPrice = 0.0;
-		
+		userId = 0;
 	}
     
     public void addFood(foodItem food){
@@ -39,6 +40,10 @@ public class Cart {
         	Integer newVal = quantity.get(foods.indexOf(food)) -1;
         	quantity.set(foods.indexOf(food), newVal);
         }
+    }
+    
+    public Integer getUserId() {
+    	return userId;
     }
     
     public String toString() {

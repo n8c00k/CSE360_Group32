@@ -3,10 +3,14 @@ package application.dataObjects;
 public class Coupon {
 	
     public Boolean haveCoupon;
+    public Integer userId;
     
 	public Coupon() {
 			
 		}
+	public Integer getUserId() {
+    	return userId;
+    }
 	
 //    public static void validCoupon(){
 //        if(Customer.pastOrders == 5) {
