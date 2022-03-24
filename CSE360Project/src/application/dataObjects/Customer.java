@@ -57,11 +57,6 @@ public class Customer extends User {
     	return card;
     }
     
-    //Do we need this method anymore?
-    ///public void paymentInfo(){
-
-   /// }
-
 	@Override
 	public String toString() {
 		return "Customer Name: " + name + "\nEmail: " + email + 
