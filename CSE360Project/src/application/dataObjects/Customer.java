@@ -14,6 +14,7 @@ public class Customer extends User {
     	super(name,email,password);
     	pastOrders = 0;
     	coupons = new ArrayList<Coupon>();
+    	cart = new ArrayList<Cart>();
     }
     
     public void setCart(ArrayList<Cart> cart) {
