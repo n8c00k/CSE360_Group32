@@ -13,7 +13,7 @@ public class Manager extends User {
     public void applyCoupon(Customer cust) {
     	
     	Coupon newCoup = new Coupon();
-    	Customer.coupons.add(newCoup);
+    	cust.coupons.add(newCoup);
  
     }
 }
