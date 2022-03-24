@@ -6,7 +6,7 @@ public class Customer extends User {
 
     
 	public ArrayList<Cart> cart;
-    public static ArrayList<Coupon> coupons;
+    public ArrayList<Coupon> coupons;
     public Integer pastOrders;
     public Payment card;
     
