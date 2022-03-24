@@ -6,17 +6,17 @@ public class Customer extends User {
 
     
 	public Cart cart;
-    //public Coupon coupons;
+    public static ArrayList<Coupon> coupons;
     public static Integer pastOrders;
     public Payment card;
     
     public Customer( String name, String email, String password) {
     	super(name,email,password);
     	pastOrders = 0;
-    	
+    	coupons = new ArrayList<Coupon>();
     }
 
-    static ArrayList<Coupon> coupons = new ArrayList<Coupon>();
+    
 
     public void paymentInfo(){
 
