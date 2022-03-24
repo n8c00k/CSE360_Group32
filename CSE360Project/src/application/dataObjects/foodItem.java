@@ -7,8 +7,6 @@ public class foodItem extends Menu{
     public String ingredients;
     public Double price;
     
-    
-
     public foodItem(String foodName, String ingredients, Double price) {
 		super();
 		this.foodName = foodName;

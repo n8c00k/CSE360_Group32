@@ -2,18 +2,16 @@ package application.dataObjects;
 
 import java.util.ArrayList;
 
-import cse360.foodItem;
 
-public class Cart extends Customer {
+public class Cart {
     
-	public ArrayList<foodItem> foods = new ArrayList<foodItem>();
-	//public foodItem foods[];
-    //public Integer[] quantity;
-    public ArrayList<Integer> quantity = new ArrayList<Integer>();
+	public ArrayList<foodItem> foods;
+    public ArrayList<Integer> quantity;
     public Double totalPrice;
     
     public Cart() {
-		super( name, email, password);
+    	foods = new ArrayList<foodItem>();
+    	quantity = new ArrayList<Integer>();
 		totalPrice = 0.0;
 		
 	}
@@ -52,9 +50,7 @@ public class Cart extends Customer {
     		}
         }
     }
-    public void verifyCart(){
-        
-    }
+    
     public String toString() {
     	return("Cart Contains: " + foods.toString()+ " Price: "+ totalPrice+
     			" Quantities: " + quantity.toString());

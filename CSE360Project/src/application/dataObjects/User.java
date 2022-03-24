@@ -14,18 +14,41 @@ public class User {
     }
 
     public void updateProfile(){
-
+    	setUserId(userId);
+    	setName(name);
+    	setEmail(email);
+    	setPassword(password);
     }
-    // public void setId(Integer x){}
+    public void setUserId(Integer x){
+    	this.userId = x;
+    }
 
     public void setName(String newName){
         this.name = newName;
     }
+    
     public void setEmail(String newEmail){
         this.email = newEmail;
     }
+    
     public void setPassword(String newPass){
         this.password = newPass;
+    }
+    
+    public Integer getUserId() {
+    	return userId;
+    }
+    
+    public String getName() {
+    	return name;
+    }
+    
+    public String getEmail() {
+    	return email;
+    }
+    
+    public String getPassword() {
+    	return password;
     }
 
 }

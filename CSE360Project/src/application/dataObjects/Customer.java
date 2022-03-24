@@ -2,10 +2,6 @@ package application.dataObjects;
 
 import java.util.ArrayList;
 
-import cse360.Cart;
-import cse360.Coupon;
-import cse360.Payment;
-
 public class Customer extends User {
 
     
