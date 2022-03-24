@@ -15,10 +15,8 @@ public class Menu {
     public void addFoodItem(foodItem food){
     	foods.add(food);
     }
-    public void removeFoodItem(){
-        foods.remove(foods);
+    public void removeFoodItem(foodItem food){
+        foods.remove(food);
     }
-    public void editFoodItem(){
-        
-    }
+    
 }

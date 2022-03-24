@@ -12,15 +12,16 @@ public class foodItem {
 		this.ingredients = ingredients;
 		this.price = price;
 	}
-	public void editIngredients(){
+    public void editFoodItem(){
         
     }
-    public void editPrice(){
-        
-    }
-    public void addToCart(){
-        
-    }
+//	public void editIngredients(){
+//        
+//    }
+//    public void editPrice(){
+//        
+//    }
+
 	@Override
 	public String toString() {
 		return foodName +  " $" + price + " ";

@@ -12,7 +12,10 @@ public class Manager extends User {
 			// TODO Auto-generated constructor stub
 		}
 	
-    public void applyCoupon() {
-    	//code for adding a coupon object into an existing customer's coupon arraylist
+    public void applyCoupon(Customer cust) {
+    	
+    	Coupon newCoup = new Coupon();
+    	Customer.coupons.add(newCoup);
+ 
     }
 }
