@@ -13,7 +13,7 @@ public class Cart extends Customer {
     public Double totalPrice;
     
     public Cart() {
-		super(userId, name, email, password);
+		super( name, email, password);
 		totalPrice = 0.0;
 		
 	}

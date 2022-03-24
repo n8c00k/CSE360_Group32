@@ -1,6 +1,5 @@
 package application.dataObjects;
 
-import cse360.Menu;
 
 public class foodItem extends Menu{
     

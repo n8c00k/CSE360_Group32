@@ -7,7 +7,7 @@ public class Payment extends Customer{
     private Integer expDate;
     
     public Payment(Integer cardNumber, Integer ccv, Integer expDate) {
-    	super(userId, name, email, password);
+    	super(name, email, password);
     	this.cardNumber = cardNumber;
     	this.ccv = ccv;
     	this.expDate = expDate;
