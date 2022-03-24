@@ -4,20 +4,18 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
-public class existingUser {
-
-	public existingUser() {
-		
-	}
+public class employee {
+	
+	public employee() {
+			
+		}
 	
 	@FXML
-	private Button signIn;
-	@FXML
-	private Button createAccount;
-	@FXML
- 	private Button employeePortal; 
+	private Button signIn; 
  	@FXML
  	private TextField email;
  	@FXML 
@@ -40,26 +38,5 @@ public class existingUser {
  		//else
  		//show login error label
  	}
- 	
- 	public void createAccount(ActionEvent event) throws IOException{
- 		createNew();
- 	}
- 	
- 	private void createNew() throws IOException{
-		Main m = new Main();
-		 		
-		m.changeScene("newUser.fxml");
- 	}
- 	
- 	public void employeePortal(ActionEvent event) throws IOException{
- 		employeeLogin();
- 	}
- 	
- 	private void employeeLogin() throws IOException {
- 		Main m = new Main();
- 		
-		m.changeScene("employee.fxml");
- 	}
- 	
-	
+
 }
