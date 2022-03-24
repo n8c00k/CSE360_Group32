@@ -1,14 +1,19 @@
 package application.dataObjects;
 
-class Coupon extends Customer{
-
+class Coupon {
+	
     public Boolean haveCoupon;
-
+    
+	public Coupon() {
+			
+		}
+	
+	
     public static void validCoupon(){
-        if(pastOrders == 5) {
+        if(Customer.pastOrders == 5) {
         	Coupon coupon = new Coupon();
-        	coupons.add(coupon);
-        	pastOrders = 0;
+        	Customer.coupons.add(coupon);
+        	Customer.pastOrders = 0;
         }
     }
 
