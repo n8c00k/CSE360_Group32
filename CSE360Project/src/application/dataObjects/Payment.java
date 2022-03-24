@@ -12,15 +12,36 @@ public class Payment {
     	this.expDate = expDate;
     }
 
-//    public void addCardNumber(Integer newCard){
-//        this.cardNumber = newCard;
-//    }
-//    public void addCcv(Integer newCcv){
-//        this.ccv = newCcv;
-//    }
-//    public void addExpDate(Integer newExp){
-//        this.expDate = newExp;
-//    }
+    public void updatePaymentInfo(){
+    	setCardNumber(cardNumber);
+    	setCcv(ccv);
+    	setExpDate(expDate);
+    }
+    
+    public void setCardNumber(Integer cardNum){
+    	this.cardNumber = cardNum;
+    }
+    
+    public void setCcv(Integer ccvNum){
+    	this.ccv = ccvNum;
+    }
+    
+    public void setExpDate(Integer date){
+    	this.expDate = date;
+    }
+    
+    public Integer getCardNumber() {
+    	return cardNumber;
+    }
+    
+    public Integer getCcv() {
+    	return ccv;
+    }
+    
+    public Integer getExpDate() {
+    	return expDate;
+    }
+    
     public String toString() {
     	return("Card Number: " + cardNumber + "\nCCV: "+ ccv+
     			"\nExpiration Date: " + expDate);
