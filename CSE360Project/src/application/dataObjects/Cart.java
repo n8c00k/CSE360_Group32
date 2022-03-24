@@ -40,16 +40,6 @@ public class Cart {
         	quantity.set(foods.indexOf(food), newVal);
         }
     }
-    public void applyCoupon(){
-    	if (!Customer.coupons.isEmpty()){
-    		if (totalPrice - 5 <= 0) { 	
-            }
-    		else {
-    			totalPrice = totalPrice -5;
-    			Customer.coupons.remove(0);
-    		}
-        }
-    }
     
     public String toString() {
     	return("Cart Contains: " + foods.toString()+ " Price: "+ totalPrice+

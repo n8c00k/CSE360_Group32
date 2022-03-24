@@ -57,6 +57,17 @@ public class Customer extends User {
     	return card;
     }
     
+    public void applyCoupon(){
+    	if (!coupons.isEmpty()){
+    		if (cart.get(0).totalPrice - 5 <= 0) { 	
+            }
+    		else {
+    			cart.get(0).totalPrice = cart.get(0).totalPrice - 5;
+    			coupons.remove(0);
+    		}
+        }
+    }
+    
 	@Override
 	public String toString() {
 		return "Customer Name: " + name + "\nEmail: " + email + 
