@@ -1,7 +1,7 @@
 package application.dataObjects;
 
 
-public class foodItem extends Menu{
+public class foodItem {
     
     public String foodName;
     public String ingredients;
@@ -10,7 +10,6 @@ public class foodItem extends Menu{
     
 
     public foodItem(String foodName, String ingredients, Double price) {
-		super();
 		this.foodName = foodName;
 		this.ingredients = ingredients;
 		this.price = price;
