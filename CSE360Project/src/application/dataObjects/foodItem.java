@@ -7,8 +7,6 @@ public class foodItem {
     public String ingredients;
     public Double price;
     
-    
-
     public foodItem(String foodName, String ingredients, Double price) {
 		this.foodName = foodName;
 		this.ingredients = ingredients;

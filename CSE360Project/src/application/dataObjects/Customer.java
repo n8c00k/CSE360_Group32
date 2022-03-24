@@ -2,23 +2,21 @@ package application.dataObjects;
 
 import java.util.ArrayList;
 
-
-
 public class Customer extends User {
 
     
 	public Cart cart;
-    public static ArrayList<Coupon> coupons;
+    //public Coupon coupons;
     public static Integer pastOrders;
     public Payment card;
     
     public Customer( String name, String email, String password) {
     	super(name,email,password);
     	pastOrders = 0;
-    	this.coupons = new ArrayList<Coupon>();
+    	
     }
 
-    static 
+    static ArrayList<Coupon> coupons = new ArrayList<Coupon>();
 
     public void paymentInfo(){
 
