@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 
+import SQLite_db.Context;
 import application.*;
 import application.dataObjects.*;
 import javafx.event.ActionEvent;
@@ -12,7 +13,7 @@ import javafx.scene.control.TextField;
 
 public class newUser {
 	
-	public int idCount;
+	
 
 	public newUser() {
 		
@@ -34,18 +35,31 @@ public class newUser {
  	private PasswordField confirmPassword;
  	
  	
+ 	
  	public void createAccount(ActionEvent event) throws IOException{
  		newAccount();
  	}
  	
  	private void newAccount() throws IOException{
- 		
- 		if (password.getText().toString().equals(confirmPassword.getText().toString())) {
- 			String fullName = firstName.getText().toString() + lastName.getText().toString();
+ 			String fullName = firstName.getText().toString() + " " + lastName.getText().toString();
+ 			String cusEmail = email.getText().toString();
+ 			String cusPassword = password.getText().toString();
+ 			String confirmCusPassword = confirmPassword.getText().toString();
  			
- 			Customer cus = new Customer(fullName, email.getText().toString(), password.getText().toString());
+ 		if (cusPassword.equals(confirmCusPassword)) {
+ 			
+ 			
+ 			Customer cus = new Customer(fullName, cusEmail, cusPassword);
+ 			//cus.setId( get latest ID number from DB + 1);
+ 			//System.out.println("Customer: "+ fullName + "\nEmail: " + cusEmail + "\nPassword: " + cusPassword
+ 			//		+ "\nID: "+ );
  			//send to database
  			
+ 			Main m = new Main();
+ 			m.changeScene("existingUserScene.fxml");
+ 		}
+ 		else {
+ 			//label error prompt bc passwords dont match
  		}
  	}
  	

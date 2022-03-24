@@ -16,7 +16,9 @@ public class User {
     public void updateProfile(){
 
     }
-    // public void setId(Integer x){}
+    public void setId(Integer x){
+    	this.userId = x;
+    }
 
     public void setName(String newName){
         this.name = newName;
