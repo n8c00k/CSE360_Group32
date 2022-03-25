@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.canvas.Canvas?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.employee">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Canvas id="employeeLoginImage" height="200.0" layoutX="334.0" layoutY="97.0" width="200.0" />
       <Text layoutX="127.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Login" />
-      <Button id="employeeSignInButton" fx:id="signIn" layoutX="84.0" layoutY="197.0" mnemonicParsing="false" onAction="#userSignIn" prefHeight="27.0" prefWidth="158.0" text="Sign In" />
-      <PasswordField id="employeeLoginPasswordText" fx:id="password" layoutX="82.0" layoutY="150.0" promptText="Password" />
-      <TextField id="employeeLoginUserNameText" fx:id="email" layoutX="83.0" layoutY="106.0" promptText="Email" />
+      <Button id="employeeSignInButton" layoutX="84.0" layoutY="197.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="158.0" text="Sign In" />
+      <PasswordField id="employeeLoginPasswordText" layoutX="82.0" layoutY="161.0" promptText="Password" />
+      <TextField id="employeeLoginUserNameText" layoutX="83.0" layoutY="120.0" promptText="User Name" />
+      <Text id="empInvalidUserPass" fill="RED" layoutX="80.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid user name or password" visible="false" />
+      <Button id="employeeBackButton" layoutX="84.0" layoutY="231.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="158.0" text="Back" />
    </children>
 </Pane>
