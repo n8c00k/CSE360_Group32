@@ -11,6 +11,9 @@ public class Coupon {
 	public Integer getUserId() {
     	return userId;
     }
+	public void setUserId(Integer x){
+    	this.userId = x;
+    }
 	
 //    public static void validCoupon(){
 //        if(Customer.pastOrders == 5) {

@@ -16,6 +16,9 @@ public class Cart {
 		totalPrice = 0.0;
 		userId = 0;
 	}
+    public void setUserId(Integer x){
+    	this.userId = x;
+    }
     
     public void addFood(foodItem food){
     	totalPrice += food.price;

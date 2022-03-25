@@ -10,8 +10,8 @@ public class Customer extends User {
     public Integer pastOrders;
     public Payment card;
     
-    public Customer(Integer userId, String name, String email, String password) {
-    	super(userId, name, email, password);
+    public Customer( String name, String email, String password) {
+    	super( name, email, password);
     	pastOrders = 0;
     	coupons = new ArrayList<Coupon>();
     	cart = new ArrayList<Cart>();
