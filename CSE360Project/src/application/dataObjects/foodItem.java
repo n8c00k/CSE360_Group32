@@ -8,11 +8,11 @@ public class foodItem {
     public Double price;
     public Integer userId;
     
-    public foodItem(String foodName, String ingredients, Double price, Integer userId) {
+    public foodItem(String foodName, String ingredients, Double price) {
 		this.foodName = foodName;
 		this.ingredients = ingredients;
 		this.price = price;
-		this.userId = userId;
+		
 	}
     
     public void updateFoodItem(){
@@ -47,6 +47,9 @@ public class foodItem {
     
     public Integer getUserId() {
     	return userId;
+    }
+    public void setUserId(Integer x){
+    	this.userId = x;
     }
   
 	@Override
