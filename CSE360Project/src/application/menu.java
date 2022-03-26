@@ -38,7 +38,6 @@ public class menu implements Initializable {
 	private Button addItem4;
 	@FXML
 	private Button addItem5;
-	
 	@FXML
 	private TextField qtyItem1;
 	@FXML
