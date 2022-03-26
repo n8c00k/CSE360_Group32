@@ -1,12 +1,23 @@
 package application;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import SQLite_db.Context;
+import application.dataObjects.User;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
-public class cart {
+public class cart implements Initializable{
 	public cart() {
 		
 	}
+	private User user;
+	
+	
 	@FXML 
 	private Button menu;
 	
@@ -67,6 +78,39 @@ public class cart {
 	
 	@FXML 
 	private Button checkout;
+	
+	Context con = new Context();
+
+	
+	public void initializeUser(User newUser) {
+		
+		user = newUser;
+	}
+	public void menuButton(ActionEvent event) throws IOException{
+ 		menu();
+ 	}
+ 	public void accountButton(ActionEvent event) throws IOException{
+ 		account();
+ 	}
+ 	
+ 	private void menu() throws IOException{
+ 		Main m = new Main();
+ 				
+ 		m.menuSceneCustomer(user);	
+ 	}
+ 	
+ 	private void account() throws IOException{
+ 		Main m = new Main();
+ 				
+ 		m.accountSceneCustomer(user);
+ 	}
+ 	
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }
