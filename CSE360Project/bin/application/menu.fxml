@@ -11,7 +11,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.menu">
    <children>
       <ScrollPane layoutX="8.0" layoutY="78.0" prefHeight="312.0" prefWidth="580.0">
@@ -24,40 +23,40 @@
                      </effect>
                   </ImageView>
                   <TextArea id="menuItemOneDescription" editable="false" layoutX="189.0" layoutY="20.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
-                  <Button id="menuItemOneAddQtyButton" layoutX="473.0" layoutY="52.0" mnemonicParsing="false" text="Add Item(s)" />
-                  <TextField id="menuItemOneQtyTextField" layoutX="409.0" layoutY="52.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
+                  <Button id="menuItemOneAddQtyButton" fx:id="addItem1" layoutX="473.0" layoutY="52.0" mnemonicParsing="false" text="Add Item(s)" />
+                  <TextField id="menuItemOneQtyTextField" fx:id="qtyItem1" layoutX="409.0" layoutY="52.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemTwoImage" fitHeight="97.0" fitWidth="130.0" layoutX="35.0" layoutY="124.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
                   </ImageView>
                   <TextArea id="menuItemTwoDescription" editable="false" layoutX="189.0" layoutY="127.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
-                  <Button id="menuItemTwoAddQtyButton" layoutX="473.0" layoutY="159.0" mnemonicParsing="false" text="Add Item(s)" />
-                  <TextField id="menuItemTwoQtyTextField" layoutX="409.0" layoutY="159.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
+                  <Button id="menuItemTwoAddQtyButton" fx:id="addItem2" layoutX="473.0" layoutY="159.0" mnemonicParsing="false" text="Add Item(s)" />
+                  <TextField id="menuItemTwoQtyTextField" fx:id="qtyItem2" layoutX="409.0" layoutY="159.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemThreeImage" fitHeight="97.0" fitWidth="130.0" layoutX="35.0" layoutY="231.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
                   </ImageView>
                   <TextArea id="menuItemThreeDescription" editable="false" layoutX="189.0" layoutY="234.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
-                  <Button id="menuItemThreeAddQtyButton" layoutX="473.0" layoutY="266.0" mnemonicParsing="false" text="Add Item(s)" />
-                  <TextField id="menuItemThreeQtyTextField" layoutX="409.0" layoutY="266.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
+                  <Button id="menuItemThreeAddQtyButton" fx:id="addItem3" layoutX="473.0" layoutY="266.0" mnemonicParsing="false" text="Add Item(s)" />
+                  <TextField id="menuItemThreeQtyTextField" fx:id="qtyItem3" layoutX="409.0" layoutY="266.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemFourImage" fitHeight="97.0" fitWidth="130.0" layoutX="35.0" layoutY="338.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
                   </ImageView>
                   <TextArea id="menuItemFourDescription" editable="false" layoutX="189.0" layoutY="341.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
-                  <Button id="menuItemFourAddQtyButton" layoutX="473.0" layoutY="373.0" mnemonicParsing="false" text="Add Item(s)" />
-                  <TextField id="menuItemFourQtyTextField" layoutX="409.0" layoutY="373.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
+                  <Button id="menuItemFourAddQtyButton" fx:id="addItem4" layoutX="473.0" layoutY="373.0" mnemonicParsing="false" text="Add Item(s)" />
+                  <TextField id="menuItemFourQtyTextField" fx:id="qtyItem4" layoutX="409.0" layoutY="373.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemFiveImage" fitHeight="97.0" fitWidth="130.0" layoutX="35.0" layoutY="446.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
                   </ImageView>
                   <TextArea id="menuItemFiveDescription" editable="false" layoutX="189.0" layoutY="449.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
-                  <Button id="menuItemFiveAddQtyButton" layoutX="473.0" layoutY="481.0" mnemonicParsing="false" text="Add Item(s)" />
-                  <TextField id="menuItemFiveQtyTextField" layoutX="409.0" layoutY="481.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
+                  <Button id="menuItemFiveAddQtyButton" fx:id="addItem5" layoutX="473.0" layoutY="481.0" mnemonicParsing="false" text="Add Item(s)" />
+                  <TextField id="menuItemFiveQtyTextField" fx:id="qtyItem5" layoutX="409.0" layoutY="481.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <Text layoutX="410.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
                   <Text id="itemOnePrice" layoutX="442.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
                   <Text layoutX="410.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
@@ -77,10 +76,10 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <TextField id="searchTextField" layoutX="382.0" layoutY="49.0" promptText="Search Item" />
-      <Button id="searchButton" layoutX="532.0" layoutY="48.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Search" />
-      <Button id="menuToCartButton" layoutX="419.0" layoutY="8.0" mnemonicParsing="false" text="Cart" />
-      <Button id="menuToAccountButton" layoutX="465.0" layoutY="8.0" mnemonicParsing="false" text="Account" />
-      <Button id="logOutButton" layoutX="533.0" layoutY="8.0" mnemonicParsing="false" text="Log Out" />
+      <TextField id="searchTextField" fx:id="searchItem" layoutX="382.0" layoutY="49.0" promptText="Search Item" />
+      <Button id="searchButton" fx:id="search" layoutX="532.0" layoutY="48.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Search" />
+      <Button id="menuToCartButton" fx:id="cart" layoutX="419.0" layoutY="8.0" mnemonicParsing="false" text="Cart" />
+      <Button id="menuToAccountButton" fx:id="account" layoutX="465.0" layoutY="8.0" mnemonicParsing="false" text="Account" />
+      <Button id="logOutButton" fx:id="logout" layoutX="533.0" layoutY="8.0" mnemonicParsing="false" text="Log Out" />
    </children>
 </Pane>

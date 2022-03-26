@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #808080;" text="Cart" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #808080;" text="Cart" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <content>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
          <children>
@@ -52,33 +52,33 @@
                               <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="22.110885620117188" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Label alignment="CENTER" text="Item1" />
-                              <Label alignment="CENTER" layoutX="10.0" layoutY="22.0" text="Item2" GridPane.rowIndex="1" />
-                              <Label alignment="CENTER" layoutX="10.0" layoutY="22.0" text="Item3" GridPane.rowIndex="2" />
-                              <Button mnemonicParsing="false" text="+" GridPane.columnIndex="3" />
-                              <Button layoutX="481.0" layoutY="18.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3">
+                              <Label fx:id="item1" alignment="CENTER" text="Item1" />
+                              <Label fx:id="item2" alignment="CENTER" layoutX="10.0" layoutY="22.0" text="Item2" GridPane.rowIndex="1" />
+                              <Label fx:id="item3" alignment="CENTER" layoutX="10.0" layoutY="22.0" text="Item3" GridPane.rowIndex="2" />
+                              <Button fx:id="addItem1" mnemonicParsing="false" text="+" GridPane.columnIndex="3" />
+                              <Button fx:id="removeItem1" layoutX="481.0" layoutY="18.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3">
                                  <GridPane.margin>
                                     <Insets left="30.0" />
                                  </GridPane.margin>
                               </Button>
-                              <Button layoutX="481.0" layoutY="18.0" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <Button layoutX="511.0" layoutY="18.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <Button fx:id="addItem2" layoutX="481.0" layoutY="18.0" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Button fx:id="removeItem2" layoutX="511.0" layoutY="18.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="30.0" />
                                  </GridPane.margin>
                               </Button>
-                              <Button layoutX="481.0" layoutY="58.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <Button layoutX="511.0" layoutY="58.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <Button fx:id="addItem3" layoutX="481.0" layoutY="58.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Button fx:id="removeItem3" layoutX="511.0" layoutY="58.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <GridPane.margin>
                                     <Insets left="30.0" />
                                  </GridPane.margin>
                               </Button>
-                              <TextField GridPane.columnIndex="1" />
-                              <TextField GridPane.columnIndex="2" />
-                              <TextField prefHeight="25.0" prefWidth="68.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <TextField fx:id="quantityItem1" GridPane.columnIndex="1" />
+                              <TextField fx:id="priceItem1" GridPane.columnIndex="2" />
+                              <TextField fx:id="quantityItem2" prefHeight="25.0" prefWidth="68.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="priceItem2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="quantityItem3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="priceItem3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <Label layoutX="390.0" layoutY="34.0" prefHeight="17.0" prefWidth="80.0" text="Add/Remove">
@@ -87,13 +87,13 @@
                            </font>
                         </Label>
                         <Text layoutX="276.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total " />
-                        <TextField floatText="\$" layoutX="320.0" layoutY="226.0" prefHeight="14.0" prefWidth="127.0" />
+                        <TextField fx:id="totalPrice" floatText="\$" layoutX="320.0" layoutY="226.0" prefHeight="14.0" prefWidth="127.0" />
                         <Button fx:id="checkout" layoutX="346.0" layoutY="266.0" mnemonicParsing="false" text="Checkout " />
                      </children>
                   </Pane>
-                  <Button layoutX="366.0" layoutY="2.0" mnemonicParsing="false" text="Menu" />
-                  <Button layoutX="427.0" layoutY="1.0" mnemonicParsing="false" text="Account " />
-                  <Button layoutX="497.0" layoutY="2.0" mnemonicParsing="false" text="Remove" />
+                  <Button fx:id="menu" layoutX="366.0" layoutY="2.0" mnemonicParsing="false" text="Menu" />
+                  <Button fx:id="account" layoutX="427.0" layoutY="1.0" mnemonicParsing="false" text="Account " />
+                  <Button fx:id="remove" layoutX="497.0" layoutY="2.0" mnemonicParsing="false" text="Remove" />
                   <ImageView fitHeight="48.0" fitWidth="99.0" layoutX="278.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@1200px-Breakfast_Platter.jpeg" />
