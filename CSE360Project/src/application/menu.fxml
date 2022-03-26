@@ -58,15 +58,15 @@
                   <Button id="menuItemFiveAddQtyButton" fx:id="addItem5" layoutX="473.0" layoutY="481.0" mnemonicParsing="false" text="Add Item(s)" />
                   <TextField id="menuItemFiveQtyTextField" fx:id="qtyItem5" layoutX="409.0" layoutY="481.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <Text layoutX="410.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <Text id="itemOnePrice" layoutX="442.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
+                  <Text id="itemOnePrice" fx:id="priceItem1" layoutX="442.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
                   <Text layoutX="410.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <Text id="itemTwoPrice" layoutX="442.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
+                  <Text id="itemTwoPrice" fx:id="priceItem2" layoutX="442.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
                   <Text layoutX="410.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <Text id="itemThreePrice" layoutX="442.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
+                  <Text id="itemThreePrice" fx:id="priceItem3" layoutX="442.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
                   <Text layoutX="409.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <Text id="itemFourPrice" layoutX="441.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
+                  <Text id="itemFourPrice" fx:id="priceItem4" layoutX="441.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
                   <Text layoutX="410.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <Text id="itemFivePrice" layoutX="442.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
+                  <Text id="itemFivePrice" fx:id="priceItem5" layoutX="442.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
                </children>
             </AnchorPane>
         </content>
