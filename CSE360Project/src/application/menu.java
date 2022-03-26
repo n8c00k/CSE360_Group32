@@ -4,10 +4,12 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import SQLite_db.Context;
 import application.dataObjects.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 
 public class menu implements Initializable {
 	
@@ -50,11 +52,34 @@ public class menu implements Initializable {
 	private TextField qtyItem4;
 	@FXML
 	private TextField qtyItem5;
+	@FXML
+	private TextArea desItem1;
+	@FXML
+	private TextArea desItem2;
+	@FXML
+	private TextArea desItem3;
+	@FXML
+	private TextArea desItem4;
+	@FXML
+	private TextArea desItem5;
+	@FXML
+	private Text priceItem1;
+	@FXML
+	private Text priceItem2;
+	@FXML
+	private Text priceItem3;
+	@FXML
+	private Text priceItem4;
+	@FXML
+	private Text priceItem5;
 	
+	
+	Context con = new Context();
 	
 	public void initializeUser(User newUser) {
 		
 		user = newUser;
+		
 	}
 	
 	public void accountButton(ActionEvent event) throws IOException{
@@ -65,6 +90,23 @@ public class menu implements Initializable {
  	}
  	public void logoutButton(ActionEvent event) throws IOException{
  		logout();
+ 	}
+ 	public void setMenu(String menu) {
+ 		
+ 		desItem1.setText(con.getMenu(menu).foods.get(0).foodName + ": " + con.getMenu(menu).foods.get(0).ingredients);
+ 		priceItem1.setText("$" + con.getMenu(menu).foods.get(0).price.toString());
+ 		
+ 		desItem2.setText(con.getMenu(menu).foods.get(1).foodName + ": " + con.getMenu(menu).foods.get(1).ingredients);
+ 		priceItem2.setText("$" + con.getMenu(menu).foods.get(1).price.toString());
+ 		
+ 		desItem3.setText(con.getMenu(menu).foods.get(2).foodName + ": " + con.getMenu(menu).foods.get(2).ingredients);
+ 		priceItem3.setText("$" + con.getMenu(menu).foods.get(2).price.toString());
+ 		
+ 		desItem4.setText(con.getMenu(menu).foods.get(3).foodName + ": " + con.getMenu(menu).foods.get(3).ingredients);
+ 		priceItem4.setText("$" + con.getMenu(menu).foods.get(3).price.toString());
+ 		
+ 		desItem5.setText(con.getMenu(menu).foods.get(4).foodName + ": " + con.getMenu(menu).foods.get(4).ingredients);
+ 		priceItem5.setText("$" + con.getMenu(menu).foods.get(4).price.toString());
  	}
  	
  	
