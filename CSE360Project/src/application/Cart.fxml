@@ -47,7 +47,7 @@
                               <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="27.92572021484375" vgrow="SOMETIMES" />
                               <RowConstraints maxHeight="35.07427978515625" minHeight="10.0" prefHeight="29.975234985351562" vgrow="SOMETIMES" />
                               <RowConstraints maxHeight="31.259414672851562" minHeight="10.0" prefHeight="27.024765014648438" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="62.482208251953125" minHeight="0.0" prefHeight="26.889114379882812" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="31.259414672851562" minHeight="10.0" prefHeight="27.024765014648438" vgrow="SOMETIMES" />
                               <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="22.110885620117188" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
@@ -74,10 +74,18 @@
                               </Button>
                               <TextField GridPane.columnIndex="1" />
                               <TextField GridPane.columnIndex="2" />
-                              <TextField prefHeight="25.0" prefWidth="68.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
                               <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="6" />
                            </children>
                         </GridPane>
                         <Label layoutX="390.0" layoutY="34.0" prefHeight="17.0" prefWidth="80.0" text="Add/Remove">
@@ -85,9 +93,9 @@
                               <Font size="8.0" />
                            </font>
                         </Label>
-                        <Text layoutX="276.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total " />
+                        <Text layoutX="276.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%key.unspecified" />
                         <Button fx:id="checkout" layoutX="346.0" layoutY="266.0" mnemonicParsing="false" text="Checkout " />
-                        <TextField layoutX="310.0" layoutY="236.0" text="\$ " />
+                        <TextField layoutX="310.0" layoutY="236.0" text="\$ %key.unspecified" />
                      </children>
                   </Pane>
                   <Button layoutX="366.0" layoutY="2.0" mnemonicParsing="false" text="Menu" />
