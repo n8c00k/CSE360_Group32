@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 
 public class userMain implements Initializable{
 	
@@ -31,7 +32,11 @@ public class userMain implements Initializable{
 	@FXML 
 	private Button logOut;
 	
+	@FXML 
+	private Text nameText;
+	
 	Context con = new Context();
+	
 	
 	
 	
@@ -39,6 +44,10 @@ public class userMain implements Initializable{
 			
 			user = newUser;
 	}
+	
+	public void setNameText(User user){
+ 		nameText.setText(user.getName().toString());
+ 	}
 	
  	public void menuButton(ActionEvent event) throws IOException{
  		menu();

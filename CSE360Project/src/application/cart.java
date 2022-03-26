@@ -25,7 +25,7 @@ public class cart implements Initializable{
 	private Button account;
 	
 	@FXML 
-	private Button remove;
+	private Button logout;
 	
 	@FXML 
 	private Label item1;
@@ -92,6 +92,9 @@ public class cart implements Initializable{
  	public void accountButton(ActionEvent event) throws IOException{
  		account();
  	}
+ 	public void logoutButton(ActionEvent event) throws IOException{
+ 		logout();
+ 	}
  	
  	private void menu() throws IOException{
  		Main m = new Main();
@@ -104,6 +107,12 @@ public class cart implements Initializable{
  				
  		m.accountSceneCustomer(user);
  	}
+ 	private void logout() throws IOException{
+ 		Main m = new Main();
+ 				
+ 		m.changeScene("existingUserScene.fxml");
+ 	}
+ 	
  	
 	
 	@Override
