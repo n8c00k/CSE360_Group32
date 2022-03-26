@@ -43,11 +43,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Region?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Account " xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Account " xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <content>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #808080;">
          <children>
-            <SubScene fill="#797676" height="341.0" layoutX="16.0" layoutY="15.0" width="564.0">
+            <SubScene fill="#797676" height="377.0" layoutX="-1.0" layoutY="-2.0" width="600.0">
               <root>
                 <Region />
               </root>
@@ -73,9 +73,9 @@
                   <Blend />
                </effect>
             </SplitPane>
-            <Button fx:id="menu" layoutX="381.0" layoutY="22.0" mnemonicParsing="false" text="Menu" />
-            <Button fx:id="cart" layoutX="442.0" layoutY="22.0" mnemonicParsing="false" text="Cart" />
-            <Button fx:id="logout" layoutX="508.0" layoutY="22.0" mnemonicParsing="false" text="Log out " />
+            <Button fx:id="menu" layoutX="380.0" layoutY="2.0" mnemonicParsing="false" text="Menu" />
+            <Button fx:id="cart" layoutX="442.0" layoutY="2.0" mnemonicParsing="false" text="Cart" />
+            <Button fx:id="logout" layoutX="499.0" layoutY="2.0" mnemonicParsing="false" text="Log out " />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="380.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@f4604e05f6a9eaca99afddd69e849005_c02485d4-0841-4de6-b152-69deb38693f2.jpeg" />
