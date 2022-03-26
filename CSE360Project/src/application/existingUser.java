@@ -1,15 +1,27 @@
 package application;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
+import SQLite_db.Context;
+import application.dataObjects.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
-public class existingUser {
+public class existingUser implements Initializable{
 
 	public existingUser() {
 		
+	}
+	private User user;
+	
+	
+	public void initializeUser(User newUser) {
+		
+		user = newUser;
 	}
 	
 	@FXML
@@ -22,6 +34,10 @@ public class existingUser {
  	private TextField email;
  	@FXML 
  	private PasswordField password;
+ 	@FXML 
+ 	private Label emailError;
+ 	
+ 	Context con = new Context();
 	
  	public void userSignIn(ActionEvent event) throws IOException{
  		checkLogin();
@@ -29,16 +45,20 @@ public class existingUser {
  	
  	private void checkLogin() throws IOException{
  		Main m = new Main();
- 		
+ 		String cusEmail = email.getText().toString();
+		String cusPassword = password.getText().toString();
+		
  		//if database contains email.getText().toString()
- 		// if employee login blah blah
+ 		if(con.getCustomer(cusEmail, cusPassword ) != null) {
+ 			
+ 			
+ 			m.logInSceneCustomer(con.getCustomer(cusEmail, cusPassword));
+ 		}
  		// change scene to employee page.fxml
- 		//check if password.getText.toString.equals(database password for that email)
- 		
- 		m.changeScene("whatever the following scene.fxml is");
- 		
- 		//else
- 		//show login error label
+ 		else {
+ 			emailError.setText("Invalid Email or Password");
+ 		}
+
  	}
  	
  	public void createAccount(ActionEvent event) throws IOException{
@@ -60,6 +80,12 @@ public class existingUser {
  		
 		m.changeScene("employee.fxml");
  	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		
+	}
  	
 	
 }
