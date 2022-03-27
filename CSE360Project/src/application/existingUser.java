@@ -25,6 +25,8 @@ public class existingUser implements Initializable{
 		user = newUser;
 	}
 	
+	
+	
 	@FXML
 	private Button signIn;
 	@FXML
