@@ -65,13 +65,16 @@ public class newUser {
  			passwordError.setText("Passwords do not match");
  			
  		}
+ 		else if(firstName.getText() == null || lastName.getText() == null || email.getText() == null || 
+ 				password.getText() == null || confirmPassword.getText() == null) {
+ 			emailError.setText("Please enter your data");
+ 		}
  		else {
 			Customer cus = new Customer( fullName, cusEmail, cusPassword);
 			 			
 			con.setCustomer(cus);
 			 			
-			Main m = new Main();
-			m.changeScene("existingUserScene.fxml");
+			backToLogin();
  		}
  	}
  	

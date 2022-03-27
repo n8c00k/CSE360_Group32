@@ -52,6 +52,7 @@ public class Main extends Application {
 		stg.getScene().setRoot(pane);
 		menu controller = loader.getController();
 		controller.initializeUser(user);
+		controller.setMenu("Breakfast");
 	}
 	public void accountSceneCustomer(User user) throws IOException{
 		

@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import SQLite_db.Context;
+import application.dataObjects.Customer;
 import application.dataObjects.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +16,7 @@ public class cart implements Initializable{
 	public cart() {
 		
 	}
-	private User user;
+	private Customer user;
 	
 	
 	@FXML 
@@ -84,7 +85,7 @@ public class cart implements Initializable{
 	
 	public void initializeUser(User newUser) {
 		
-		user = newUser;
+		user = (Customer) newUser;
 	}
 	public void menuButton(ActionEvent event) throws IOException{
  		menu();
@@ -101,7 +102,6 @@ public class cart implements Initializable{
  				
  		m.menuSceneCustomer(user);	
  	}
- 	
  	private void account() throws IOException{
  		Main m = new Main();
  				

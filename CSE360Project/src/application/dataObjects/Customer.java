@@ -28,7 +28,6 @@ public class Customer extends User {
     public Cart getCartIndex(int i) {
     	return cart.get(i);
     }
-
     public void setCoupon(ArrayList<Coupon> coupon) {
   	  this.coupons = coupon;
   	}
@@ -59,11 +58,11 @@ public class Customer extends User {
     
     public void applyCoupon(){
     	if (!coupons.isEmpty()){
-    		if (cart.get(0).totalPrice - 5 <= 0) { 	
+    		if (this.cart.get(0).totalPrice - 5 <= 0) { 	
             }
     		else {
-    			cart.get(0).totalPrice = cart.get(0).totalPrice - 5;
-    			coupons.remove(0);
+    			this.cart.get(0).totalPrice = cart.get(0).totalPrice - 5;
+    			this.coupons.remove(0);
     		}
         }
     }
