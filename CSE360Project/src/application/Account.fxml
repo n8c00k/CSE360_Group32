@@ -32,55 +32,48 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.scene.SubScene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.Pane?>
 
-<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" text="Account " xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.account">
-  <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #808080;">
-         <children>
-            <SubScene fill="#797676" height="377.0" layoutX="-1.0" layoutY="-2.0" width="600.0">
-              <root>
-                <Region />
-              </root>
-            </SubScene>
-            <Label layoutX="23.0" layoutY="26.0" prefHeight="17.0" prefWidth="59.0" text="Account " />
-            <SplitPane dividerPositions="0.5" layoutX="33.0" layoutY="58.0" prefHeight="293.0" prefWidth="327.0" AnchorPane.rightAnchor="238.0">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                     <children>
-                        <Label fx:id="updateInfor" alignment="CENTER" layoutX="-2.0" layoutY="6.0" prefHeight="17.0" prefWidth="155.0" text="Update Information " />
-                        <Label fx:id="avCoupons" alignment="CENTER" layoutX="-2.0" layoutY="23.0" lineSpacing="2.0" prefHeight="17.0" prefWidth="155.0" text="Available Coupons " />
-                        <Label fx:id="pastOrder" alignment="CENTER" layoutX="-2.0" layoutY="40.0" prefHeight="17.0" prefWidth="155.0" text="Past Orders" />
-                        <Label fx:id="contact" alignment="CENTER" layoutX="-2.0" layoutY="57.0" prefHeight="17.0" prefWidth="155.0" text="Contact " />
-                     </children>
-                  </AnchorPane>
-                <AnchorPane maxHeight="20.0" minHeight="20.0" prefHeight="20.0" visible="false">
-                     <effect>
-                        <Blend />
-                     </effect>
-                  </AnchorPane>
-              </items>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.4593967517401392, 0.4733178654292343" layoutX="18.0" layoutY="74.0" prefHeight="290.0" prefWidth="433.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #808080;">
+               <children>
+                  <Button layoutX="-5.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" text="Update Information " />
+                  <Button layoutY="23.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="196.0" text="Available Cupons " />
+                  <Button layoutY="48.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="196.0" text="Past Orders" />
+                  <Button layoutX="-5.0" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="202.0" text="Contact " />
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="20.0" minHeight="20.0" prefHeight="20.0" visible="false">
                <effect>
                   <Blend />
                </effect>
-            </SplitPane>
-            <Button fx:id="menu" layoutX="380.0" layoutY="2.0" mnemonicParsing="false" text="Menu" />
-            <Button fx:id="cart" layoutX="442.0" layoutY="2.0" mnemonicParsing="false" text="Cart" />
-            <Button fx:id="logOut" layoutX="499.0" layoutY="2.0" mnemonicParsing="false" text="Log out " />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="380.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@f4604e05f6a9eaca99afddd69e849005_c02485d4-0841-4de6-b152-69deb38693f2.jpeg" />
-               </image>
-            </ImageView>
-         </children></AnchorPane>
-  </content>
-</TitledPane>
+            </AnchorPane>
+            <TextField prefHeight="216.0" prefWidth="224.0" />
+         </items>
+         <effect>
+            <Blend />
+         </effect>
+      </SplitPane>
+      <Label layoutX="18.0" layoutY="25.0" text="Account " />
+      <Button layoutX="357.0" layoutY="13.0" mnemonicParsing="false" text="Menu " />
+      <Button layoutX="416.0" layoutY="13.0" mnemonicParsing="false" text="Cart" />
+      <Button layoutX="467.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Log Out " />
+      <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="453.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/f4604e05f6a9eaca99afddd69e849005_c02485d4-0841-4de6-b152-69deb38693f2.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
