@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="62.0" prefHeight="296.0" prefWidth="192.0">
+         <children>
+            <Button layoutX="-1.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="218.0" text="Update Information " />
+            <Button layoutY="27.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="216.0" text="Available Cupons " />
+            <Button layoutX="-1.0" layoutY="52.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="216.0" text="Past Orders" />
+            <Button layoutX="-2.0" layoutY="77.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="218.0" text="Contact " />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" text="Name:" />
+            <Label layoutX="22.0" layoutY="44.0" text="E-mail:" />
+            <Label layoutX="14.0" layoutY="71.0" />
+            <Label layoutX="15.0" layoutY="100.0" text="CC/CCV:" />
+            <Label layoutX="16.0" layoutY="71.0" prefHeight="17.0" prefWidth="63.0" text="Password:" />
+            <Label layoutX="14.0" layoutY="130.0" text="Exp Date:" />
+            <TextField layoutX="79.0" layoutY="10.0" prefHeight="25.0" prefWidth="149.0" text="\%key.unspecifed" />
+            <TextField layoutX="79.0" layoutY="40.0" prefHeight="25.0" prefWidth="149.0" text="\%key.unspecifed" />
+            <TextField layoutX="79.0" layoutY="67.0" prefHeight="25.0" prefWidth="149.0" text="\%key.unspecifed" />
+            <TextField layoutX="79.0" layoutY="96.0" prefHeight="25.0" prefWidth="149.0" text="\%key.unspecifed" />
+            <TextField layoutX="79.0" layoutY="126.0" prefHeight="25.0" prefWidth="149.0" text="\%key.unspecifed" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="251.0" style="-fx-background-color: #808080;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" text="Available Coupons: " />
+            <TextField layoutX="127.0" layoutY="21.0" prefHeight="25.0" prefWidth="149.0" text="\%key.unspecified" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" text="Past Orders: " />
+            <TextField layoutX="14.0" layoutY="23.0" text="\%key.unspecified" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;" visible="false">
+         <children>
+            <Label layoutX="36.0" layoutY="27.0" text="Contact Us at : (###)###-####!" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="41.0" layoutY="14.0" text="Account " />
+      <Button layoutX="346.0" layoutY="10.0" mnemonicParsing="false" text="Menu " />
+      <Button layoutX="415.0" layoutY="10.0" mnemonicParsing="false" text="Cart" />
+      <Button layoutX="474.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Log Out " />
+   </children>
+</Pane>
