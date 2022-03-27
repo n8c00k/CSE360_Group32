@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import SQLite_db.Context;
+import application.dataObjects.Customer;
 import application.dataObjects.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,12 +55,13 @@ public class existingUser implements Initializable{
  			
  			m.logInSceneCustomer(con.getCustomer(cusEmail, cusPassword));
  		}
- 		// change scene to employee page.fxml
  		else {
  			emailError.setText("Invalid Email or Password");
  		}
 
  	}
+
+
  	
  	public void createAccount(ActionEvent event) throws IOException{
  		createNew();
