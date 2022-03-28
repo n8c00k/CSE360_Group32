@@ -1,22 +1,21 @@
 package application;
-	
+
 import java.io.IOException;
 
-import SQLite_db.Context;
-import application.dataObjects.*;
+import application.dataObjects.User;
 import javafx.application.Application;
-import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
 
 
 public class Main extends Application {
-	
+
 	private static Stage stg;
 	@Override
 	public void start(Stage primaryStage) {
-		Context con= new Context();
+		//Context con= new Context();
 		stg = primaryStage;
 		primaryStage.setResizable(false);
 		try {
@@ -29,13 +28,13 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void changeScene(String fxml) throws IOException{
 		Parent pane = FXMLLoader.load(getClass().getResource(fxml));
 		stg.getScene().setRoot(pane);
 	}
 	public void logInSceneCustomer(User user) throws IOException{
-		
+
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("userMain.fxml"));
 		Parent pane = loader.load();
@@ -45,7 +44,7 @@ public class Main extends Application {
 		controller.setNameText(user);
 	}
 	public void menuSceneCustomer(User user) throws IOException{
-		
+
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("Menu.fxml"));
 		Parent pane = loader.load();
@@ -55,7 +54,7 @@ public class Main extends Application {
 		controller.setMenu("Breakfast");
 	}
 	public void accountSceneCustomer(User user) throws IOException{
-		
+
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("Account.fxml"));
 		Parent pane = loader.load();
@@ -64,7 +63,7 @@ public class Main extends Application {
 		controller.initializeUser(user);
 	}
 	public void cartSceneCustomer(User user) throws IOException{
-	
+
 	FXMLLoader loader = new FXMLLoader();
 	loader.setLocation(getClass().getResource("cart.fxml"));
 	Parent pane = loader.load();
@@ -72,7 +71,7 @@ public class Main extends Application {
 	cart controller = loader.getController();
 	controller.initializeUser(user);
 }
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}

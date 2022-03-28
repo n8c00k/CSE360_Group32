@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -13,49 +14,64 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.menu">
    <children>
-      <ScrollPane layoutX="8.0" layoutY="78.0" prefHeight="312.0" prefWidth="580.0">
+      <ScrollPane layoutX="8.0" layoutY="78.0" prefHeight="313.0" prefWidth="582.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="553.0" prefWidth="564.0">
                <children>
-                  <ImageView id="menuItemOneImage" fitHeight="97.0" fitWidth="130.0" layoutX="35.0" layoutY="17.0" pickOnBounds="true">
+                  <ImageView id="menuItemOneImage" fitHeight="80.0" fitWidth="117.0" layoutX="40.0" layoutY="20.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
+                     <image>
+                        <Image url="@Food%20Photos/Belgian%20Waffle.jpg" />
+                     </image>
                   </ImageView>
                   <TextArea id="menuItemOneDescription" fx:id="desItem1" editable="false" layoutX="189.0" layoutY="20.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
-                  <Button id="menuItemOneAddQtyButton" fx:id="addItem1" layoutX="473.0" layoutY="52.0" mnemonicParsing="false" text="Add Item(s)" />
+                  <Button id="menuItemOneAddQtyButton" fx:id="addItem1" layoutX="473.0" layoutY="52.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
                   <TextField id="menuItemOneQtyTextField" fx:id="qtyItem1" layoutX="409.0" layoutY="52.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
-                  <ImageView id="menuItemTwoImage" fitHeight="97.0" fitWidth="130.0" layoutX="35.0" layoutY="124.0" pickOnBounds="true">
+                  <ImageView id="menuItemTwoImage" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="127.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
+                     <image>
+                        <Image url="@Food%20Photos/Double%20Chocolate%20Chip%20Pancakes.jpg" />
+                     </image>
                   </ImageView>
                   <TextArea id="menuItemTwoDescription" fx:id="desItem2" editable="false" layoutX="189.0" layoutY="127.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
-                  <Button id="menuItemTwoAddQtyButton" fx:id="addItem2" layoutX="473.0" layoutY="159.0" mnemonicParsing="false" text="Add Item(s)" />
+                  <Button id="menuItemTwoAddQtyButton" fx:id="addItem2" layoutX="473.0" layoutY="159.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
                   <TextField id="menuItemTwoQtyTextField" fx:id="qtyItem2" layoutX="409.0" layoutY="159.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
-                  <ImageView id="menuItemThreeImage" fitHeight="97.0" fitWidth="130.0" layoutX="35.0" layoutY="231.0" pickOnBounds="true">
+                  <ImageView id="menuItemThreeImage" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="237.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
+                     <image>
+                        <Image url="@Food%20Photos/Indecisive%20Breakfast.jpg" />
+                     </image>
                   </ImageView>
                   <TextArea id="menuItemThreeDescription" fx:id="desItem3" editable="false" layoutX="189.0" layoutY="234.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
-                  <Button id="menuItemThreeAddQtyButton" fx:id="addItem3" layoutX="473.0" layoutY="266.0" mnemonicParsing="false" text="Add Item(s)" />
+                  <Button id="menuItemThreeAddQtyButton" fx:id="addItem3" layoutX="473.0" layoutY="266.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
                   <TextField id="menuItemThreeQtyTextField" fx:id="qtyItem3" layoutX="409.0" layoutY="266.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
-                  <ImageView id="menuItemFourImage" fitHeight="97.0" fitWidth="130.0" layoutX="35.0" layoutY="338.0" pickOnBounds="true">
+                  <ImageView id="menuItemFourImage" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="343.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
+                     <image>
+                        <Image url="@Food%20Photos/Grilled%20Ham%20&amp;%20Egg%20Sandwich.jpg" />
+                     </image>
                   </ImageView>
                   <TextArea id="menuItemFourDescription" fx:id="desItem4" editable="false" layoutX="189.0" layoutY="341.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
-                  <Button id="menuItemFourAddQtyButton" fx:id="addItem4" layoutX="473.0" layoutY="373.0" mnemonicParsing="false" text="Add Item(s)" />
+                  <Button id="menuItemFourAddQtyButton" fx:id="addItem4" layoutX="473.0" layoutY="373.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
                   <TextField id="menuItemFourQtyTextField" fx:id="qtyItem4" layoutX="409.0" layoutY="373.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
-                  <ImageView id="menuItemFiveImage" fitHeight="97.0" fitWidth="130.0" layoutX="35.0" layoutY="446.0" pickOnBounds="true">
+                  <ImageView id="menuItemFiveImage" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="452.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
+                     <image>
+                        <Image url="@Food%20Photos/Strawberry%20Banana%20Pancakes.jpg" />
+                     </image>
                   </ImageView>
                   <TextArea id="menuItemFiveDescription" fx:id="desItem5" editable="false" layoutX="189.0" layoutY="449.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
-                  <Button id="menuItemFiveAddQtyButton" fx:id="addItem5" layoutX="473.0" layoutY="481.0" mnemonicParsing="false" text="Add Item(s)" />
+                  <Button id="menuItemFiveAddQtyButton" fx:id="addItem5" layoutX="473.0" layoutY="481.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
                   <TextField id="menuItemFiveQtyTextField" fx:id="qtyItem5" layoutX="409.0" layoutY="481.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <Text layoutX="410.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
                   <Text id="itemOnePrice" fx:id="priceItem1" layoutX="442.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
@@ -67,6 +83,31 @@
                   <Text id="itemFourPrice" fx:id="priceItem4" layoutX="441.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
                   <Text layoutX="410.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
                   <Text id="itemFivePrice" fx:id="priceItem5" layoutX="442.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
+                  <Text id="foodOneName" layoutX="18.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" textAlignment="CENTER" wrappingWidth="163.92578125">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="foodTwoName" layoutX="12.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" textAlignment="CENTER" wrappingWidth="173.13671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="foodThreeName" layoutX="15.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" textAlignment="CENTER" wrappingWidth="170.826171875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="foodFourName" layoutX="4.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" textAlignment="CENTER" wrappingWidth="189.080078125">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="foodFiveName" layoutX="16.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" textAlignment="CENTER" wrappingWidth="165.13671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
         </content>

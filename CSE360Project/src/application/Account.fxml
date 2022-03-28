@@ -6,15 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="24.0" layoutY="62.0" prefHeight="296.0" prefWidth="192.0">
          <children>
             <Button layoutX="-1.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="218.0" text="Update Information " />
-            <Button layoutY="27.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="216.0" text="Available Cupons " />
+            <Button layoutX="-2.0" layoutY="27.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="218.0" text="Available Cupons " />
             <Button layoutX="-1.0" layoutY="52.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="216.0" text="Past Orders" />
-            <Button layoutX="-2.0" layoutY="77.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="218.0" text="Contact " />
+            <Button layoutY="77.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="216.0" text="Contact " />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;">
@@ -30,6 +29,7 @@
             <TextField layoutX="79.0" layoutY="67.0" prefHeight="25.0" prefWidth="149.0" text="\%key.unspecifed" />
             <TextField layoutX="79.0" layoutY="96.0" prefHeight="25.0" prefWidth="149.0" text="\%key.unspecifed" />
             <TextField layoutX="79.0" layoutY="126.0" prefHeight="25.0" prefWidth="149.0" text="\%key.unspecifed" />
+            <Button layoutX="91.0" layoutY="161.0" mnemonicParsing="false" text="Update" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="251.0" style="-fx-background-color: #808080;" visible="false">

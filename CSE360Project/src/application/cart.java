@@ -10,81 +10,83 @@ import application.dataObjects.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class cart implements Initializable{
 	public cart() {
-		
+
 	}
 	private Customer user;
-	
-	
-	@FXML 
+
+
+	@FXML
 	private Button menu;
-	
-	@FXML 
+
+	@FXML
 	private Button account;
-	
-	@FXML 
+
+	@FXML
 	private Button logout;
-	
-	@FXML 
+
+	@FXML
 	private Label item1;
-	
-	@FXML 
+
+	@FXML
 	private Label item2;
-	
-	@FXML 
+
+	@FXML
 	private Label item3;
-	
-	@FXML 
+
+	@FXML
 	private Button addItem1;
-	
-	@FXML 
+
+	@FXML
 	private Button removeItem1;
-	
-	@FXML 
+
+	@FXML
 	private Button addItem2;
-	
-	@FXML 
+
+	@FXML
 	private Button removeItem2;
-	
-	@FXML 
+
+	@FXML
 	private Button addItem3;
-	
-	@FXML 
+
+	@FXML
 	private Button removeItem3;
-	
-	@FXML 
+
+	@FXML
 	private TextField quantityItem1;
-	
-	@FXML 
+
+	@FXML
 	private TextField priceItem1;
-	
-	@FXML 
+
+	@FXML
 	private TextField quantityItem2;
-	
-	@FXML 
+
+	@FXML
 	private TextField priceItem2;
-	
-	@FXML 
+
+	@FXML
 	private TextField quantityItem3;
-	
-	@FXML 
+
+	@FXML
 	private TextField priceItem3;
-	
-	
-	@FXML 
+
+
+	@FXML
 	private TextField totalPrice;
-	
-	@FXML 
+
+	@FXML
 	private Button checkout;
-	
+
 	Context con = new Context();
 
-	
+
 	public void initializeUser(User newUser) {
-		
+
 		user = (Customer) newUser;
 	}
 	public void menuButton(ActionEvent event) throws IOException{
@@ -96,30 +98,30 @@ public class cart implements Initializable{
  	public void logoutButton(ActionEvent event) throws IOException{
  		logout();
  	}
- 	
+
  	private void menu() throws IOException{
  		Main m = new Main();
- 				
- 		m.menuSceneCustomer(user);	
+
+ 		m.menuSceneCustomer(user);
  	}
  	private void account() throws IOException{
  		Main m = new Main();
- 				
+
  		m.accountSceneCustomer(user);
  	}
  	private void logout() throws IOException{
  		Main m = new Main();
- 				
+
  		m.changeScene("existingUserScene.fxml");
  	}
- 	
- 	
-	
+
+
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-	
+
+
 }

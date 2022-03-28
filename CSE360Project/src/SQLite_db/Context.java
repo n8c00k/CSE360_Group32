@@ -1,12 +1,12 @@
 /*
  * Context.java By: Andrew Erickson
- * 
+ *
  * Last Modified: 2/24/22
- * 
+ *
  * This class is for handling all the data objects the application will need.
  * It also deals with all SQLite interactions.
  * Passing out and taking in User, Dish, and Transaction objects.
- * 
+ *
  * Requesting object(s) that are not in the database will return Null or an empty ArrayList.
  * TODO add get/set for cart
  */
@@ -21,12 +21,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import application.dataObjects.*;
+import application.dataObjects.Cart;
+import application.dataObjects.Coupon;
+import application.dataObjects.Customer;
+import application.dataObjects.Manager;
+import application.dataObjects.Menu;
+import application.dataObjects.Payment;
+import application.dataObjects.User;
+import application.dataObjects.foodItem;
 
 public class Context {
 	//connection obj that all sqlite interactions are handled through
 	private Connection conn = null;
-	
+
 	public Context() {
 		try {
 			Class.forName("org.sqlite.JDBC");//for some reason this makes it able to find the database
@@ -43,13 +50,13 @@ public class Context {
         	 System.out.println(e.getMessage());
 		}
 	}
-	
+
 	//Adds/updates a User to the database.
 	public void setUser(User u) {
 		//search to see if user is in database
 		String stmt = "SELECT * FROM User WHERE Email = " + u.getEmail();
 		ResultSet r = getData(stmt);
-		
+
 		try {
 			if(r.getFetchSize() == 0) {//if result set is of size zero
 				//add new record
@@ -66,13 +73,13 @@ public class Context {
 		}
 		return;
 	}
-	
+
 	//Adds/updates a Customer to the database.
 	public void setCustomer(Customer u) {
 		//search to see if user is in database
 		String stmt = "SELECT * FROM User WHERE Email = " + u.getEmail();
 		ResultSet r = getData(stmt);
-		
+
 		try {
 			if(r.getFetchSize() == 0) {//if result set is of size zero
 				//add new record
@@ -92,13 +99,13 @@ public class Context {
 		}
 		return;
 	}
-	
+
 	//Adds/updates a Manager to the database.
 	public void setManager(Manager u) {
 		//search to see if user is in database
 		String stmt = "SELECT * FROM User WHERE Email = " + u.getEmail();
 		ResultSet r = getData(stmt);
-		
+
 		try {
 			if(r.getFetchSize() == 0) {//if result set is of size zero
 				//add new record
@@ -115,7 +122,7 @@ public class Context {
 		}
 		return;
 	}
-	
+
 	//Updates payment info for a user. ASSUMING user has already been entered into database
 	public void setPaymentInfo(Customer u) {
 		//update user's CardNum, CCV, and EXPDate
@@ -138,7 +145,7 @@ public class Context {
 		}
 		return;
 	}
-	
+
 	//Adds/updates a food item to the database
 	public void setFoodItem(Menu m, foodItem f) {
 		//search to see if FoodItem is in database
@@ -157,7 +164,7 @@ public class Context {
 				setData(insertStmt);
 			} else if(food.getFetchSize() == 1) {
 				//only one item. update it
-				String updateStmt = "UPDATE Food_Item SET Dish_Name = "+f.getFoodName()+" , Price = " + f.getPrice()+" , Ingreadents = " + f.getIngredients() 
+				String updateStmt = "UPDATE Food_Item SET Dish_Name = "+f.getFoodName()+" , Price = " + f.getPrice()+" , Ingreadents = " + f.getIngredients()
 									+ " WHERE Dish_Name = " + f.getFoodName();
 				setData(updateStmt);
 			} else {
@@ -171,22 +178,22 @@ public class Context {
 		//if so update record
 		//if not then add new record
 	}
-	
+
 	//Adds/updates a food item to the database
 	public void addCoupon(Coupon c, User u) {
 		//add new Coupon record
 		//String insertStmt = "INSERT INTO Coupons (Amount,User_ID) Values (5.0,"+u.getID()+")";
 		//setData(insertStmt);
 	}
-	
+
 	//Deletes a coupon from the database
 	public void removeCoupon(Coupon c, User u) {
 		//delete coupon record
 		//String delStmt = "DELETE FROM Coupons WHERE ID = "+c.getID();
 		//setData(delStmt);
 	}
-	
-	//Returns a new user obj from the database, searched by email. 
+
+	//Returns a new user obj from the database, searched by email.
 	public User getUser(String email, String password) {
 		//search database for user by email
 		String stmt = "SELECT * FROM User WHERE Email = " + email + " AND Password = " + password;
@@ -204,30 +211,30 @@ public class Context {
 		}
 		return u;
 	}
-	
-	//Returns a new user obj from the database, searched by email. 
+
+	//Returns a new user obj from the database, searched by email.
 	public User getCustomer(String email, String password) {
 		Customer u = null;
 		try {
 			//search database for user by email
 			String stmtCust = "SELECT * FROM User WHERE Role = 0 AND Email = " + email + " AND Password = " + password;
 			ResultSet cust = getData(stmtCust);
-		
+
 			if(cust.getFetchSize() == 0) {//if result set is of size zero
 				return null;//user does not exist
 			}
 			//add in data
 			cust.next();//move to first data point
 			u = new Customer(cust.getString("UserName"), cust.getString("Email"), cust.getString("Password"));//make new customer obj
-			
+
 			//set customer's payment info and coupons
 			u.setCard(getPaymentInfo(u));
 			u.setCoupon(getCoupons(u));
-			
+
 			//get the coustomer's cart
 			String orderStmt = "SELECT * FROM Order WHERE User_ID = " + cust.getInt("ID");
 			ResultSet orderR = getData(orderStmt);
-			ArrayList<Cart> pastCarts = new ArrayList<Cart>();
+			ArrayList<Cart> pastCarts = new ArrayList<>();
 			//for each order
 			while(orderR.next()) {
 				Cart c = new Cart();
@@ -250,14 +257,14 @@ public class Context {
 			}
 			u.setCart(pastCarts);
 			u.pastOrders = pastCarts.size();
-			
+
 		} catch(SQLException e) {
 			e.printStackTrace();
 		}
 		return u;
 	}
-	
-	//Returns a new user obj from the database, searched by email. 
+
+	//Returns a new user obj from the database, searched by email.
 	public User getManager(String email, String password) {
 		//search database for user by email
 		String stmt = "SELECT * FROM User WHERE Role = 1 AND Email = " + email + " AND Password = " + password;
@@ -276,8 +283,8 @@ public class Context {
 		}
 		return u;
 	}
-	
-	
+
+
 	//Returns a new menu obj from the database, searched by name.
 	public Menu getMenu(String menuName) {
 		//search database for menu by name
@@ -288,7 +295,7 @@ public class Context {
 			m.next();
 			int menuID = m.getInt("ID");
 			menu = new Menu(m.getString("Name"));
-			
+
 			//get each food item with that menuID
 			String foodStmt = "SELECT * FROM Food_Item WHERE Menu_ID = " + menuID;
 			ResultSet foods = getData(foodStmt);
@@ -299,11 +306,11 @@ public class Context {
 		} catch(SQLException e) {
 			e.printStackTrace();
 		}
-		
+
 		//with menu id search for all related foodItems
 		return menu;
 	}
-	
+
 	//Returns a new food item obj from the database, searched by name.
 	public foodItem getFoodItem(String name) {
 		//search database for foodItem by name
@@ -319,13 +326,13 @@ public class Context {
 		}
 		return f;
 	}
-	
+
 	//gets any coupon(s) that a user may have.
 	public ArrayList<Coupon> getCoupons(User u) {
 		//search database for userID by email
 		String userStmt = "SELECT ID FROM User WHERE Email = " + u.getEmail();
 		ResultSet user = getData(userStmt);
-		ArrayList<Coupon> c = new ArrayList<Coupon>();
+		ArrayList<Coupon> c = new ArrayList<>();
 		try {
 			user.next();
 			int ID = user.getInt("ID");
@@ -339,10 +346,10 @@ public class Context {
 		} catch (SQLException e) {//add in data
 			e.printStackTrace();
 		}
-		
+
 		return c;
 	}
-	
+
 	//Returns a payment info obj, searched by user.
 	public Payment getPaymentInfo(User u) {
 		//search database for userID by email
@@ -357,7 +364,7 @@ public class Context {
 		}
 		return p;
 	}
-	
+
 	private void setData(String stmt) {
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(stmt);
@@ -367,12 +374,12 @@ public class Context {
 		}
 		return;
 	}
-	
+
 	private ResultSet getData(String stmt) {
 		ResultSet r;
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(stmt);
-			r = pstmt.executeQuery(); 
+			r = pstmt.executeQuery();
 		} catch (SQLException e) {
 			System.err.print("ERROR: SQL Statement failed\\nQuerry: "+stmt+"\n\nFull Trace:\\n"+e.getMessage());
 			return null;

@@ -5,51 +5,52 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import SQLite_db.Context;
-import application.dataObjects.Customer;
 import application.dataObjects.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 
 public class userMain implements Initializable{
-	
+
 	public userMain() {
-		
+
 	}
-	
+
 	private User user;
-	
-	@FXML 
+
+	@FXML
 	private Button menu;
-	
-	@FXML 
+
+	@FXML
 	private Button account;
-	
-	@FXML 
+
+	@FXML
 	private Button cart;
-	
-	@FXML 
+
+	@FXML
 	private Button logOut;
-	
-	@FXML 
-	private Text nameText;
-	
+
+	@FXML
+	private Label name;
+
 	Context con = new Context();
-	
-	
-	
-	
+
+
+
+
 	public void initializeUser(User newUser) {
 			
 			user = newUser;
+			setNameText(newUser);
 	}
-	
+
 	public void setNameText(User user){
- 		nameText.setText(user.getName().toString());
+ 		name.setText(user.getName() + "!");
  	}
-	
+
  	public void menuButton(ActionEvent event) throws IOException{
  		menu();
  	}
@@ -62,38 +63,38 @@ public class userMain implements Initializable{
  	public void logoutButton(ActionEvent event) throws IOException{
  		logout();
  	}
- 	
- 	
+
+
  	private void logout() throws IOException{
  		Main m = new Main();
- 				
+
  		m.changeScene("existingUserScene.fxml");
  	}
  	private void menu() throws IOException{
  		Main m = new Main();
- 				
+
  		m.menuSceneCustomer(user);
  	}
- 	
+
  	private void account() throws IOException{
  		Main m = new Main();
- 				
+
  		m.accountSceneCustomer(user);
  	}
- 	
+
  	private void cart() throws IOException{
  		Main m = new Main();
- 				
+
  		m.cartSceneCustomer(user);
  	}
- 	
- 	
+
+
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 
 }

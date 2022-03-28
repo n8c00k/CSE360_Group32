@@ -9,23 +9,23 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
 public class account implements Initializable{
-	
+
 public account() {
-		
+
 	}
-	
+
 	@FXML
-	private Button menu; 
+	private Button menu;
 	@FXML
 	private Button cart;
 	@FXML
-	private Button logOut; 
+	private Button logOut;
 
 	private User user;
-	
-	
+
+
 	public void initializeUser(User newUser) {
-		
+
 		user = newUser;
 	}
 
@@ -33,7 +33,7 @@ public account() {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
