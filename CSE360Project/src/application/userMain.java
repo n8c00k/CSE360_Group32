@@ -48,7 +48,7 @@ public class userMain implements Initializable{
 	}
 
 	public void setNameText(User user){
- 		name.setText(user.getName() + "!");
+ 		name.setText("Welcome " + user.getName() + "!");
  	}
 
  	public void menuButton(ActionEvent event) throws IOException{

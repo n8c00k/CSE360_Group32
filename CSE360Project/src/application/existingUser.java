@@ -29,7 +29,7 @@ public class existingUser implements Initializable{
 		user = newUser;
 	}
 
-	Customer john = new Customer("john","ex@email.com","123");
+	Customer john = new Customer("Billy","ex@email.com","123");
 
 
 	@FXML
@@ -110,8 +110,8 @@ public class existingUser implements Initializable{
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		//Image image = new Image(getClass().getResourceAsStream("/Food Photos/Logo.jpg"));
-		//logo.setImage(image);
+		Image image = new Image(getClass().getResourceAsStream("/Food Photos/Logo.jpg"));
+		logo.setImage(image);
 	}
 
 
