@@ -18,9 +18,9 @@
       <Button id="createAccountButton" fx:id="createAccount" layoutX="75.0" layoutY="223.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="27.0" prefWidth="156.0" text="Create Account" />
       <Button id="employeePortalButton" fx:id="employeePortal" layoutX="76.0" layoutY="260.0" mnemonicParsing="false" onAction="#employeePortal" prefHeight="27.0" prefWidth="154.0" text="Employee Portal" />
       <Label fx:id="emailError" layoutX="78.0" layoutY="83.0" prefHeight="28.0" prefWidth="149.0" textAlignment="CENTER" textFill="RED" />
-      <ImageView fitHeight="222.0" fitWidth="294.0" layoutX="264.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView id="existingImage" fitHeight="222.0" fitWidth="294.0" layoutX="264.0" layoutY="76.0">
          <image>
-            <Image url="@/Food%20Photos/Logo.jpg" />
+            <Image url="@Food%20Photos/Logo.png" />
          </image>
       </ImageView>
    </children>
