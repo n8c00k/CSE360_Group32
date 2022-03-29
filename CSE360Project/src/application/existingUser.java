@@ -13,6 +13,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class existingUser implements Initializable{
 
@@ -42,6 +44,8 @@ public class existingUser implements Initializable{
  	private PasswordField password;
  	@FXML
  	private Label emailError;
+ 	@FXML
+ 	private ImageView logo;
 
  	//Context con = new Context();
 
@@ -106,8 +110,8 @@ public class existingUser implements Initializable{
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-
+		//Image image = new Image(getClass().getResourceAsStream("/Food Photos/Logo.jpg"));
+		//logo.setImage(image);
 	}
 
 

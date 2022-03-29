@@ -26,7 +26,7 @@
                         <Image url="@Food%20Photos/Belgian%20Waffle.jpg" />
                      </image>
                   </ImageView>
-                  <TextArea id="menuItemOneDescription" fx:id="desItem1" editable="false" layoutX="189.0" layoutY="20.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
+                  <TextArea id="menuItemOneDescription" fx:id="desItem1" editable="false" layoutX="189.0" layoutY="20.0" prefHeight="90.0" prefWidth="199.0" />
                   <Button id="menuItemOneAddQtyButton" fx:id="addItem1" layoutX="473.0" layoutY="52.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
                   <TextField id="menuItemOneQtyTextField" fx:id="qtyItem1" layoutX="409.0" layoutY="52.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemTwoImage" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="127.0" pickOnBounds="true">
@@ -37,7 +37,7 @@
                         <Image url="@Food%20Photos/Double%20Chocolate%20Chip%20Pancakes.jpg" />
                      </image>
                   </ImageView>
-                  <TextArea id="menuItemTwoDescription" fx:id="desItem2" editable="false" layoutX="189.0" layoutY="127.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
+                  <TextArea id="menuItemTwoDescription" fx:id="desItem2" editable="false" layoutX="189.0" layoutY="127.0" prefHeight="90.0" prefWidth="199.0" text="&#10;" />
                   <Button id="menuItemTwoAddQtyButton" fx:id="addItem2" layoutX="473.0" layoutY="159.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
                   <TextField id="menuItemTwoQtyTextField" fx:id="qtyItem2" layoutX="409.0" layoutY="159.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemThreeImage" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="237.0" pickOnBounds="true">
@@ -48,7 +48,7 @@
                         <Image url="@Food%20Photos/Indecisive%20Breakfast.jpg" />
                      </image>
                   </ImageView>
-                  <TextArea id="menuItemThreeDescription" fx:id="desItem3" editable="false" layoutX="189.0" layoutY="234.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
+                  <TextArea id="menuItemThreeDescription" fx:id="desItem3" editable="false" layoutX="189.0" layoutY="234.0" prefHeight="90.0" prefWidth="199.0" />
                   <Button id="menuItemThreeAddQtyButton" fx:id="addItem3" layoutX="473.0" layoutY="266.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
                   <TextField id="menuItemThreeQtyTextField" fx:id="qtyItem3" layoutX="409.0" layoutY="266.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemFourImage" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="343.0" pickOnBounds="true">
@@ -59,7 +59,7 @@
                         <Image url="@Food%20Photos/Grilled%20Ham%20&amp;%20Egg%20Sandwich.jpg" />
                      </image>
                   </ImageView>
-                  <TextArea id="menuItemFourDescription" fx:id="desItem4" editable="false" layoutX="189.0" layoutY="341.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
+                  <TextArea id="menuItemFourDescription" fx:id="desItem4" editable="false" layoutX="189.0" layoutY="341.0" prefHeight="90.0" prefWidth="199.0" />
                   <Button id="menuItemFourAddQtyButton" fx:id="addItem4" layoutX="473.0" layoutY="373.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
                   <TextField id="menuItemFourQtyTextField" fx:id="qtyItem4" layoutX="409.0" layoutY="373.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemFiveImage" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="452.0" pickOnBounds="true">
@@ -70,40 +70,35 @@
                         <Image url="@Food%20Photos/Strawberry%20Banana%20Pancakes.jpg" />
                      </image>
                   </ImageView>
-                  <TextArea id="menuItemFiveDescription" fx:id="desItem5" editable="false" layoutX="189.0" layoutY="449.0" prefHeight="90.0" prefWidth="199.0" text="%key.unspecified" />
+                  <TextArea id="menuItemFiveDescription" fx:id="desItem5" editable="false" layoutX="189.0" layoutY="449.0" prefHeight="90.0" prefWidth="199.0" />
                   <Button id="menuItemFiveAddQtyButton" fx:id="addItem5" layoutX="473.0" layoutY="481.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
                   <TextField id="menuItemFiveQtyTextField" fx:id="qtyItem5" layoutX="409.0" layoutY="481.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <Text layoutX="410.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <Text id="itemOnePrice" fx:id="priceItem1" layoutX="442.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
+                  <Text id="itemOnePrice" fx:id="priceItem1" layoutX="442.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
                   <Text layoutX="410.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <Text id="itemTwoPrice" fx:id="priceItem2" layoutX="442.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
+                  <Text id="itemTwoPrice" fx:id="priceItem2" layoutX="442.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
                   <Text layoutX="410.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <Text id="itemThreePrice" fx:id="priceItem3" layoutX="442.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
+                  <Text id="itemThreePrice" fx:id="priceItem3" layoutX="442.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
                   <Text layoutX="409.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <Text id="itemFourPrice" fx:id="priceItem4" layoutX="441.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
+                  <Text id="itemFourPrice" fx:id="priceItem4" layoutX="441.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
                   <Text layoutX="410.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <Text id="itemFivePrice" fx:id="priceItem5" layoutX="442.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" wrappingWidth="127.7366943359375" />
-                  <Text id="foodOneName" layoutX="18.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" textAlignment="CENTER" wrappingWidth="163.92578125">
+                  <Text id="itemFivePrice" fx:id="priceItem5" layoutX="442.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
+                  <Text id="foodOneName" layoutX="18.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="163.92578125">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <Text id="foodTwoName" layoutX="12.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" textAlignment="CENTER" wrappingWidth="173.13671875">
+                  <Text id="foodTwoName" layoutX="12.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="173.13671875">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <Text id="foodThreeName" layoutX="15.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" textAlignment="CENTER" wrappingWidth="170.826171875">
+                  <Text id="foodThreeName" layoutX="15.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="170.826171875">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <Text id="foodFourName" layoutX="4.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" textAlignment="CENTER" wrappingWidth="189.080078125">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Text>
-                  <Text id="foodFiveName" layoutX="16.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%key.unspecified" textAlignment="CENTER" wrappingWidth="165.13671875">
+                  <Text id="foodFiveName" layoutX="16.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="165.13671875">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -119,8 +114,8 @@
       </Text>
       <TextField id="searchTextField" fx:id="searchItem" layoutX="382.0" layoutY="49.0" promptText="Search Item" />
       <Button id="searchButton" fx:id="search" layoutX="532.0" layoutY="48.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Search" />
-      <Button id="menuToCartButton" fx:id="cart" layoutX="419.0" layoutY="8.0" mnemonicParsing="false" text="Cart" />
-      <Button id="menuToAccountButton" fx:id="account" layoutX="465.0" layoutY="8.0" mnemonicParsing="false" text="Account" />
-      <Button id="logOutButton" fx:id="logout" layoutX="533.0" layoutY="8.0" mnemonicParsing="false" text="Log Out" />
+      <Button id="menuToCartButton" fx:id="cart" layoutX="419.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
+      <Button id="menuToAccountButton" fx:id="account" layoutX="465.0" layoutY="8.0" mnemonicParsing="false" onAction="#accountButton" text="Account" />
+      <Button id="logOutButton" fx:id="logout" layoutX="533.0" layoutY="8.0" mnemonicParsing="false" onAction="#logoutButton" text="Log Out" />
    </children>
 </Pane>

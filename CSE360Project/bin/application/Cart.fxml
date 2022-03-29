@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cart">
    <children>
       <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
@@ -82,11 +82,11 @@
                               <TextField GridPane.columnIndex="2" GridPane.rowIndex="5" />
                               <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
                               <TextField GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\%key.unspecified" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\%key.unspecified" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\%key.unspecified" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\%key.unspecified" GridPane.rowIndex="3" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\%key.unspecified" GridPane.rowIndex="4" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="4" />
                               <Button mnemonicParsing="false" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                               <Button layoutX="419.0" layoutY="57.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <GridPane.margin>
@@ -106,14 +106,14 @@
                               <Font size="8.0" />
                            </font>
                         </Label>
-                        <Text layoutX="276.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%key.unspecified" />
+                        <Text layoutX="276.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                         <Button fx:id="checkout" layoutX="346.0" layoutY="266.0" mnemonicParsing="false" text="Checkout " />
-                        <TextField layoutX="310.0" layoutY="236.0" text="\$ %key.unspecified" />
+                        <TextField layoutX="310.0" layoutY="236.0" />
                      </children>
                   </Pane>
-                  <Button layoutX="366.0" layoutY="2.0" mnemonicParsing="false" text="Menu" />
-                  <Button layoutX="415.0" layoutY="2.0" mnemonicParsing="false" text="Account " />
-                  <Button fx:id="logout" layoutX="481.0" layoutY="2.0" mnemonicParsing="false" text="Log out" />
+                  <Button fx:id="menu" layoutX="366.0" layoutY="2.0" mnemonicParsing="false" onAction="#menuButton" text="Menu" />
+                  <Button fx:id="account" layoutX="415.0" layoutY="2.0" mnemonicParsing="false" onAction="#accountButton" text="Account " />
+                  <Button fx:id="logout" layoutX="481.0" layoutY="2.0" mnemonicParsing="false" onAction="#logoutButton" text="Log out" />
                   <ImageView fitHeight="42.0" fitWidth="70.0" layoutX="295.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../../Desktop/download.jpeg" />
