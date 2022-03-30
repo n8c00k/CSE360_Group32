@@ -51,7 +51,7 @@ public class Cart {
     }
 
     public String receipt() {
-    	String food; 
+    String food; 
 	String quan;
 	Double price; 
 	String ret = "";

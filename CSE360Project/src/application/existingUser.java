@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import SQLite_db.Context;
 import application.dataObjects.Customer;
 import application.dataObjects.User;
 import javafx.event.ActionEvent;
@@ -29,7 +30,7 @@ public class existingUser implements Initializable{
 		user = newUser;
 	}
 
-	Customer john = new Customer("Billy","ex@email.com","123");
+
 
 
 	@FXML
@@ -47,44 +48,44 @@ public class existingUser implements Initializable{
  	@FXML
  	private ImageView logo;
 
- 	//Context con = new Context();
+ 	Context con = new Context();
 
  	public void userSignIn(ActionEvent event) throws IOException{
  		checkLogin();
  	}
 
-// 	private void checkLogin() throws IOException{
-// 		Main m = new Main();
-// 		String cusEmail = email.getText().toString();
-//		String cusPassword = password.getText().toString();
-//
-// 		//if database contains email.getText().toString()
-// 		if(con.getCustomer(cusEmail, cusPassword ) != null) {
-//
-//
-// 			m.logInSceneCustomer(con.getCustomer(cusEmail, cusPassword));
-// 		}
-// 		else {
-// 			emailError.setText("Invalid Email or Password");
-// 		}
-//
-// 	}
  	private void checkLogin() throws IOException{
  		Main m = new Main();
  		String cusEmail = email.getText().toString();
 		String cusPassword = password.getText().toString();
 
  		//if database contains email.getText().toString()
- 		if(cusEmail.equals(john.getEmail()) && cusPassword.equals(john.getPassword())) {
+ 		if(con.getCustomer(cusEmail, cusPassword ) != null) {
 
- 			System.out.println("logged in successfully");
- 			m.logInSceneCustomer(john);
+
+ 			m.logInSceneCustomer(con.getCustomer(cusEmail, cusPassword));
  		}
  		else {
  			emailError.setText("Invalid Email or Password");
  		}
 
  	}
+// 	private void checkLogin() throws IOException{
+// 		Main m = new Main();
+// 		String cusEmail = email.getText().toString();
+//		String cusPassword = password.getText().toString();
+//
+// 		//if database contains email.getText().toString()
+// 		if(cusEmail.equals(john.getEmail()) && cusPassword.equals(john.getPassword())) {
+//
+// 			System.out.println("logged in successfully");
+// 			m.logInSceneCustomer(john);
+// 		}
+// 		else {
+// 			emailError.setText("Invalid Email or Password");
+// 		}
+//
+// 	}
 
 
 

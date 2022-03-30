@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import SQLite_db.Context;
 import application.dataObjects.User;
 import application.dataObjects.Customer;
 import javafx.event.ActionEvent;
@@ -91,6 +92,7 @@ public account() {
 		couponTextInput(user);
 		pastOrdersTextInput(user);
 	}
+	Context con = new Context();
 	
 	public void menuButton(ActionEvent event) throws IOException{
  		menu();
@@ -114,11 +116,14 @@ public account() {
  		showContact();
  	}
  	public String couponTextInput(Customer user) {
- 		String ret =user.coupons.toString() + " available for use!";
+ 		String ret = Integer.valueOf(user.quantityOfCoupons()) + " available for use!";
  		return ret;
  	}
  	public String pastOrdersTextInput(Customer user) {
- 		String ret = user.cart.toString();
+ 		String receipt1 = con.getCarts(user).get(0).receipt();
+ 		String receipt2 = con.getCarts(user).get(1).receipt();
+ 		String receipt3 = con.getCarts(user).get(2).receipt();
+ 		String ret = receipt1 +"\n"+receipt2 +"\n"+receipt3;
  		return ret;
  	}
  	

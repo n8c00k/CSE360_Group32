@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 
+
 import application.dataObjects.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
 	private static Stage stg;
+
+		
 	@Override
 	public void start(Stage primaryStage) {
 		//Context con= new Context();

@@ -13,8 +13,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
 public class menu implements Initializable {
@@ -60,15 +63,15 @@ public class menu implements Initializable {
 	@FXML
 	private TextField qtyItem5;
 	@FXML
-	private TextArea desItem1;
+	private Label desItem1;
 	@FXML
-	private TextArea desItem2;
+	private Label desItem2;
 	@FXML
-	private TextArea desItem3;
+	private Label desItem3;
 	@FXML
-	private TextArea desItem4;
+	private Label desItem4;
 	@FXML
-	private TextArea desItem5;
+	private Label desItem5;
 	@FXML
 	private Text priceItem1;
 	@FXML
@@ -89,15 +92,31 @@ public class menu implements Initializable {
 	private Text nameItem4;
 	@FXML
 	private Text nameItem5;
+	@FXML
+	private ImageView waffle;
+	@FXML
+	private ImageView strawberryPan;
+	@FXML
+	private ImageView chocolatePan;
+	@FXML
+	private ImageView crepe;
+	@FXML
+	private ImageView frenchToast;
+	
 
 
 	Context con = new Context();
+	
+	
 
 	public void initializeUser(User newUser) {
 
 		user = (Customer) newUser;
-
+		setMenu("Breakfast");
+		
 	}
+	
+	
 
 	public void accountButton(ActionEvent event) throws IOException{
  		account();
@@ -109,28 +128,28 @@ public class menu implements Initializable {
  		logout();
  	}
  	public void setMenu(String menu) {
+ 		
+ 		con.getMenu(menu);
 
- 		breakfastMenu = new Menu(menu);
+ 		nameItem1.setText(con.getMenu(menu).foods.get(5).getFoodName());
+ 		desItem1.setText(con.getMenu(menu).foods.get(5).getIngredients());
+ 		priceItem1.setText("$" + con.getMenu(menu).foods.get(5).getPrice());
 
- 		nameItem1.setText(con.getMenu(menu).foods.get(0).foodName);
- 		desItem1.setText( con.getMenu(menu).foods.get(0).ingredients);
- 		priceItem1.setText("$" + con.getMenu(menu).foods.get(0).price.toString());
+ 		nameItem2.setText(con.getMenu(menu).foods.get(1).getFoodName());
+ 		desItem2.setText(con.getMenu(menu).foods.get(1).getIngredients());
+ 		priceItem2.setText("$" + con.getMenu(menu).foods.get(1).getPrice());
 
- 		nameItem2.setText(con.getMenu(menu).foods.get(1).foodName);
- 		desItem2.setText(con.getMenu(menu).foods.get(1).foodName + ": " + con.getMenu(menu).foods.get(1).ingredients);
- 		priceItem2.setText("$" + con.getMenu(menu).foods.get(1).price.toString());
+ 		nameItem3.setText(con.getMenu(menu).foods.get(2).getFoodName());
+ 		desItem3.setText(con.getMenu(menu).foods.get(2).getIngredients());
+ 		priceItem3.setText("$" + con.getMenu(menu).foods.get(2).getPrice());
 
- 		nameItem3.setText(con.getMenu(menu).foods.get(2).foodName);
- 		desItem3.setText(con.getMenu(menu).foods.get(2).foodName + ": " + con.getMenu(menu).foods.get(2).ingredients);
- 		priceItem3.setText("$" + con.getMenu(menu).foods.get(2).price.toString());
+ 		nameItem4.setText(con.getMenu(menu).foods.get(3).getFoodName());
+ 		desItem4.setText(con.getMenu(menu).foods.get(3).getIngredients());
+ 		priceItem4.setText("$" + con.getMenu(menu).foods.get(3).getPrice());
 
- 		nameItem4.setText(con.getMenu(menu).foods.get(3).foodName);
- 		desItem4.setText(con.getMenu(menu).foods.get(3).foodName + ": " + con.getMenu(menu).foods.get(3).ingredients);
- 		priceItem4.setText("$" + con.getMenu(menu).foods.get(3).price.toString());
-
- 		nameItem5.setText(con.getMenu(menu).foods.get(4).foodName);
- 		desItem5.setText(con.getMenu(menu).foods.get(4).foodName + ": " + con.getMenu(menu).foods.get(4).ingredients);
- 		priceItem5.setText("$" + con.getMenu(menu).foods.get(4).price.toString());
+ 		nameItem5.setText(con.getMenu(menu).foods.get(4).getFoodName());
+ 		desItem5.setText(con.getMenu(menu).foods.get(4).getIngredients());
+ 		priceItem5.setText("$" + con.getMenu(menu).foods.get(4).getPrice());
  	}
 
  	public void addItem(ActionEvent event) throws IOException{
@@ -182,8 +201,18 @@ public class menu implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-
+		Image image1 = new Image(getClass().getResourceAsStream("/Food Photos/Belgian Waffle.jpg"));
+		Image image2 = new Image(getClass().getResourceAsStream("/Food Photos/Strawberry Banana Pancakes.jpg"));
+		Image image3 = new Image(getClass().getResourceAsStream("/Food Photos/Double Chocolate Chip Pancakes.jpg"));
+		Image image4 = new Image(getClass().getResourceAsStream("/Food Photos/Strawberry Cream Crepes.jpg"));
+		Image image5 = new Image(getClass().getResourceAsStream("/Food Photos/French Toast.jpg"));
+		
+		waffle.setImage(image1);
+		strawberryPan.setImage(image2);
+		chocolatePan.setImage(image3);
+		crepe.setImage(image4);
+		frenchToast.setImage(image5);
+		
 	}
 
 
