@@ -223,10 +223,8 @@ public class Context {
 	//Deletes a coupon from the database
 	public void removeCoupon(Coupon c, User u) {
 		//delete coupon record
-		/*
-		String delStmt = "DELETE FROM Coupons WHERE ID = " + c.getID() + ";";
+		String delStmt = "DELETE FROM Coupons WHERE ID = " + c.getId() + ";";
 		setData(delStmt);
-		*/
 	}
 	
 	//Returns a new user obj from the database, searched by email.
@@ -361,6 +359,8 @@ public class Context {
 			while(coupons.next()) {
 				Coupon cou = new Coupon();
 				cou.haveCoupon = true;
+				cou.setUserId(u.getUserId());
+				cou.setId(coupons.getInt("ID"));
 				c.add(cou);
 			}
 		} catch (SQLException e) {//add in data
