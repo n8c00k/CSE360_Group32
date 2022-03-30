@@ -16,7 +16,7 @@
             <Button fx:id="contact" layoutY="77.0" mnemonicParsing="false" onAction="#contactButton" prefHeight="25.0" prefWidth="216.0" text="Contact " />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="updatePane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;">
+      <AnchorPane fx:id="updatePane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;" visible="false">
          <children>
             <Label fx:id="nameLabel" layoutX="23.0" layoutY="14.0" text="Name:" />
             <Label fx:id="emailLabel" layoutX="22.0" layoutY="44.0" text="E-mail:" />
@@ -28,22 +28,22 @@
             <TextField fx:id="passwordText" layoutX="79.0" layoutY="67.0" prefHeight="25.0" prefWidth="149.0" />
             <TextField fx:id="ccNumText" layoutX="79.0" layoutY="96.0" prefHeight="25.0" prefWidth="149.0" />
             <TextField fx:id="expdateText" layoutX="79.0" layoutY="126.0" prefHeight="25.0" prefWidth="149.0" />
-            <Button fx:id="update" layoutX="91.0" layoutY="161.0" mnemonicParsing="false" text="Update" />
+            <Button fx:id="update" layoutX="91.0" layoutY="161.0" mnemonicParsing="false" onAction="#updateUserInformation" text="Update" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="couponPane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="264.0" style="-fx-background-color: #808080;" visible="false">
          <children>
             <Label fx:id="couponLabel" layoutX="14.0" layoutY="25.0" prefHeight="31.0" prefWidth="224.0" text="Available Coupons: " textAlignment="CENTER" />
-            <TextField fx:id="couponText" layoutX="43.0" layoutY="77.0" prefHeight="104.0" prefWidth="167.0" />
+            <Label fx:id="couponText" layoutX="75.0" layoutY="83.0" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="orderPane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;" visible="false">
          <children>
             <Label fx:id="orderLabel" layoutX="14.0" layoutY="6.0" text="Past Orders: " />
-            <TextField fx:id="orderText" layoutX="14.0" layoutY="23.0" />
+            <Label fx:id="orderText" layoutX="69.0" layoutY="45.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="contactPane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;" visible="false">
+      <AnchorPane fx:id="contactPane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;">
          <children>
             <Label fx:id="contactLabel" layoutX="36.0" layoutY="27.0" text="Contact Us at : (###)###-####!" />
          </children>

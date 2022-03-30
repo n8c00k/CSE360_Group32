@@ -80,9 +80,9 @@
                               <TextField GridPane.columnIndex="2" GridPane.rowIndex="5" />
                               <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
                               <TextField GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
+                              <Text fx:id="item1" strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text fx:id="item2" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                              <Text fx:id="item3" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="4" />
                               <Button mnemonicParsing="false" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />

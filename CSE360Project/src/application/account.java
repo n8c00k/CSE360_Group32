@@ -73,11 +73,11 @@ public account() {
 	@FXML
 	private Label couponLabel;
 	@FXML
-	private TextField couponText;
+	private Label couponText;
 	@FXML
 	private Label orderLabel;
 	@FXML
-	private TextField orderText;
+	private Label orderText;
 	@FXML
 	private Label contactLabel;
 	
@@ -90,7 +90,23 @@ public account() {
 		emailText.setText(user.getEmail());
 		passwordText.setText(user.getPassword());
 		couponTextInput(user);
-		//pastOrdersTextInput(user);
+		pastOrdersTextInput(user);
+		if(user.card.getCardNumber() == null) {
+			ccNumText.setText("No card on file.");
+		}
+		else {
+			ccNumText.setText(user.card.getCardNumber().toString());
+		}
+		if(user.card.getCcv() == null) {
+		}
+		else {
+			ccNumText.setText(user.card.getCcv().toString());
+		}
+		if(user.card.getExpDate() == null) {
+		}
+		else {
+			ccNumText.setText(user.card.getExpDate().toString());
+		}
 	}
 	Context con = new Context();
 	
@@ -115,24 +131,50 @@ public account() {
 	public void contactButton(ActionEvent event) throws IOException{
  		showContact();
  	}
+	public void updateUserInformation(ActionEvent event) throws IOException{
+ 		updateUser(user);
+ 	}
  	public String couponTextInput(Customer user) {
  		String ret = Integer.valueOf(user.quantityOfCoupons()) + " available for use!";
  		return ret;
  	}
  	public String pastOrdersTextInput(Customer user) {
  		String ret;
- 		if (con.getCarts(user).size() == 0) {
+ 		String receipt1;
+ 		String receipt2;
+ 		String receipt3;
+ 		if (con.getCarts(user).size() < 1) {
  			ret = "No past Orders.";
  		}
- 		else {
- 		String receipt1 = con.getCarts(user).get(0).receipt();
- 		String receipt2 = con.getCarts(user).get(1).receipt();
- 		String receipt3 = con.getCarts(user).get(2).receipt();
- 		ret = receipt1 +"\n"+receipt2 +"\n"+receipt3;
+ 		else if(con.getCarts(user).size() < 2){
+ 			receipt1 = con.getCarts(user).get(con.getCarts(user).size()).receipt();
+ 			ret = receipt1;
  		}
+ 		else if(con.getCarts(user).size() < 3) {
+ 			receipt1 = con.getCarts(user).get(con.getCarts(user).size()).receipt();	
+ 			receipt2 = con.getCarts(user).get(con.getCarts(user).size()-1).receipt();
+ 			ret = receipt1 +"\n"+receipt2;
+ 		}
+ 		else {
+ 			receipt1 = con.getCarts(user).get(con.getCarts(user).size()).receipt();	
+ 			receipt2 = con.getCarts(user).get(con.getCarts(user).size()-1).receipt();
+ 			receipt3 = con.getCarts(user).get(con.getCarts(user).size()-2).receipt();
+ 			ret = receipt1 +"\n"+receipt2 +"\n"+receipt3;
+ 		}
+ 		
  		return ret;
  	}
  	
+ 	private void updateUser(Customer user) throws IOException{
+ 		user.setName(nameText.getText());
+ 		user.setEmail(emailText.getText());
+ 		user.setPassword(passwordText.getText());
+ 		user.card.setCardNumber(Integer.valueOf(ccNumText.getText()));
+ 		user.card.setCardNumber(Integer.valueOf(ccNumText.getText()));
+ 		user.card.setExpDate(Integer.valueOf(ccvText.getText()));
+ 		con.setPaymentInfo(user);
+ 		
+ 	}
  	
  	private void logout() throws IOException{
  		Main m = new Main();
