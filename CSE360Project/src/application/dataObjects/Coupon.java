@@ -14,6 +14,7 @@ public class Coupon {
 	public void setUserId(Integer x){
     	this.userId = x;
     }
+	
 
 //    public static void validCoupon(){
 //        if(Customer.pastOrders == 5) {
@@ -22,6 +23,7 @@ public class Coupon {
 //        	Customer.pastOrders = 0;
 //        }
 //    }
+	
 
 }
 

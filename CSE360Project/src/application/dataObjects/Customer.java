@@ -66,6 +66,10 @@ public class Customer extends User {
     		}
         }
     }
+    
+    public Integer quantityOfCoupons() {
+    	return coupons.size();
+    }
 
 	@Override
 	public String toString() {
