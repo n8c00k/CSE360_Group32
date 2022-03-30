@@ -15,6 +15,7 @@ public class Customer extends User {
     	pastOrders = 0;
     	coupons = new ArrayList<>();
     	cart = new ArrayList<>();
+    	card = new Payment(null,null,null);
     }
 
     public void setCart(ArrayList<Cart> cart) {

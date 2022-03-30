@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import SQLite_db.Context;
+import application.dataObjects.Customer;
 import application.dataObjects.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,7 +20,7 @@ public class userMain implements Initializable{
 
 	}
 
-	private User user;
+	private Customer user;
 
 	@FXML
 	private Button menu;
@@ -41,7 +42,7 @@ public class userMain implements Initializable{
 
 
 
-	public void initializeUser(User newUser) {
+	public void initializeUser(Customer newUser) {
 			
 			user = newUser;
 			setNameText(newUser);

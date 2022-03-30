@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import SQLite_db.Context;
+import application.dataObjects.Cart;
 import application.dataObjects.Customer;
 import application.dataObjects.Menu;
 import application.dataObjects.User;
@@ -24,12 +25,10 @@ public class menu implements Initializable {
 
 
 	private Customer user;
-	private Menu breakfastMenu;
 
 	public menu() {
 
 	}
-
 
 
 	@FXML
@@ -109,13 +108,12 @@ public class menu implements Initializable {
 	
 	
 
-	public void initializeUser(User newUser) {
+	public void initializeUser(Customer newUser) {
 
-		user = (Customer) newUser;
+		user = newUser;
 		setMenu("Breakfast");
 		
 	}
-	
 	
 
 	public void accountButton(ActionEvent event) throws IOException{
@@ -152,32 +150,28 @@ public class menu implements Initializable {
  		priceItem5.setText("$" + con.getMenu(menu).foods.get(4).getPrice());
  	}
 
- 	public void addItem(ActionEvent event) throws IOException{
- 		if(addItem1.isPressed()) {
- 			addToCart(breakfastMenu.foods.get(0),qtyItem1);
- 			qtyItem1.setText(null);
- 		}
- 		else if(addItem2.isPressed()) {
- 			addToCart(breakfastMenu.foods.get(1),qtyItem2);
- 		}
- 		else if(addItem3.isPressed()) {
- 			addToCart(breakfastMenu.foods.get(2),qtyItem3);
- 		}
- 		else if(addItem4.isPressed()) {
- 			addToCart(breakfastMenu.foods.get(3),qtyItem4);
- 		}
- 		else if(addItem5.isPressed()) {
- 			addToCart(breakfastMenu.foods.get(4),qtyItem5);
- 		}
+ 	public void addItem1(ActionEvent event) throws IOException{
+ 		addToCart(con.getMenu("Breakfast").foods.get(5),qtyItem1);
+ 	}
+ 	public void addItem2(ActionEvent event) throws IOException{
+ 		addToCart(con.getMenu("Breakfast").foods.get(1),qtyItem2);
+ 	}
+ 	public void addItem3(ActionEvent event) throws IOException{
+ 		addToCart(con.getMenu("Breakfast").foods.get(2),qtyItem3);
+ 	}
+ 	public void addItem4(ActionEvent event) throws IOException{
+ 		addToCart(con.getMenu("Breakfast").foods.get(3),qtyItem4);
+ 	}
+ 	public void addItem5(ActionEvent event) throws IOException{
+ 		addToCart(con.getMenu("Breakfast").foods.get(4),qtyItem5);
  	}
 
  	private void addToCart(foodItem food, TextField qty) throws IOException{
- 		Integer quantity;
- 		food = con.getFoodItem(food.foodName);
- 		quantity = Integer.parseInt(qty.getText().toString());
-
- 		user.cart.get(0).foods.add(food);
- 		user.cart.get(0).quantity.add(quantity);
+ 		Cart userCart = new Cart(); 		
+ 		userCart.addFood(food);
+ 		con.addCart(user, userCart);
+ 		Integer quant = Integer.valueOf(qty.getText());
+ 		userCart.quantity.add(quant);
  		qty.setText(null);
  	}
 
@@ -204,7 +198,7 @@ public class menu implements Initializable {
 		Image image1 = new Image(getClass().getResourceAsStream("/Food Photos/Belgian Waffle.jpg"));
 		Image image2 = new Image(getClass().getResourceAsStream("/Food Photos/Strawberry Banana Pancakes.jpg"));
 		Image image3 = new Image(getClass().getResourceAsStream("/Food Photos/Double Chocolate Chip Pancakes.jpg"));
-		Image image4 = new Image(getClass().getResourceAsStream("/Food Photos/Strawberry Cream Crepes.jpg"));
+		Image image4 = new Image(getClass().getResourceAsStream("/Food Photos/Strawberries Cream Crepes.jpg"));
 		Image image5 = new Image(getClass().getResourceAsStream("/Food Photos/French Toast.jpg"));
 		
 		waffle.setImage(image1);

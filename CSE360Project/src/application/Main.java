@@ -2,7 +2,7 @@ package application;
 
 import java.io.IOException;
 
-
+import application.dataObjects.Customer;
 import application.dataObjects.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -36,7 +36,7 @@ public class Main extends Application {
 		Parent pane = FXMLLoader.load(getClass().getResource(fxml));
 		stg.getScene().setRoot(pane);
 	}
-	public void logInSceneCustomer(User user) throws IOException{
+	public void logInSceneCustomer(Customer user) throws IOException{
 
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("userMain.fxml"));
@@ -46,17 +46,17 @@ public class Main extends Application {
 		controller.initializeUser(user);
 		controller.setNameText(user);
 	}
-	public void menuSceneCustomer(User user) throws IOException{
+	public void menuSceneCustomer(Customer user) throws IOException{
 
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("Menu.fxml"));
+		loader.setLocation(getClass().getResource("menu.fxml"));
 		Parent pane = loader.load();
 		stg.getScene().setRoot(pane);
 		menu controller = loader.getController();
 		controller.initializeUser(user);
 		
 	}
-	public void accountSceneCustomer(User user) throws IOException{
+	public void accountSceneCustomer(Customer user) throws IOException{
 
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("Account.fxml"));
@@ -65,7 +65,7 @@ public class Main extends Application {
 		account controller = loader.getController();
 		controller.initializeUser(user);
 	}
-	public void cartSceneCustomer(User user) throws IOException{
+	public void cartSceneCustomer(Customer user) throws IOException{
 
 	FXMLLoader loader = new FXMLLoader();
 	loader.setLocation(getClass().getResource("cart.fxml"));

@@ -90,7 +90,7 @@ public account() {
 		emailText.setText(user.getEmail());
 		passwordText.setText(user.getPassword());
 		couponTextInput(user);
-		pastOrdersTextInput(user);
+		//pastOrdersTextInput(user);
 	}
 	Context con = new Context();
 	
@@ -120,10 +120,16 @@ public account() {
  		return ret;
  	}
  	public String pastOrdersTextInput(Customer user) {
+ 		String ret;
+ 		if (con.getCarts(user).size() == 0) {
+ 			ret = "No past Orders.";
+ 		}
+ 		else {
  		String receipt1 = con.getCarts(user).get(0).receipt();
  		String receipt2 = con.getCarts(user).get(1).receipt();
  		String receipt3 = con.getCarts(user).get(2).receipt();
- 		String ret = receipt1 +"\n"+receipt2 +"\n"+receipt3;
+ 		ret = receipt1 +"\n"+receipt2 +"\n"+receipt3;
+ 		}
  		return ret;
  	}
  	

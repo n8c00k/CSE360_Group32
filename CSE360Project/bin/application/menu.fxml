@@ -27,7 +27,7 @@
                      </image>
                   </ImageView>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Button id="menuItemOneAddQtyButton" fx:id="addItem1" layoutX="473.0" layoutY="52.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
+                  <Button id="menuItemOneAddQtyButton" fx:id="addItem1" layoutX="473.0" layoutY="52.0" mnemonicParsing="false" onAction="#addItem1" text="Add Item(s)" />
                   <TextField id="menuItemOneQtyTextField" fx:id="qtyItem1" layoutX="409.0" layoutY="52.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemTwoImage" fx:id="strawberryPan" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="127.0" pickOnBounds="true">
                      <effect>
@@ -37,7 +37,7 @@
                         <Image url="@../Food%20Photos/Strawberry%20Banana%20Pancakes.jpg" />
                      </image>
                   </ImageView>
-                  <Button id="menuItemTwoAddQtyButton" fx:id="addItem2" layoutX="473.0" layoutY="159.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
+                  <Button id="menuItemTwoAddQtyButton" fx:id="addItem2" layoutX="473.0" layoutY="159.0" mnemonicParsing="false" onAction="#addItem2" text="Add Item(s)" />
                   <TextField id="menuItemTwoQtyTextField" fx:id="qtyItem2" layoutX="409.0" layoutY="159.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemThreeImage" fx:id="chocolatePan" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="237.0" pickOnBounds="true">
                      <effect>
@@ -47,17 +47,17 @@
                         <Image url="@../Food%20Photos/Double%20Chocolate%20Chip%20Pancakes.jpg" />
                      </image>
                   </ImageView>
-                  <Button id="menuItemThreeAddQtyButton" fx:id="addItem3" layoutX="473.0" layoutY="266.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
+                  <Button id="menuItemThreeAddQtyButton" fx:id="addItem3" layoutX="473.0" layoutY="266.0" mnemonicParsing="false" onAction="#addItem3" text="Add Item(s)" />
                   <TextField id="menuItemThreeQtyTextField" fx:id="qtyItem3" layoutX="409.0" layoutY="266.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemFourImage" fx:id="crepe" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="343.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
                      <image>
-                        <Image url="@../Food%20Photos/Strawberries%20&amp;%20Cream%20Crepes.jpg" />
+                        <Image url="@../Food%20Photos/Strawberries%20Cream%20Crepes.jpg" />
                      </image>
                   </ImageView>
-                  <Button id="menuItemFourAddQtyButton" fx:id="addItem4" layoutX="473.0" layoutY="373.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
+                  <Button id="menuItemFourAddQtyButton" fx:id="addItem4" layoutX="473.0" layoutY="373.0" mnemonicParsing="false" onAction="#addItem4" text="Add Item(s)" />
                   <TextField id="menuItemFourQtyTextField" fx:id="qtyItem4" layoutX="409.0" layoutY="373.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <ImageView id="menuItemFiveImage" fx:id="frenchToast" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="452.0" pickOnBounds="true">
                      <effect>
@@ -67,7 +67,7 @@
                         <Image url="@../Food%20Photos/French%20Toast.jpg" />
                      </image>
                   </ImageView>
-                  <Button id="menuItemFiveAddQtyButton" fx:id="addItem5" layoutX="473.0" layoutY="481.0" mnemonicParsing="false" onAction="#addItem" text="Add Item(s)" />
+                  <Button id="menuItemFiveAddQtyButton" fx:id="addItem5" layoutX="473.0" layoutY="481.0" mnemonicParsing="false" onAction="#addItem5" text="Add Item(s)" />
                   <TextField id="menuItemFiveQtyTextField" fx:id="qtyItem5" layoutX="409.0" layoutY="481.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <Text layoutX="410.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
                   <Text id="itemOnePrice" fx:id="priceItem1" layoutX="442.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
