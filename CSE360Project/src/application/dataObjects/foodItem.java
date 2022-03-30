@@ -7,11 +7,13 @@ public class foodItem {
     public String ingredients;
     public Double price;
     public Integer userId;
+    public Integer minToComplete;
 
-    public foodItem(String foodName, String ingredients, Double price) {
+    public foodItem(String foodName, String ingredients, Double price, Integer minToComplete) {
 		this.foodName = foodName;
 		this.ingredients = ingredients;
 		this.price = price;
+		this.minToComplete = minToComplete;
 
 	}
 
@@ -32,6 +34,14 @@ public class foodItem {
     public void setPrice(Double amount){
     	this.price = amount;
     }
+    
+    public void setUserId(Integer x){
+    	this.userId = x;
+    }
+
+    public void setMinToCom(Integer mins){
+    	this.minToComplete = mins;
+    }
 
     public String getFoodName() {
     	return foodName;
@@ -48,10 +58,11 @@ public class foodItem {
     public Integer getUserId() {
     	return userId;
     }
-    public void setUserId(Integer x){
-    	this.userId = x;
+    
+    public Integer getMinToCom() {
+    	return minToComplete;
     }
-
+    
 	@Override
 	public String toString() {
 		return foodName +  " $" + price + " ";
