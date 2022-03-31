@@ -53,9 +53,9 @@
          </children>
       </AnchorPane>
       <Label layoutX="41.0" layoutY="14.0" text="Account " />
-      <Button fx:id="menu" layoutX="300.0" layoutY="10.0" mnemonicParsing="false" onAction="#menuButton" text="Menu " />
-      <Button fx:id="cart" layoutX="433.0" layoutY="10.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
-      <Button fx:id="logout" layoutX="481.0" layoutY="10.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="25.0" prefWidth="70.0" text="Log Out " />
-      <Button fx:id="menu1" layoutX="358.0" layoutY="10.0" mnemonicParsing="false" onAction="#menuButton" text="Account " />
+      <Button fx:id="menu" layoutX="325.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuButton" text="Menu " />
+      <Button fx:id="cart" layoutX="450.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
+      <Button fx:id="logout" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="25.0" prefWidth="70.0" text="Log Out " />
+      <Button fx:id="menu1" layoutX="380.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuButton" text="Account " />
    </children>
 </Pane>
