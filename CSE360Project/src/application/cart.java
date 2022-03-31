@@ -21,7 +21,7 @@ public class cart implements Initializable{
 
 	}
 	private Customer user;
-	private Cart userCart;
+	private Cart newCart;
 
 	@FXML
 	private Button menu;
@@ -111,42 +111,37 @@ public class cart implements Initializable{
 	Context con = new Context();
 
 
-	public void initializeUser(User newUser) {
+	public void initializeUser(Customer newUser, Cart cusCart) {
 
-		user = (Customer) newUser;
-		if (user.getCart().isEmpty()) {
-			Cart newCart = new Cart();
-			userCart = newCart;
+		user = newUser;
+		newCart = cusCart;
+		
+		if(newCart.foods.isEmpty()){
+		}
+		else if(newCart.foods.size() < 2) {
+			item1.setText(newCart.foods.get(0).getFoodName());
+		}
+		else if(newCart.foods.size() < 3) {
+			item1.setText(newCart.foods.get(0).getFoodName());
+			item2.setText(newCart.foods.get(1).getFoodName());
+		}
+		else if(newCart.foods.size() < 4) {
+			item1.setText(newCart.foods.get(0).getFoodName());
+			item2.setText(newCart.foods.get(1).getFoodName());
+			item3.setText(newCart.foods.get(2).getFoodName());
+		}
+		else if(newCart.foods.size() < 5) {
+			item1.setText(newCart.foods.get(0).getFoodName());
+			item2.setText(newCart.foods.get(1).getFoodName());
+			item3.setText(newCart.foods.get(2).getFoodName());
+			item4.setText(newCart.foods.get(3).getFoodName());
 		}
 		else {
-			userCart = user.getCartIndex(user.cart.size());
-		}
-		if(userCart.foods.isEmpty()){
-		}
-		else if(userCart.foods.size() < 2) {
-			item1.setText(userCart.foods.get(0).getFoodName());
-		}
-		else if(userCart.foods.size() < 3) {
-			item1.setText(userCart.foods.get(0).getFoodName());
-			item2.setText(userCart.foods.get(1).getFoodName());
-		}
-		else if(userCart.foods.size() < 4) {
-			item1.setText(userCart.foods.get(0).getFoodName());
-			item2.setText(userCart.foods.get(1).getFoodName());
-			item3.setText(userCart.foods.get(2).getFoodName());
-		}
-		else if(userCart.foods.size() < 5) {
-			item1.setText(userCart.foods.get(0).getFoodName());
-			item2.setText(userCart.foods.get(1).getFoodName());
-			item3.setText(userCart.foods.get(2).getFoodName());
-			item4.setText(userCart.foods.get(3).getFoodName());
-		}
-		else {
-				item1.setText(userCart.foods.get(0).getFoodName());
-				item2.setText(userCart.foods.get(1).getFoodName());
-				item3.setText(userCart.foods.get(2).getFoodName());
-				item4.setText(userCart.foods.get(3).getFoodName());
-				item5.setText(userCart.foods.get(4).getFoodName());
+				item1.setText(newCart.foods.get(0).getFoodName());
+				item2.setText(newCart.foods.get(1).getFoodName());
+				item3.setText(newCart.foods.get(2).getFoodName());
+				item4.setText(newCart.foods.get(3).getFoodName());
+				item5.setText(newCart.foods.get(4).getFoodName());
 		}
 		
 	}
@@ -182,12 +177,12 @@ public class cart implements Initializable{
  	private void menu() throws IOException{
  		Main m = new Main();
 
- 		m.menuSceneCustomer(user);
+ 		m.menuSceneCustomer(user,newCart);
  	}
  	private void account() throws IOException{
  		Main m = new Main();
 
- 		m.accountSceneCustomer(user);
+ 		m.accountSceneCustomer(user,newCart);
  	}
  	private void logout() throws IOException{
  		Main m = new Main();

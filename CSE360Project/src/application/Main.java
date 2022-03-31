@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 
+import application.dataObjects.Cart;
 import application.dataObjects.Customer;
 import application.dataObjects.User;
 import javafx.application.Application;
@@ -36,43 +37,34 @@ public class Main extends Application {
 		Parent pane = FXMLLoader.load(getClass().getResource(fxml));
 		stg.getScene().setRoot(pane);
 	}
-	public void logInSceneCustomer(Customer user) throws IOException{
 
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("userMain.fxml"));
-		Parent pane = loader.load();
-		stg.getScene().setRoot(pane);
-		userMain controller = loader.getController();
-		controller.initializeUser(user);
-		controller.setNameText(user);
-	}
-	public void menuSceneCustomer(Customer user) throws IOException{
+	public void menuSceneCustomer(Customer user, Cart userCart) throws IOException{
 
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("menu.fxml"));
 		Parent pane = loader.load();
 		stg.getScene().setRoot(pane);
 		menu controller = loader.getController();
-		controller.initializeUser(user);
+		controller.initializeUser(user, userCart);
 		
 	}
-	public void accountSceneCustomer(Customer user) throws IOException{
+	public void accountSceneCustomer(Customer user, Cart userCart) throws IOException{
 
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("Account.fxml"));
 		Parent pane = loader.load();
 		stg.getScene().setRoot(pane);
 		account controller = loader.getController();
-		controller.initializeUser(user);
+		controller.initializeUser(user, userCart);
 	}
-	public void cartSceneCustomer(Customer user) throws IOException{
+	public void cartSceneCustomer(Customer user, Cart userCart) throws IOException{
 
 	FXMLLoader loader = new FXMLLoader();
 	loader.setLocation(getClass().getResource("cart.fxml"));
 	Parent pane = loader.load();
 	stg.getScene().setRoot(pane);
 	cart controller = loader.getController();
-	controller.initializeUser(user);
+	controller.initializeUser(user, userCart);
 }
 
 	public static void main(String[] args) {

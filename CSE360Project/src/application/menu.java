@@ -25,6 +25,7 @@ public class menu implements Initializable {
 
 
 	private Customer user;
+	private Cart newCart;
 
 	public menu() {
 
@@ -108,11 +109,11 @@ public class menu implements Initializable {
 	
 	
 
-	public void initializeUser(Customer newUser) {
+	public void initializeUser(Customer newUser, Cart userCart) {
 
-		user = newUser;
 		setMenu("Breakfast");
-		
+		user = newUser;
+		newCart = userCart;
 	}
 	
 
@@ -167,11 +168,9 @@ public class menu implements Initializable {
  	}
 
  	private void addToCart(foodItem food, TextField qty) throws IOException{
- 		Cart userCart = new Cart(); 		
- 		userCart.addFood(food);
- 		con.addCart(user, userCart);
- 		Integer quant = Integer.valueOf(qty.getText());
- 		userCart.quantity.add(quant);
+ 		Integer quant = Integer.valueOf(qty.getText());		
+ 		newCart.addFood(food);
+ 		newCart.quantity.add(quant);
  		qty.setText(null);
  	}
 
@@ -184,13 +183,13 @@ public class menu implements Initializable {
  	private void account() throws IOException{
  		Main m = new Main();
 
- 		m.accountSceneCustomer(user);
+ 		m.accountSceneCustomer(user,newCart);
  	}
 
  	private void cart() throws IOException{
  		Main m = new Main();
 
- 		m.cartSceneCustomer(user);
+ 		m.cartSceneCustomer(user,newCart);
  	}
 
 	@Override

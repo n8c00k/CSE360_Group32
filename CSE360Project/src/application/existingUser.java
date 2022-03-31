@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import SQLite_db.Context;
+import application.dataObjects.Cart;
 import application.dataObjects.Customer;
 import application.dataObjects.User;
 import javafx.event.ActionEvent;
@@ -62,8 +63,8 @@ public class existingUser implements Initializable{
  		//if database contains email.getText().toString()
  		if(con.getCustomer(cusEmail, cusPassword ) != null) {
 
-
- 			m.logInSceneCustomer(con.getCustomer(cusEmail, cusPassword));
+ 			Cart userCart = new Cart();
+ 			m.menuSceneCustomer(con.getCustomer(cusEmail, cusPassword),userCart);
  		}
  		else {
  			emailError.setText("Invalid Email or Password");

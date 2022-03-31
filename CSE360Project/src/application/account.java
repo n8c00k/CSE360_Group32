@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 
 import SQLite_db.Context;
 import application.dataObjects.User;
+import application.dataObjects.Cart;
 import application.dataObjects.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,6 +22,7 @@ public account() {
 
 	}
 	private Customer user;
+	private Cart newCart;
 
 	@FXML
 	private Button menu;
@@ -83,9 +85,10 @@ public account() {
 	
 
 
-	public void initializeUser(User newUser) {
+	public void initializeUser(User newUser, Cart userCart) {
 
 		user = (Customer) newUser;
+		newCart = userCart;
 		nameText.setText(user.getName());
 		emailText.setText(user.getEmail());
 		passwordText.setText(user.getPassword());
@@ -184,12 +187,12 @@ public account() {
  	private void menu() throws IOException{
  		Main m = new Main();
 
- 		m.menuSceneCustomer(user);
+ 		m.menuSceneCustomer(user, newCart);
  	}
  	private void cart() throws IOException{
  		Main m = new Main();
 
- 		m.cartSceneCustomer(user);
+ 		m.cartSceneCustomer(user, newCart);
  	}
 
  	private void hideUpdate() {
