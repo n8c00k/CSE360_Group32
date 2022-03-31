@@ -15,13 +15,14 @@
       <PasswordField id="existingUserLoginPasswordText" fx:id="password" layoutX="78.0" layoutY="149.0" promptText="Password" />
       <Button id="existingSignInButton" fx:id="signIn" layoutX="74.0" layoutY="187.0" mnemonicParsing="false" onAction="#userSignIn" prefHeight="27.0" prefWidth="158.0" text="Sign In" />
       <Text layoutX="117.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Existing User" />
-      <Button id="createAccountButton" fx:id="createAccount" layoutX="75.0" layoutY="223.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="27.0" prefWidth="156.0" text="Create Account" />
-      <Button id="employeePortalButton" fx:id="employeePortal" layoutX="76.0" layoutY="260.0" mnemonicParsing="false" onAction="#employeePortal" prefHeight="27.0" prefWidth="154.0" text="Employee Portal" />
+      <Button id="createAccountButton" fx:id="createAccount" layoutX="75.0" layoutY="260.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="27.0" prefWidth="156.0" text="Create Account" />
+      <Button id="employeePortalButton" fx:id="employeePortal" layoutX="76.0" layoutY="298.0" mnemonicParsing="false" onAction="#employeePortal" prefHeight="27.0" prefWidth="154.0" text="Employee Portal" />
       <Label fx:id="emailError" layoutX="78.0" layoutY="83.0" prefHeight="28.0" prefWidth="149.0" textAlignment="CENTER" textFill="RED" />
       <ImageView id="existingImage" fx:id="logo" fitHeight="222.0" fitWidth="294.0" layoutX="264.0" layoutY="76.0">
          <image>
             <Image url="@Food%20Photos/Logo.png" />
          </image>
       </ImageView>
+      <Button id="existingSignInButton" fx:id="signIn1" layoutX="74.0" layoutY="223.0" mnemonicParsing="false" onAction="#userSignIn" prefHeight="27.0" prefWidth="158.0" text="Continue as Guest " />
    </children>
 </Pane>
