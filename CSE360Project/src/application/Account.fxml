@@ -16,41 +16,46 @@
             <Button fx:id="contact" layoutY="77.0" mnemonicParsing="false" onAction="#contactButton" prefHeight="25.0" prefWidth="216.0" text="Contact " />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="updatePane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;" visible="false">
+      <AnchorPane fx:id="updatePane" layoutX="241.0" layoutY="62.0" prefHeight="260.0" prefWidth="234.0" style="-fx-background-color: #808080;">
          <children>
             <Label fx:id="nameLabel" layoutX="23.0" layoutY="14.0" text="Name:" />
             <Label fx:id="emailLabel" layoutX="22.0" layoutY="44.0" text="E-mail:" />
-            <Label fx:id="ccNumLabel" layoutX="15.0" layoutY="100.0" text="CC/CCV:" />
+            <Label fx:id="ccNumLabel" layoutX="15.0" layoutY="100.0" text="CC# :" />
             <Label fx:id="passwordLabel" layoutX="16.0" layoutY="71.0" prefHeight="17.0" prefWidth="63.0" text="Password:" />
-            <Label fx:id="expdateLabel" layoutX="14.0" layoutY="130.0" text="Exp Date:" />
+            <Label fx:id="expdateLabel" layoutX="14.0" layoutY="130.0" text="CCV: " />
             <TextField fx:id="nameText" layoutX="79.0" layoutY="10.0" prefHeight="25.0" prefWidth="149.0" />
             <TextField fx:id="emailText" layoutX="79.0" layoutY="40.0" prefHeight="25.0" prefWidth="149.0" />
             <TextField fx:id="passwordText" layoutX="79.0" layoutY="67.0" prefHeight="25.0" prefWidth="149.0" />
             <TextField fx:id="ccNumText" layoutX="79.0" layoutY="96.0" prefHeight="25.0" prefWidth="149.0" />
             <TextField fx:id="expdateText" layoutX="79.0" layoutY="126.0" prefHeight="25.0" prefWidth="149.0" />
-            <Button fx:id="update" layoutX="91.0" layoutY="161.0" mnemonicParsing="false" onAction="#updateUserInformation" text="Update" />
+            <Button fx:id="update" layoutX="88.0" layoutY="214.0" mnemonicParsing="false" onAction="#updateUserInformation" text="Update" />
+            <TextField fx:id="expdateText1" layoutX="79.0" layoutY="158.0" prefHeight="25.0" prefWidth="149.0" />
+            <Label fx:id="expdateLabel1" layoutX="15.0" layoutY="162.0" text="Exp Date:" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="couponPane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="264.0" style="-fx-background-color: #808080;" visible="false">
          <children>
             <Label fx:id="couponLabel" layoutX="14.0" layoutY="25.0" prefHeight="31.0" prefWidth="224.0" text="Available Coupons: " textAlignment="CENTER" />
             <Label fx:id="couponText" layoutX="75.0" layoutY="83.0" />
+            <Label fx:id="couponLabel1" layoutX="20.0" layoutY="76.0" prefHeight="31.0" prefWidth="224.0" text="\%key.unspecified" textAlignment="CENTER" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="orderPane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;" visible="false">
          <children>
             <Label fx:id="orderLabel" layoutX="14.0" layoutY="6.0" text="Past Orders: " />
             <Label fx:id="orderText" layoutX="69.0" layoutY="45.0" />
+            <Label fx:id="orderLabel1" layoutX="69.0" layoutY="54.0" text="\%key.unspecified" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="contactPane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;">
+      <AnchorPane fx:id="contactPane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;" visible="false">
          <children>
             <Label fx:id="contactLabel" layoutX="36.0" layoutY="27.0" text="Contact Us at : (###)###-####!" />
          </children>
       </AnchorPane>
       <Label layoutX="41.0" layoutY="14.0" text="Account " />
-      <Button fx:id="menu" layoutX="346.0" layoutY="10.0" mnemonicParsing="false" onAction="#menuButton" text="Menu " />
-      <Button fx:id="cart" layoutX="415.0" layoutY="10.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
-      <Button fx:id="logout" layoutX="474.0" layoutY="10.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="25.0" prefWidth="87.0" text="Log Out " />
+      <Button fx:id="menu" layoutX="314.0" layoutY="10.0" mnemonicParsing="false" onAction="#menuButton" text="Menu " />
+      <Button fx:id="cart" layoutX="445.0" layoutY="10.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
+      <Button fx:id="logout" layoutX="493.0" layoutY="10.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="25.0" prefWidth="87.0" text="Log Out " />
+      <Button fx:id="menu1" layoutX="373.0" layoutY="10.0" mnemonicParsing="false" onAction="#menuButton" text="Account " />
    </children>
 </Pane>
