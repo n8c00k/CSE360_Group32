@@ -99,8 +99,14 @@
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="nameItem4" layoutX="29.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="141.13671875" />
-                  <Text layoutX="76.0" layoutY="670.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="49.16064453125" />
+                  <Text fx:id="nameItem4" layoutX="29.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="141.13671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Text>
+                  <Text layoutX="76.0" layoutY="670.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="49.16064453125">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Text>
                   <Label fx:id="desItem1" layoutX="175.0" layoutY="28.0" prefHeight="75.0" prefWidth="190.0" />
                   <Label fx:id="desItem2" layoutX="175.0" layoutY="135.0" prefHeight="75.0" prefWidth="190.0" />
                   <Label fx:id="desItem3" layoutX="175.0" layoutY="242.0" prefHeight="75.0" prefWidth="190.0" />
