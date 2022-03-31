@@ -49,6 +49,7 @@ public class existingUser implements Initializable{
  	private ImageView logo;
 
  	Context con = new Context();
+// 	Customer john = new Customer("billy","email","123");
 
  	public void userSignIn(ActionEvent event) throws IOException{
  		checkLogin();
