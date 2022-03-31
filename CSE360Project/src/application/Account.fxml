@@ -11,7 +11,7 @@
       <AnchorPane layoutX="24.0" layoutY="62.0" prefHeight="296.0" prefWidth="192.0">
          <children>
             <Button fx:id="updateInfo" layoutX="-1.0" layoutY="2.0" mnemonicParsing="false" onAction="#updateInfoButton" prefHeight="25.0" prefWidth="218.0" text="Update Information " />
-            <Button fx:id="AvailCoupon" layoutX="-2.0" layoutY="27.0" mnemonicParsing="false" onAction="#availCouponButton" prefHeight="25.0" prefWidth="218.0" text="Available Cupons " />
+            <Button fx:id="AvailCoupon" layoutX="-2.0" layoutY="27.0" mnemonicParsing="false" onAction="#availCouponButton" prefHeight="25.0" prefWidth="218.0" text="Available Coupons " />
             <Button fx:id="pastOrders" layoutX="-1.0" layoutY="52.0" mnemonicParsing="false" onAction="#pastOrderButton" prefHeight="25.0" prefWidth="216.0" text="Past Orders" />
             <Button fx:id="contact" layoutY="77.0" mnemonicParsing="false" onAction="#contactButton" prefHeight="25.0" prefWidth="216.0" text="Contact " />
          </children>
