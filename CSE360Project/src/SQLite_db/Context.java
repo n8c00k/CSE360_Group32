@@ -436,19 +436,16 @@ public class Context {
 	
 	private ResultSet getData(String stmt) {
 		ResultSet r;
-		int i = 0;
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(stmt);
-			i =1;
 			r = pstmt.executeQuery();
-			i =2;
 			return r;
 		} catch (SQLException e) {
 			System.err.println("ERROR: SQL get Statement failed\nQuerry: "+stmt+"\n\nFull Trace:");
 			e.printStackTrace();
 			return null;
 		} catch (NullPointerException e) {
-			System.out.println("Null: " + stmt + "\n" +i+ "\n" + e.getMessage());
+			System.out.println("Null: " + stmt + "\n" + e.getMessage());
 			return null;
 		}
 	}
