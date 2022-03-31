@@ -122,12 +122,12 @@
                         <Text layoutX="276.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total " />
                      </children>
                   </Pane>
-                  <Button fx:id="menu" layoutX="301.0" layoutY="-12.0" mnemonicParsing="false" onAction="#menuButton" text="Menu" />
-                  <Button fx:id="logout" layoutX="482.0" layoutY="-12.0" mnemonicParsing="false" onAction="#logoutButton" text="Log out" />
+                  <Button fx:id="menu" layoutX="325.0" layoutY="-16.0" mnemonicParsing="false" onAction="#menuButton" text="Menu" />
+                  <Button fx:id="logout" layoutX="500.0" layoutY="-16.0" mnemonicParsing="false" onAction="#logoutButton" text="Log out" />
+                  <Button fx:id="account" layoutX="380.0" layoutY="-16.0" mnemonicParsing="false" onAction="#accountButton" text="Account " />
+                  <Button fx:id="account1" layoutX="450.0" layoutY="-16.0" mnemonicParsing="false" onAction="#accountButton" text="Cart" />
                </children>
             </Pane>
-            <Button fx:id="account" layoutX="358.0" layoutY="2.0" mnemonicParsing="false" onAction="#accountButton" text="Account " />
-            <Button fx:id="account1" layoutX="433.0" layoutY="2.0" mnemonicParsing="false" onAction="#accountButton" text="Cart" />
          </children>
       </Pane>
    </children>
