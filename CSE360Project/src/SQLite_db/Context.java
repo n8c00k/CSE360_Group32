@@ -318,7 +318,7 @@ public class Context {
 			String foodStmt = "SELECT * FROM Food_Item WHERE Menu_ID = " + menuID + ";";
 			ResultSet foods = getData(foodStmt);
 			while(foods.next()) {
-				foodItem f = new foodItem(foods.getString("Dish_Name"), foods.getString("Ingreadents"), foods.getDouble("Price"));
+				foodItem f = new foodItem(foods.getString("Dish_Name"), foods.getString("Ingreadents"), foods.getDouble("Price"), 15);
 				f.setUserId(foods.getInt("ID"));
 				menu.addFoodItem(f);
 			}
@@ -340,7 +340,7 @@ public class Context {
 				return null;
 			}
 			//convert to foodItem
-			f = new foodItem(foods.getString("Dish_Name"),foods.getString("Ingreadents"), foods.getDouble("Price"));
+			f = new foodItem(foods.getString("Dish_Name"),foods.getString("Ingreadents"), foods.getDouble("Price"), 15);
 			f.setUserId(foods.getInt("ID"));
 		} catch (SQLException e) {//add in data
 			System.err.println("Error in getFoodItem");
@@ -409,7 +409,7 @@ public class Context {
 					String foodStmt = "SELECT * FROM Food_Item WHERE ID = " + trans.getInt("Dish_ID") + ";";
 					ResultSet food = getData(foodStmt);
 					food.next();
-					foodItem f = new foodItem(food.getString("Dish_Name"),food.getString("Ingreadents"), food.getDouble("Price"));
+					foodItem f = new foodItem(food.getString("Dish_Name"),food.getString("Ingreadents"), food.getDouble("Price"), 15);
 					f.setUserId(food.getInt("ID"));
 					c.foods.add(f);//add food to cart
 				}
@@ -436,15 +436,21 @@ public class Context {
 	
 	private ResultSet getData(String stmt) {
 		ResultSet r;
+		int i = 0;
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(stmt);
+			i =1;
 			r = pstmt.executeQuery();
+			i =2;
+			return r;
 		} catch (SQLException e) {
 			System.err.println("ERROR: SQL get Statement failed\nQuerry: "+stmt+"\n\nFull Trace:");
 			e.printStackTrace();
 			return null;
+		} catch (NullPointerException e) {
+			System.out.println("Null: " + stmt + "\n" +i+ "\n" + e.getMessage());
+			return null;
 		}
-		return r;
 	}
 
 }
