@@ -94,20 +94,20 @@
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Button>
-                              <Label text="\%key.unspecified" GridPane.columnIndex="1" />
-                              <Label layoutX="286.0" layoutY="13.0" text="\%key.unspecified" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label layoutX="286.0" layoutY="36.0" text="\%key.unspecified" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label layoutX="286.0" layoutY="61.0" text="\%key.unspecified" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label layoutX="286.0" layoutY="87.0" text="\%key.unspecified" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label layoutX="286.0" layoutY="113.0" text="\%key.unspecified" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <Label layoutX="286.0" layoutY="139.0" text="\%key.unspecified" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <Label layoutX="286.0" layoutY="36.0" text="\%key.unspecified" GridPane.columnIndex="2" />
-                              <Label layoutX="323.0" layoutY="13.0" text="\%key.unspecified" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <Label text="\%key.unspecified" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <Label layoutX="323.0" layoutY="61.0" text="\%key.unspecified" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                              <Label layoutX="323.0" layoutY="87.0" text="\%key.unspecified" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                              <Label layoutX="323.0" layoutY="113.0" text="\%key.unspecified" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                              <Label layoutX="323.0" layoutY="139.0" text="\%key.unspecified" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <Label fx:id="quantityItem1" GridPane.columnIndex="1" />
+                              <Label fx:id="quantityItem2" layoutX="286.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="quantityItem3" layoutX="286.0" layoutY="36.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="quantityItem4" layoutX="286.0" layoutY="61.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="quantityItem5" layoutX="286.0" layoutY="87.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="quantityItem6" layoutX="286.0" layoutY="113.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label layoutX="286.0" layoutY="139.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="priceItem1" layoutX="286.0" layoutY="36.0" GridPane.columnIndex="2" />
+                              <Label fx:id="priceItem2" layoutX="323.0" layoutY="13.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label fx:id="priceItem3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label fx:id="priceItem4" layoutX="323.0" layoutY="61.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label fx:id="priceItem5" layoutX="323.0" layoutY="87.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Label fx:id="priceItem6" layoutX="323.0" layoutY="113.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <Label layoutX="323.0" layoutY="139.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
                            </children>
                         </GridPane>
                         <Label layoutX="375.0" layoutY="35.0" prefHeight="17.0" prefWidth="80.0" text="Add/Remove">
@@ -118,7 +118,7 @@
                         <Text layoutX="276.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                         <Button fx:id="checkout" layoutX="415.0" layoutY="261.0" mnemonicParsing="false" text="Checkout " />
                         <Button fx:id="checkout1" layoutX="310.0" layoutY="261.0" mnemonicParsing="false" text="Apply Coupon" />
-                        <Label layoutX="329.0" layoutY="232.0" text="\%key.unspecified" />
+                        <Label layoutX="329.0" layoutY="232.0" />
                         <Text layoutX="276.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total " />
                      </children>
                   </Pane>

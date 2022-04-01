@@ -65,41 +65,41 @@ public class cart implements Initializable{
 	private Button removeItem3;
 
 	@FXML
-	private TextField quantityItem1;
+	private Label quantityItem1;
 
 	@FXML
-	private TextField priceItem1;
+	private Label priceItem1;
 
 	@FXML
-	private TextField quantityItem2;
+	private Label quantityItem2;
 
 	@FXML
-	private TextField priceItem2;
+	private Label priceItem2;
 
 	@FXML
-	private TextField quantityItem3;
+	private Label quantityItem3;
 
 	@FXML
-	private TextField priceItem3;
+	private Label priceItem3;
 	@FXML
-	private TextField quantityItem4;
+	private Label quantityItem4;
 
 	@FXML
-	private TextField priceItem4;
+	private Label priceItem4;
 	@FXML
-	private TextField quantityItem5;
+	private Label quantityItem5;
 
 	@FXML
-	private TextField priceItem5;
+	private Label priceItem5;
 	@FXML
-	private TextField quantityItem6;
+	private Label quantityItem6;
 
 	@FXML
-	private TextField priceItem6;
+	private Label priceItem6;
 
 
 	@FXML
-	private TextField totalPrice;
+	private Label totalPrice;
 
 	@FXML
 	private Button checkout;

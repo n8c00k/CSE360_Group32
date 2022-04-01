@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
@@ -11,11 +10,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cart">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cart">
    <children>
       <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Pane layoutY="14.0" prefHeight="351.0" prefWidth="569.0" style="-fx-background-color: #D3D3D3;">
+            <Pane layoutY="14.0" prefHeight="351.0" prefWidth="569.0" style="-fx-background-color: white;">
                <children>
                   <Label alignment="CENTER" layoutX="14.0" text="Cart" />
                   <Pane layoutX="10.0" layoutY="47.0" prefHeight="298.0" prefWidth="545.0" style="-fx-background-color: #FFFFFF;">
@@ -66,20 +65,6 @@
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Button>
-                              <TextField GridPane.columnIndex="1" />
-                              <TextField GridPane.columnIndex="2" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <TextField GridPane.columnIndex="2" GridPane.rowIndex="6" />
                               <Text fx:id="item1" strokeType="OUTSIDE" strokeWidth="0.0" />
                               <Text fx:id="item2" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
                               <Text fx:id="item3" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
@@ -109,6 +94,20 @@
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Button>
+                              <Label fx:id="quantityItem1" GridPane.columnIndex="1" />
+                              <Label fx:id="quantityItem2" layoutX="286.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="quantityItem3" layoutX="286.0" layoutY="36.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="quantityItem4" layoutX="286.0" layoutY="61.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="quantityItem5" layoutX="286.0" layoutY="87.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="quantityItem6" layoutX="286.0" layoutY="113.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label layoutX="286.0" layoutY="139.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label fx:id="priceItem1" layoutX="286.0" layoutY="36.0" GridPane.columnIndex="2" />
+                              <Label fx:id="priceItem2" layoutX="323.0" layoutY="13.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label fx:id="priceItem3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label fx:id="priceItem4" layoutX="323.0" layoutY="61.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label fx:id="priceItem5" layoutX="323.0" layoutY="87.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Label fx:id="priceItem6" layoutX="323.0" layoutY="113.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <Label layoutX="323.0" layoutY="139.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
                            </children>
                         </GridPane>
                         <Label layoutX="375.0" layoutY="35.0" prefHeight="17.0" prefWidth="80.0" text="Add/Remove">
@@ -119,14 +118,14 @@
                         <Text layoutX="276.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                         <Button fx:id="checkout" layoutX="415.0" layoutY="261.0" mnemonicParsing="false" text="Checkout " />
                         <Button fx:id="checkout1" layoutX="310.0" layoutY="261.0" mnemonicParsing="false" text="Apply Coupon" />
-                        <Label layoutX="329.0" layoutY="232.0" text="\%key.unspecified" />
+                        <Label layoutX="329.0" layoutY="232.0" />
                         <Text layoutX="276.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total " />
                      </children>
                   </Pane>
-                  <Button fx:id="menu" layoutX="332.0" layoutY="2.0" mnemonicParsing="false" onAction="#menuButton" text="Menu" />
-                  <Button fx:id="account" layoutX="388.0" layoutY="2.0" mnemonicParsing="false" onAction="#accountButton" text="Account " />
-                  <Button fx:id="logout" layoutX="509.0" layoutY="2.0" mnemonicParsing="false" onAction="#logoutButton" text="Log out" />
-                  <Button fx:id="account1" layoutX="461.0" layoutY="2.0" mnemonicParsing="false" onAction="#accountButton" text="Cart" />
+                  <Button fx:id="menu" layoutX="325.0" layoutY="-16.0" mnemonicParsing="false" onAction="#menuButton" text="Menu" />
+                  <Button fx:id="logout" layoutX="500.0" layoutY="-16.0" mnemonicParsing="false" onAction="#logoutButton" text="Log out" />
+                  <Button fx:id="account" layoutX="380.0" layoutY="-16.0" mnemonicParsing="false" onAction="#accountButton" text="Account " />
+                  <Button fx:id="account1" layoutX="450.0" layoutY="-16.0" mnemonicParsing="false" onAction="#accountButton" text="Cart" />
                </children>
             </Pane>
          </children>
