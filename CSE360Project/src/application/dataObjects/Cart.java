@@ -1,6 +1,7 @@
 package application.dataObjects;
 
 import java.util.ArrayList;
+import java.text.DecimalFormat;
 
 
 public class Cart {
@@ -10,6 +11,8 @@ public class Cart {
     public Double totalPrice;
     public Integer userId;
     public String receipt;
+    
+    DecimalFormat dFmt = new DecimalFormat("0.00");
 
     public Cart() {
     	foods = new ArrayList<>();
@@ -35,8 +38,13 @@ public class Cart {
         
     }
     public void removeFood(foodItem food){
-
+    	
         totalPrice -= food.price;
+        
+        if(totalPrice <= 0.0) {
+        	totalPrice = 0.0;
+        }
+        
         if(quantity.get(foods.indexOf(food)) == 1) {
         	quantity.remove(foods.indexOf(food));
         	foods.remove(food);
@@ -71,7 +79,7 @@ public class Cart {
 	public String toString() {
     	
     	return(
-    			"Cart Contains: " + foods.toString()+ " Price: "+ totalPrice+
+    			"Cart Contains: " + foods.toString()+ " Price: "+ dFmt.format(totalPrice)+
     			" Quantities: " + quantity.toString());
     }
 }
