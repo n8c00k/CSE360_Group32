@@ -338,18 +338,28 @@ public class cart implements Initializable{
  	}
  	private void addQty(foodItem food) throws IOException{	
  		newCart.addFood(food);
+	 	totalprice += food.getPrice();
  		totalPrice.setText("$"+totalprice.toString());	
  	}
  	private void subQty(foodItem food) throws IOException{
- 		if(newCart.quantity.get(newCart.foods.indexOf(food)) == 0){	
+ 		if(newCart.quantity.get(newCart.foods.indexOf(food)) == 1){	
+ 			newCart.quantity.set(newCart.foods.indexOf(food),0);
+ 			totalprice -= food.getPrice();
+ 			totalPrice.setText("$"+totalprice.toString());
+ 		}
+ 		else if(newCart.quantity.get(newCart.foods.indexOf(food)) == 0) {
+ 			
  		}
  		else {
  			
  			newCart.removeFood(food);
+ 			totalprice -= food.getPrice();
  			totalPrice.setText("$"+totalprice.toString());
  		}
 	
  	}
+
+ 	
  	private String calcPrice(foodItem food) throws IOException{
  		return String.format("%.2f", food.getPrice() * newCart.quantity.get(newCart.foods.indexOf(food)));
  	}
