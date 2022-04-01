@@ -14,7 +14,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.menu">
    <children>
-      <ScrollPane layoutY="74.0" prefHeight="329.0" prefWidth="600.0">
+      <ScrollPane layoutY="74.0" prefHeight="326.0" prefWidth="600.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="707.0" prefWidth="600.0">
                <children>
@@ -49,7 +49,7 @@
                   </ImageView>
                   <Button id="menuItemThreeAddQtyButton" fx:id="addItem3" layoutX="473.0" layoutY="318.0" mnemonicParsing="false" onAction="#addItem3" text="Add Item(s)" />
                   <TextField id="menuItemThreeQtyTextField" fx:id="qtyItem3" layoutX="412.0" layoutY="317.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
-                  <ImageView id="menuItemFourImage" fx:id="crepe" fitHeight="80.0" fitWidth="117.0" layoutX="41.0" layoutY="441.0" pickOnBounds="true">
+                  <ImageView id="menuItemFourImage" fx:id="crepe" fitHeight="80.0" fitWidth="117.0" layoutX="41.0" layoutY="434.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
@@ -59,7 +59,7 @@
                   </ImageView>
                   <Button id="menuItemFourAddQtyButton" fx:id="addItem4" layoutX="473.0" layoutY="457.0" mnemonicParsing="false" onAction="#addItem4" text="Add Item(s)" />
                   <TextField id="menuItemFourQtyTextField" fx:id="qtyItem4" layoutX="409.0" layoutY="458.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
-                  <ImageView id="menuItemFiveImage" fx:id="frenchToast" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="577.0" pickOnBounds="true">
+                  <ImageView id="menuItemFiveImage" fx:id="frenchToast" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="559.0" pickOnBounds="true">
                      <effect>
                         <Glow />
                      </effect>
@@ -109,9 +109,34 @@
                      </font></Text>
                   <Label fx:id="desItem1" layoutX="175.0" layoutY="28.0" prefHeight="75.0" prefWidth="190.0" />
                   <Label fx:id="desItem2" layoutX="175.0" layoutY="135.0" prefHeight="75.0" prefWidth="190.0" />
-                  <Label fx:id="desItem3" layoutX="175.0" layoutY="242.0" prefHeight="75.0" prefWidth="190.0" />
-                  <Label fx:id="desItem4" layoutX="175.0" layoutY="349.0" prefHeight="75.0" prefWidth="190.0" />
-                  <Label fx:id="desItem5" layoutX="175.0" layoutY="457.0" prefHeight="75.0" prefWidth="190.0" />
+                  <Label fx:id="desItem3" layoutX="176.0" layoutY="296.0" prefHeight="75.0" prefWidth="190.0" />
+                  <Label fx:id="desItem4" layoutX="175.0" layoutY="439.0" prefHeight="75.0" prefWidth="190.0" />
+                  <Label fx:id="desItem5" layoutX="175.0" layoutY="563.0" prefHeight="75.0" prefWidth="190.0" />
+                  <Text id="AddedToCartOne" layoutX="437.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="AssedToCartTwo" layoutX="437.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="AddedToCartThree" layoutX="437.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="addedToCartFour" layoutX="437.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="addedToCartFive" layoutX="437.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
         </content>
