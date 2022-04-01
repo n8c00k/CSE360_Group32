@@ -68,9 +68,9 @@ public class Cart {
 		 food = foods.get(i).getFoodName();
 		 quan = "" + quantity.get(i);
 		 price = (double) quantity.get(i) * foods.get(i).getPrice();
-		 ret += food + " " + quan + " " + price + "\n";
+		 ret += food + " " + quan + " " + dFmt.format(price) + "\n";
 	}
-	ret += totalPrice;
+	ret += dFmt.format(totalPrice);
 	return ret;
     	
     }
