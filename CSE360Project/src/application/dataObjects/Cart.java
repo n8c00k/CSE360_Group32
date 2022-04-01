@@ -21,16 +21,16 @@ public class Cart {
     	this.userId = x;
     }
 
-    public void addFood(foodItem food){
-    	this.totalPrice += food.price;
+    public void addFood(foodItem food, Integer qty){
+    	this.totalPrice += (food.price * qty);
 
         if( foods.contains(food)) {
-        	Integer newVal = quantity.get(foods.indexOf(food)) +1;
-        	quantity.set(foods.indexOf(food), newVal);
+//        	Integer newVal = quantity.get(foods.indexOf(food)) +1;
+        	this.quantity.set(foods.indexOf(food), qty);
         }
         else {
-        	foods.add(food);
-        	quantity.add(1);
+        	this.foods.add(food);
+        	this.quantity.add(qty);
         }
         
     }

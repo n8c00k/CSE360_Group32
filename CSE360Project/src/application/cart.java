@@ -337,7 +337,7 @@ public class cart implements Initializable{
  		m.changeScene("existingUserScene.fxml");
  	}
  	private void addQty(foodItem food) throws IOException{	
- 		newCart.addFood(food);
+ 		newCart.addFood(food,newCart.quantity.get(newCart.foods.indexOf(food))+1);
 	 	totalprice += food.getPrice();
  		totalPrice.setText("$"+totalprice.toString());	
  	}

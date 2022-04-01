@@ -172,8 +172,8 @@ public class menu implements Initializable {
  			
  		}
  		else{	
- 			newCart.addFood(food);
-        	newCart.quantity.set(newCart.foods.indexOf(food), quant);
+ 			newCart.addFood(food,quant);
+//        	newCart.quantity.set(newCart.foods.indexOf(food), quant);
  	 		totalprice += food.getPrice()*newCart.quantity.get(newCart.foods.indexOf(food));
  	 		qty.setText(null);
  	 		System.out.println(totalprice.toString());
