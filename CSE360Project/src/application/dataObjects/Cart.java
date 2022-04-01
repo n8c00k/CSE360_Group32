@@ -22,7 +22,7 @@ public class Cart {
     }
 
     public void addFood(foodItem food){
-    	totalPrice += food.price;
+    	this.totalPrice += food.price;
 
         if( foods.contains(food)) {
         	Integer newVal = quantity.get(foods.indexOf(food)) +1;
@@ -32,6 +32,7 @@ public class Cart {
         	foods.add(food);
         	quantity.add(1);
         }
+        
     }
     public void removeFood(foodItem food){
 

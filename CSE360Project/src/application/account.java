@@ -23,6 +23,7 @@ public account() {
 	}
 	private Customer user;
 	private Cart newCart;
+	private Double totalprice;
 
 	@FXML
 	private Button menu;
@@ -85,10 +86,11 @@ public account() {
 	
 
 
-	public void initializeUser(User newUser, Cart userCart) {
+	public void initializeUser(User newUser, Cart userCart, Double total) {
 
 		user = (Customer) newUser;
 		newCart = userCart;
+		totalprice = total;
 		nameText.setText(user.getName());
 		emailText.setText(user.getEmail());
 		passwordText.setText(user.getPassword());
@@ -187,12 +189,12 @@ public account() {
  	private void menu() throws IOException{
  		Main m = new Main();
 
- 		m.menuSceneCustomer(user, newCart);
+ 		m.menuSceneCustomer(user, newCart,totalprice);
  	}
  	private void cart() throws IOException{
  		Main m = new Main();
 
- 		m.cartSceneCustomer(user, newCart);
+ 		m.cartSceneCustomer(user, newCart,totalprice);
  	}
 
  	private void hideUpdate() {

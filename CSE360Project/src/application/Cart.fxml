@@ -47,20 +47,20 @@
                               <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="22.110885620117188" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button mnemonicParsing="false" text="+" GridPane.columnIndex="3" />
-                              <Button layoutX="481.0" layoutY="18.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3">
+                              <Button fx:id="addItem1" mnemonicParsing="false" onAction="#addButton1" text="+" GridPane.columnIndex="3" />
+                              <Button fx:id="removeItem1" layoutX="481.0" layoutY="18.0" mnemonicParsing="false" onAction="#subButton1" text="-" GridPane.columnIndex="3">
                                  <GridPane.margin>
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Button>
-                              <Button layoutX="481.0" layoutY="18.0" mnemonicParsing="false" text="+" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <Button layoutX="511.0" layoutY="18.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <Button fx:id="addItem2" layoutX="481.0" layoutY="18.0" mnemonicParsing="false" onAction="#addButton2" text="+" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Button fx:id="removeItem2" layoutX="511.0" layoutY="18.0" mnemonicParsing="false" onAction="#subButton2" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Button>
-                              <Button layoutX="481.0" layoutY="58.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <Button layoutX="511.0" layoutY="58.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <Button fx:id="addItem3" layoutX="481.0" layoutY="58.0" mnemonicParsing="false" onAction="#addButton3" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Button fx:id="removeItem3" layoutX="511.0" layoutY="58.0" mnemonicParsing="false" onAction="#subButton3" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <GridPane.margin>
                                     <Insets left="25.0" />
                                  </GridPane.margin>
@@ -68,16 +68,17 @@
                               <Text fx:id="item1" strokeType="OUTSIDE" strokeWidth="0.0" />
                               <Text fx:id="item2" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
                               <Text fx:id="item3" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="4" />
-                              <Button mnemonicParsing="false" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                              <Button layoutX="419.0" layoutY="57.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                              <Text fx:id="item4" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
+                              <Text fx:id="item5" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="4" />
+                              <Text fx:id="item6" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="5" />
+                              <Button fx:id="addItem4" mnemonicParsing="false" onAction="#addButton4" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <Button fx:id="removeItem4" layoutX="419.0" layoutY="57.0" mnemonicParsing="false" onAction="#subButton4" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <GridPane.margin>
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Button>
-                              <Button layoutX="389.0" layoutY="83.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                              <Button layoutX="419.0" layoutY="83.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                              <Button fx:id="addItem5" layoutX="389.0" layoutY="83.0" mnemonicParsing="false" onAction="#addButton5" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <Button fx:id="removeItem5" layoutX="419.0" layoutY="83.0" mnemonicParsing="false" onAction="#subButton5" text="-" GridPane.columnIndex="3" GridPane.rowIndex="4">
                                  <GridPane.margin>
                                     <Insets left="25.0" />
                                  </GridPane.margin>
@@ -118,8 +119,9 @@
                         <Text layoutX="276.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                         <Button fx:id="checkout" layoutX="415.0" layoutY="261.0" mnemonicParsing="false" text="Checkout " />
                         <Button fx:id="checkout1" layoutX="310.0" layoutY="261.0" mnemonicParsing="false" text="Apply Coupon" />
-                        <Label layoutX="329.0" layoutY="232.0" />
+                        <Label fx:id="totalPrice" layoutX="329.0" layoutY="232.0" prefHeight="18.0" prefWidth="73.0" />
                         <Text layoutX="276.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total " />
+                        <Text fx:id="item51" layoutX="10.0" layoutY="-2.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                      </children>
                   </Pane>
                   <Button fx:id="menu" layoutX="325.0" layoutY="-16.0" mnemonicParsing="false" onAction="#menuButton" text="Menu" />

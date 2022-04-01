@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import application.dataObjects.Cart;
 import application.dataObjects.Customer;
-import application.dataObjects.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -38,33 +37,33 @@ public class Main extends Application {
 		stg.getScene().setRoot(pane);
 	}
 
-	public void menuSceneCustomer(Customer user, Cart userCart) throws IOException{
+	public void menuSceneCustomer(Customer user, Cart userCart, Double total) throws IOException{
 
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("menu.fxml"));
 		Parent pane = loader.load();
 		stg.getScene().setRoot(pane);
 		menu controller = loader.getController();
-		controller.initializeUser(user, userCart);
+		controller.initializeUser(user, userCart, total);
 		
 	}
-	public void accountSceneCustomer(Customer user, Cart userCart) throws IOException{
+	public void accountSceneCustomer(Customer user, Cart userCart, Double total) throws IOException{
 
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("Account.fxml"));
 		Parent pane = loader.load();
 		stg.getScene().setRoot(pane);
 		account controller = loader.getController();
-		controller.initializeUser(user, userCart);
+		controller.initializeUser(user, userCart,total);
 	}
-	public void cartSceneCustomer(Customer user, Cart userCart) throws IOException{
+	public void cartSceneCustomer(Customer user, Cart userCart,Double total) throws IOException{
 
 	FXMLLoader loader = new FXMLLoader();
 	loader.setLocation(getClass().getResource("cart.fxml"));
 	Parent pane = loader.load();
 	stg.getScene().setRoot(pane);
 	cart controller = loader.getController();
-	controller.initializeUser(user, userCart);
+	controller.initializeUser(user, userCart,total);
 }
 
 	public static void main(String[] args) {

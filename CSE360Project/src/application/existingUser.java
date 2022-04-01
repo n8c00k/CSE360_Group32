@@ -6,7 +6,6 @@ import java.util.ResourceBundle;
 
 import SQLite_db.Context;
 import application.dataObjects.Cart;
-import application.dataObjects.Customer;
 import application.dataObjects.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,12 +22,10 @@ public class existingUser implements Initializable{
 	public existingUser() {
 
 	}
-	private User user;
 
 
 	public void initializeUser(User newUser) {
 
-		user = newUser;
 	}
 
 
@@ -64,7 +61,7 @@ public class existingUser implements Initializable{
  		if(con.getCustomer(cusEmail, cusPassword ) != null) {
 
  			Cart userCart = new Cart();
- 			m.menuSceneCustomer(con.getCustomer(cusEmail, cusPassword),userCart);
+ 			m.menuSceneCustomer(con.getCustomer(cusEmail, cusPassword),userCart,userCart.totalPrice);
  		}
  		else {
  			emailError.setText("Invalid Email or Password");

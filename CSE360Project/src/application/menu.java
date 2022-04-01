@@ -7,15 +7,12 @@ import java.util.ResourceBundle;
 import SQLite_db.Context;
 import application.dataObjects.Cart;
 import application.dataObjects.Customer;
-import application.dataObjects.Menu;
-import application.dataObjects.User;
 import application.dataObjects.foodItem;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -26,6 +23,7 @@ public class menu implements Initializable {
 
 	private Customer user;
 	private Cart newCart;
+	private Double totalprice;
 
 	public menu() {
 
@@ -109,11 +107,12 @@ public class menu implements Initializable {
 	
 	
 
-	public void initializeUser(Customer newUser, Cart userCart) {
+	public void initializeUser(Customer newUser, Cart userCart, Double total) {
 
 		setMenu("Breakfast");
 		user = newUser;
 		newCart = userCart;
+		totalprice = newCart.totalPrice;
 	}
 	
 
@@ -168,10 +167,18 @@ public class menu implements Initializable {
  	}
 
  	private void addToCart(foodItem food, TextField qty) throws IOException{
- 		Integer quant = Integer.valueOf(qty.getText());		
- 		newCart.addFood(food);
- 		newCart.quantity.add(quant);
- 		qty.setText(null);
+ 		Integer quant = Integer.valueOf(qty.getText());	
+ 		if(quant == 0) {
+ 			
+ 		}
+ 		else{	
+ 			newCart.addFood(food);
+        	newCart.quantity.set(newCart.foods.indexOf(food), quant);
+ 	 		totalprice += food.getPrice()*newCart.quantity.get(newCart.foods.indexOf(food));
+ 	 		qty.setText(null);
+ 	 		System.out.println(totalprice.toString());
+ 		}
+ 		
  	}
 
  	private void logout() throws IOException{
@@ -183,13 +190,13 @@ public class menu implements Initializable {
  	private void account() throws IOException{
  		Main m = new Main();
 
- 		m.accountSceneCustomer(user,newCart);
+ 		m.accountSceneCustomer(user,newCart,totalprice);
  	}
 
  	private void cart() throws IOException{
  		Main m = new Main();
 
- 		m.cartSceneCustomer(user,newCart);
+ 		m.cartSceneCustomer(user,newCart,totalprice);
  	}
 
 	@Override
