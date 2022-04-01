@@ -11,7 +11,7 @@
       <Button id="backToHomeButton" layoutX="494.0" layoutY="361.0" mnemonicParsing="false" text="Back to home " />
       <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receipt: " />
       <Text layoutX="14.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orders Ahead:" />
-      <Label id="ordersAheadText" layoutX="92.0" layoutY="365.0" prefHeight="17.0" prefWidth="157.0" />
+      <Label id="ordersAheadText" layoutX="96.0" layoutY="365.0" prefHeight="17.0" prefWidth="157.0" />
       <Text layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checkout">
          <font>
             <Font size="14.0" />
