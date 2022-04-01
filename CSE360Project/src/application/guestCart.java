@@ -48,26 +48,26 @@ public class guestCart implements Initializable {
 	private Label totalPrice;
 	
 	@FXML
-	private Button addItem1;
+	private Button gAddItem1;
 	@FXML
-	private Button addItem2;
+	private Button gAddItem2;
 	@FXML
-	private Button addItem3;
+	private Button gAddItem3;
 	@FXML
-	private Button addItem4;
+	private Button gAddItem4;
 	@FXML
-	private Button addItem5;
+	private Button gAddItem5;
 	
 	@FXML
-	private Button removeItem1;
+	private Button gRemoveItem1;
 	@FXML
-	private Button removeItem2;
+	private Button gRemoveItem2;
 	@FXML
-	private Button removeItem3;
+	private Button gRemoveItem3;
 	@FXML
-	private Button removeItem4;
+	private Button gRemoveItem4;
 	@FXML
-	private Button removeItem5;
+	private Button gRemoveItem5;
 	
 	@FXML
 	private Label quantityItem1;
