@@ -40,8 +40,10 @@ public class Context {
             conn = DriverManager.getConnection(url);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            e.printStackTrace();
         } catch (ClassNotFoundException e) {
         	 System.out.println(e.getMessage());
+        	 e.printStackTrace();
 		}
 	}
 
