@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 
 public class cart implements Initializable{
 	public cart() {
@@ -67,56 +68,34 @@ public class cart implements Initializable{
  	public void couponButton(ActionEvent event) throws IOException{
  		applyCoupon();
  	}
-
- 	
- 	public void addButton1() throws IOException{
- 		addQty(newCart.foods.get(0));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void addButton2() throws IOException{
- 		addQty(newCart.foods.get(1));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void addButton3() throws IOException{
- 		addQty(newCart.foods.get(2));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void addButton4() throws IOException{
- 		addQty(newCart.foods.get(3));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void addButton5() throws IOException{
- 		addQty(newCart.foods.get(4));
- 		totalPrice.setText("$"+totalprice);
+ 	public void checkoutButton(ActionEvent event) throws IOException{
+ 		checkout();
  	}
  	
- 	public void subButton1() throws IOException{
- 		subQty(newCart.foods.get(0));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void subButton2() throws IOException{
- 		subQty(newCart.foods.get(1));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void subButton3() throws IOException{
- 		subQty(newCart.foods.get(2));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void subButton4() throws IOException{
- 		subQty(newCart.foods.get(3));
- 		totalPrice.setText("$"+totalprice);
- 	} 	
- 	public void subButton5() throws IOException{
- 		subQty(newCart.foods.get(4));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	
- 	
- 	private void applyCoupon() throws IOException{
- 	
+ 	private void checkout() throws IOException{
+ 		Main m = new Main();
+		if(user.getCard().getCardNumber()== 0) {
+			couponResponse.setTextFill(Color.RED);
+			couponResponse.setText("No card information on file,\nplease go to Account page");
+			System.out.println("fuck lmao");
+		}
+		else {
+			con.addCart(user, newCart);
+			m.checkoutCustomer(user, newCart, totalprice);
+		}
+		
+	}
+	private void applyCoupon() throws IOException{
+ 		Label couponlabel = new Label("$5 off coupon");
+ 		Label qtylabel = new Label("1");
+ 		Label pricelabel = new Label("-5.00");
+ 		cartGrid.addColumn(cartGrid.getColumnCount()+1, couponlabel,  qtylabel , pricelabel);
+ 		totalprice = totalprice -5;
+		
  	}
  	private void setUserCart(){
  		cartGrid.getChildren().clear();
+ 		
  			for(int jj = 0; jj < newCart.foods.size(); jj++) {
  				Label label = new Label();
  				cartGrid.add(label, 0, jj);
