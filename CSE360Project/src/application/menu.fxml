@@ -14,9 +14,9 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.menu">
    <children>
-      <ScrollPane layoutY="74.0" prefHeight="326.0" prefWidth="600.0">
+      <ScrollPane layoutY="74.0" prefHeight="327.0" prefWidth="600.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="688.0" prefWidth="600.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="707.0" prefWidth="600.0">
                <children>
                   <ImageView id="menuItemOneImage" fx:id="waffle" fitHeight="80.0" fitWidth="117.0" layoutX="40.0" layoutY="20.0" pickOnBounds="true">
                      <effect>
@@ -70,20 +70,48 @@
                   <Button id="menuItemFiveAddQtyButton" fx:id="addItem5" layoutX="473.0" layoutY="574.0" mnemonicParsing="false" onAction="#addItem5" text="Add Item(s)" />
                   <TextField id="menuItemFiveQtyTextField" fx:id="qtyItem5" layoutX="409.0" layoutY="575.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
                   <Text layoutX="410.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                  <Text id="itemOnePrice" fx:id="priceItem1" layoutX="442.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
                   <Text layoutX="410.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                  <Text id="itemTwoPrice" fx:id="priceItem2" layoutX="442.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
                   <Text layoutX="410.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                  <Text id="itemThreePrice" fx:id="priceItem3" layoutX="442.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
                   <Text layoutX="409.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                  <Text id="itemFourPrice" fx:id="priceItem4" layoutX="442.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
                   <Text layoutX="409.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                  <Text id="itemFivePrice" fx:id="priceItem5" layoutX="450.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
+                  <Text id="foodOneName" fx:id="nameItem1" layoutX="19.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="159.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="foodTwoName" fx:id="nameItem2" layoutX="14.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="173.13671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="foodThreeName" fx:id="nameItem3" layoutX="15.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="170.826171875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
                   <Text id="foodFiveName" fx:id="nameItem5" layoutX="18.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="165.13671875">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
+                  <Text fx:id="nameItem4" layoutX="28.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="141.13671875">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Text>
                   <Text id="nameItemFive" layoutX="76.0" layoutY="652.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="49.16064453125">
                      <font>
                         <Font size="14.0" />
                      </font></Text>
+                  <Label fx:id="desItem1" layoutX="175.0" layoutY="28.0" prefHeight="75.0" prefWidth="190.0" />
+                  <Label fx:id="desItem2" layoutX="175.0" layoutY="135.0" prefHeight="75.0" prefWidth="190.0" />
+                  <Label fx:id="desItem3" layoutX="176.0" layoutY="296.0" prefHeight="75.0" prefWidth="190.0" />
                   <Label fx:id="desItem4" layoutX="175.0" layoutY="439.0" prefHeight="75.0" prefWidth="190.0" />
+                  <Label fx:id="desItem5" layoutX="175.0" layoutY="563.0" prefHeight="75.0" prefWidth="190.0" />
                   <Text id="AddedToCartOne" layoutX="437.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
                      <font>
                         <Font size="14.0" />
@@ -109,21 +137,6 @@
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="446.0" layoutY="25.0" prefHeight="26.0" prefWidth="109.0" />
-                  <TextField layoutX="446.0" layoutY="147.0" prefHeight="26.0" prefWidth="109.0" />
-                  <TextField layoutX="446.0" layoutY="283.0" prefHeight="26.0" prefWidth="109.0" />
-                  <TextField layoutX="170.0" layoutY="17.0" prefHeight="84.0" prefWidth="160.0" />
-                  <TextField layoutX="170.0" layoutY="150.0" prefHeight="84.0" prefWidth="160.0" />
-                  <TextField layoutX="21.0" layoutY="101.0" prefHeight="26.0" prefWidth="144.0" />
-                  <TextField layoutX="21.0" layoutY="234.0" prefHeight="26.0" prefWidth="144.0" />
-                  <TextField layoutX="21.0" layoutY="367.0" prefHeight="26.0" prefWidth="144.0" />
-                  <TextField layoutX="170.0" layoutY="288.0" prefHeight="84.0" prefWidth="160.0" />
-                  <TextField layoutX="170.0" layoutY="432.0" prefHeight="84.0" prefWidth="160.0" />
-                  <TextField layoutX="446.0" layoutY="426.0" prefHeight="26.0" prefWidth="109.0" />
-                  <TextField layoutX="27.0" layoutY="516.0" prefHeight="26.0" prefWidth="144.0" />
-                  <TextField layoutX="446.0" layoutY="546.0" prefHeight="26.0" prefWidth="109.0" />
-                  <TextField layoutX="170.0" layoutY="557.0" prefHeight="84.0" prefWidth="160.0" />
-                  <TextField layoutX="27.0" layoutY="634.0" prefHeight="26.0" prefWidth="144.0" />
                </children>
             </AnchorPane>
         </content>
