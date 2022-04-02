@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -30,11 +29,12 @@
                               <Font size="8.0" />
                            </font>
                         </Label>
-                        <GridPane gridLinesVisible="true" layoutX="1.0" layoutY="51.0" prefHeight="171.0" prefWidth="421.0" style="-fx-background-color: #808080;">
+                        <GridPane fx:id="cartGrid" gridLinesVisible="true" layoutX="1.0" layoutY="51.0" prefHeight="171.0" prefWidth="421.0" style="-fx-background-color: #808080;">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.0" minWidth="10.0" prefWidth="307.66632080078125" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="0.0" prefWidth="68.33367919921875" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.0" minWidth="10.0" prefWidth="88.11090087890625" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="8.0" prefWidth="82.88909912109375" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="8.0" prefWidth="82.88909912109375" />
                            </columnConstraints>
                            <rowConstraints>
@@ -46,82 +46,17 @@
                               <RowConstraints maxHeight="31.259414672851562" minHeight="10.0" prefHeight="27.024765014648438" vgrow="SOMETIMES" />
                               <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="22.110885620117188" vgrow="SOMETIMES" />
                            </rowConstraints>
-                           <children>
-                              <Button fx:id="addItem1" mnemonicParsing="false" onAction="#addButton1" text="+" GridPane.columnIndex="3" />
-                              <Button fx:id="removeItem1" layoutX="481.0" layoutY="18.0" mnemonicParsing="false" onAction="#subButton1" text="-" GridPane.columnIndex="3">
-                                 <GridPane.margin>
-                                    <Insets left="25.0" />
-                                 </GridPane.margin>
-                              </Button>
-                              <Button fx:id="addItem2" layoutX="481.0" layoutY="18.0" mnemonicParsing="false" onAction="#addButton2" text="+" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <Button fx:id="removeItem2" layoutX="511.0" layoutY="18.0" mnemonicParsing="false" onAction="#subButton2" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                                 <GridPane.margin>
-                                    <Insets left="25.0" />
-                                 </GridPane.margin>
-                              </Button>
-                              <Button fx:id="addItem3" layoutX="481.0" layoutY="58.0" mnemonicParsing="false" onAction="#addButton3" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <Button fx:id="removeItem3" layoutX="511.0" layoutY="58.0" mnemonicParsing="false" onAction="#subButton3" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                                 <GridPane.margin>
-                                    <Insets left="25.0" />
-                                 </GridPane.margin>
-                              </Button>
-                              <Text fx:id="item1" strokeType="OUTSIDE" strokeWidth="0.0" />
-                              <Text fx:id="item2" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
-                              <Text fx:id="item3" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
-                              <Text fx:id="item4" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
-                              <Text fx:id="item5" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="4" />
-                              <Text fx:id="item6" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="5" />
-                              <Button fx:id="addItem4" mnemonicParsing="false" onAction="#addButton4" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                              <Button fx:id="removeItem4" layoutX="419.0" layoutY="57.0" mnemonicParsing="false" onAction="#subButton4" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                                 <GridPane.margin>
-                                    <Insets left="25.0" />
-                                 </GridPane.margin>
-                              </Button>
-                              <Button fx:id="addItem5" layoutX="389.0" layoutY="83.0" mnemonicParsing="false" onAction="#addButton5" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                              <Button fx:id="removeItem5" layoutX="419.0" layoutY="83.0" mnemonicParsing="false" onAction="#subButton5" text="-" GridPane.columnIndex="3" GridPane.rowIndex="4">
-                                 <GridPane.margin>
-                                    <Insets left="25.0" />
-                                 </GridPane.margin>
-                              </Button>
-                              <Button layoutX="389.0" layoutY="109.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                              <Button layoutX="405.0" layoutY="109.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="5">
-                                 <GridPane.margin>
-                                    <Insets left="25.0" />
-                                 </GridPane.margin>
-                              </Button>
-                              <Button layoutX="380.0" layoutY="135.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="26.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-                              <Button layoutX="405.0" layoutY="135.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3" GridPane.rowIndex="6">
-                                 <GridPane.margin>
-                                    <Insets left="25.0" />
-                                 </GridPane.margin>
-                              </Button>
-                              <Label fx:id="quantityItem1" GridPane.columnIndex="1" />
-                              <Label fx:id="quantityItem2" layoutX="286.0" layoutY="13.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label fx:id="quantityItem3" layoutX="286.0" layoutY="36.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label fx:id="quantityItem4" layoutX="286.0" layoutY="61.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label fx:id="quantityItem5" layoutX="286.0" layoutY="87.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label fx:id="quantityItem6" layoutX="286.0" layoutY="113.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <Label layoutX="286.0" layoutY="139.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <Label fx:id="priceItem1" layoutX="286.0" layoutY="36.0" GridPane.columnIndex="2" />
-                              <Label fx:id="priceItem2" layoutX="323.0" layoutY="13.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <Label fx:id="priceItem3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <Label fx:id="priceItem4" layoutX="323.0" layoutY="61.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                              <Label fx:id="priceItem5" layoutX="323.0" layoutY="87.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                              <Label fx:id="priceItem6" layoutX="323.0" layoutY="113.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                              <Label layoutX="323.0" layoutY="139.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-                           </children>
                         </GridPane>
                         <Label layoutX="375.0" layoutY="35.0" prefHeight="17.0" prefWidth="80.0" text="Add/Remove">
                            <font>
                               <Font size="8.0" />
                            </font>
                         </Label>
-                        <Text layoutX="276.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" />
                         <Button fx:id="checkout" layoutX="415.0" layoutY="261.0" mnemonicParsing="false" text="Checkout " />
                         <Button fx:id="checkout1" layoutX="310.0" layoutY="261.0" mnemonicParsing="false" text="Apply Coupon" />
                         <Label fx:id="totalPrice" layoutX="329.0" layoutY="232.0" prefHeight="18.0" prefWidth="73.0" />
                         <Text layoutX="276.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total " />
-                        <Text fx:id="item51" layoutX="10.0" layoutY="-2.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <Label fx:id="couponResponse" layoutX="208.0" layoutY="264.0" prefHeight="24.0" prefWidth="96.0" textAlignment="CENTER" />
                      </children>
                   </Pane>
                   <Button fx:id="menu" layoutX="325.0" layoutY="-16.0" mnemonicParsing="false" onAction="#menuButton" text="Menu" />

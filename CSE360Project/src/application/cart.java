@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.NumberFormat;
 import java.util.ResourceBundle;
 import SQLite_db.Context;
 import application.dataObjects.Cart;
@@ -12,7 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.text.Text;
+import javafx.scene.layout.GridPane;
 
 public class cart implements Initializable{
 	public cart() {
@@ -24,93 +25,14 @@ public class cart implements Initializable{
 
 	@FXML
 	private Button menu;
-
 	@FXML
 	private Button account;
-
 	@FXML
 	private Button logout;
-
 	@FXML
-	private Text item1;
-
-	@FXML
-	private Text item2;
-
-	@FXML
-	private Text item3;
-	@FXML
-	private Text item4;
-	@FXML
-	private Text item5;
-	@FXML
-	private Text item6;
-	@FXML
-	private Button addItem1;
-
-	@FXML
-	private Button removeItem1;
-
-	@FXML
-	private Button addItem2;
-
-	@FXML
-	private Button removeItem2;
-
-	@FXML
-	private Button addItem3;
-
-	@FXML
-	private Button removeItem3;
-	
-	@FXML
-	private Button addItem4;
-
-	@FXML
-	private Button removeItem4;
-	
-	@FXML
-	private Button addItem5;
-
-	@FXML
-	private Button removeItem5;
-
-	@FXML
-	private Label quantityItem1;
-
-	@FXML
-	private Label priceItem1;
-
-	@FXML
-	private Label quantityItem2;
-
-	@FXML
-	private Label priceItem2;
-
-	@FXML
-	private Label quantityItem3;
-
-	@FXML
-	private Label priceItem3;
-	@FXML
-	private Label quantityItem4;
-
-	@FXML
-	private Label priceItem4;
-	@FXML
-	private Label quantityItem5;
-
-	@FXML
-	private Label priceItem5;
-	@FXML
-	private Label quantityItem6;
-
-	@FXML
-	private Label priceItem6;
-
+	private GridPane cartGrid;
 	@FXML
 	private Label totalPrice;
-
 	@FXML
 	private Button checkout;
 	@FXML
@@ -118,15 +40,10 @@ public class cart implements Initializable{
 	@FXML
 	private Label couponResponse;
 	
-	Text[] itemList = new Text[]{item1, item2, item3, item4, item5, item6};
-	Label[] qtyList = new Label[] {quantityItem1, quantityItem2, quantityItem3, quantityItem4, quantityItem5, quantityItem6};
-	Label[] priceList = new Label[] {priceItem1, priceItem2, priceItem3, priceItem4, priceItem5, priceItem6};
-	
-	
 	
 	Context con = new Context();
 	
-
+	NumberFormat cFmt = NumberFormat.getCurrencyInstance();
 
 	public void initializeUser(Customer newUser, Cart cusCart, Double total) {
 
@@ -134,7 +51,8 @@ public class cart implements Initializable{
 		newCart = cusCart;
 		setUserCart();
 		totalprice = total;
-		totalPrice.setText("$"+totalprice);
+		
+		totalPrice.setText(cFmt.format(totalprice));
 
 	}
 	public void menuButton(ActionEvent event) throws IOException{
@@ -153,172 +71,109 @@ public class cart implements Initializable{
  	
  	public void addButton1() throws IOException{
  		addQty(newCart.foods.get(0));
- 		quantityItem1.setText(newCart.quantity.get(0).toString());
- 		priceItem1.setText(calcPrice(newCart.foods.get(0)));
  		totalPrice.setText("$"+totalprice);
  	}
  	public void addButton2() throws IOException{
  		addQty(newCart.foods.get(1));
- 		quantityItem2.setText(newCart.quantity.get(1).toString());
- 		priceItem2.setText(calcPrice(newCart.foods.get(1)));
  		totalPrice.setText("$"+totalprice);
  	}
  	public void addButton3() throws IOException{
  		addQty(newCart.foods.get(2));
- 		quantityItem3.setText(newCart.quantity.get(2).toString());
- 		priceItem3.setText(calcPrice(newCart.foods.get(2)));
  		totalPrice.setText("$"+totalprice);
  	}
  	public void addButton4() throws IOException{
  		addQty(newCart.foods.get(3));
- 		quantityItem4.setText(newCart.quantity.get(3).toString());
- 		priceItem4.setText(calcPrice(newCart.foods.get(3)));
  		totalPrice.setText("$"+totalprice);
  	}
  	public void addButton5() throws IOException{
  		addQty(newCart.foods.get(4));
- 		quantityItem5.setText(newCart.quantity.get(4).toString());
- 		priceItem5.setText(calcPrice(newCart.foods.get(4)));
  		totalPrice.setText("$"+totalprice);
  	}
  	
  	public void subButton1() throws IOException{
  		subQty(newCart.foods.get(0));
- 		quantityItem1.setText(newCart.quantity.get(0).toString());
- 		priceItem1.setText(calcPrice(newCart.foods.get(0)));
  		totalPrice.setText("$"+totalprice);
  	}
  	public void subButton2() throws IOException{
  		subQty(newCart.foods.get(1));
- 		quantityItem2.setText(newCart.quantity.get(1).toString());
- 		priceItem2.setText(calcPrice(newCart.foods.get(1)));
  		totalPrice.setText("$"+totalprice);
  	}
  	public void subButton3() throws IOException{
  		subQty(newCart.foods.get(2));
- 		quantityItem3.setText(newCart.quantity.get(2).toString());
- 		priceItem3.setText(calcPrice(newCart.foods.get(2)));
  		totalPrice.setText("$"+totalprice);
  	}
  	public void subButton4() throws IOException{
  		subQty(newCart.foods.get(3));
- 		quantityItem4.setText(newCart.quantity.get(3).toString());
- 		priceItem4.setText(calcPrice(newCart.foods.get(3)));
  		totalPrice.setText("$"+totalprice);
  	} 	
  	public void subButton5() throws IOException{
  		subQty(newCart.foods.get(4));
- 		quantityItem5.setText(newCart.quantity.get(4).toString());
- 		priceItem5.setText(calcPrice(newCart.foods.get(4)));
  		totalPrice.setText("$"+totalprice);
  	}
  	
  	
  	private void applyCoupon() throws IOException{
- 		if(user.coupons.isEmpty()) {
- 			couponResponse.setText("No Coupons Available!");
- 		}
- 		else if(!item6.getText().isBlank()) {
- 			couponResponse.setText("Only one coupon per order!");
- 		}
- 		else {
- 			user.coupons.remove(0);
- 			item6.setText("$5 off Coupon");
- 			quantityItem6.setText("1");
- 			priceItem6.setText("-5.00");
- 			couponResponse.setText("Coupon Applied!");
- 		}
+ 	
  	}
- 	private void setUserCart() {
- 		Double price1;
- 		Double price2;
- 		Double price3;
- 		Double price4;
- 		Double price5;
+ 	private void setUserCart(){
+ 		cartGrid.getChildren().clear();
+ 			for(int jj = 0; jj < newCart.foods.size(); jj++) {
+ 				Label label = new Label();
+ 				cartGrid.add(label, 0, jj);
+ 				label.setText(newCart.foods.get(jj).getFoodName());
+ 				
+ 			}
+ 			for(int jj = 0; jj < newCart.quantity.size(); jj++) {
+ 				Label label = new Label();
+ 				cartGrid.add(label, 1, jj);
+ 				label.setText(newCart.quantity.get(jj).toString());
+ 				
+ 			}
+ 			for(int jj = 0; jj < newCart.quantity.size(); jj++) {
+ 				Label label = new Label();
+ 				cartGrid.add(label, 2, jj);
+ 				Double value = (newCart.foods.get(jj).getPrice()*newCart.quantity.get(jj));
+ 				label.setText(value.toString());
+ 				
+ 			}
+ 			for(int jj = 0; jj < newCart.quantity.size(); jj++) {
+ 				final Integer innerMi = jj;
+ 				Button plus = new Button();
+ 				cartGrid.add(plus, 3, jj);
+ 				plus.setMaxWidth(Double.MAX_VALUE);
+ 				plus.setText("+");
+ 				plus.setOnAction((event) -> {
+ 					
+ 					try {
+						addQty(newCart.foods.get(innerMi));
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+ 				});
+ 				
+ 			}
+ 			for(int jj = 0; jj < newCart.quantity.size(); jj++) {
+ 				final Integer innerMi = jj;
+ 				Button minus = new Button();
+ 				cartGrid.add(minus, 4, jj);
+ 				minus.setMaxWidth(Double.MAX_VALUE);
+ 				minus.setText("-");
+ 				minus.setOnAction((event) -> {
+ 					
+ 					try {
+						subQty(newCart.foods.get(innerMi));
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+ 				});
+ 				
+ 				
+ 			}
+ 				
+ 			
  		
-
-		if(newCart.foods.isEmpty()){
-		}
-		else if(newCart.foods.size() < 2) {
-			item1.setText(newCart.foods.get(0).getFoodName());
-			quantityItem1.setText(newCart.quantity.get(0).toString());
-			price1 = (newCart.foods.get(0).getPrice() * newCart.quantity.get(0));
-			priceItem1.setText(String.format("%.2f",price1));
-		}
-		else if(newCart.foods.size() < 3) {
-			item1.setText(newCart.foods.get(0).getFoodName());
-			quantityItem1.setText(newCart.quantity.get(0).toString());
-			price1 = (newCart.foods.get(0).getPrice() * newCart.quantity.get(0));
-			priceItem1.setText(String.format("%.2f",price1));
-			
-			item2.setText(newCart.foods.get(1).getFoodName());
-			quantityItem2.setText(newCart.quantity.get(1).toString());
-			price2 = (newCart.foods.get(1).getPrice() * newCart.quantity.get(1));
-			priceItem2.setText(String.format("%.2f",price2));
-		}
-		else if(newCart.foods.size() < 4) {
-			item1.setText(newCart.foods.get(0).getFoodName());
-			quantityItem1.setText(newCart.quantity.get(0).toString());
-			price1 = (newCart.foods.get(0).getPrice() * newCart.quantity.get(0));
-			priceItem1.setText(String.format("%.2f",price1.toString()));
-			
-			item2.setText(newCart.foods.get(1).getFoodName());
-			quantityItem2.setText(newCart.quantity.get(1).toString());
-			price2 = (newCart.foods.get(1).getPrice() * newCart.quantity.get(1));
-			priceItem2.setText(String.format("%.2f",price2));
-			
-			item3.setText(newCart.foods.get(2).getFoodName());
-			quantityItem3.setText(newCart.quantity.get(2).toString());
-			price3 = (newCart.foods.get(2).getPrice() * newCart.quantity.get(2));
-			priceItem3.setText(String.format("%.2f",price3));
-		}
-		else if(newCart.foods.size() < 5) {
-			item1.setText(newCart.foods.get(0).getFoodName());
-			quantityItem1.setText(newCart.quantity.get(0).toString());
-			price1 = (newCart.foods.get(0).getPrice() * newCart.quantity.get(0));
-			priceItem1.setText(String.format("%.2f",price1));
-			
-			item2.setText(newCart.foods.get(1).getFoodName());
-			quantityItem2.setText(newCart.quantity.get(1).toString());
-			price2 = (newCart.foods.get(1).getPrice() * newCart.quantity.get(1));
-			priceItem2.setText(String.format("%.2f",price2));
-			
-			item3.setText(newCart.foods.get(2).getFoodName());
-			quantityItem3.setText(newCart.quantity.get(2).toString());
-			price3 = (newCart.foods.get(2).getPrice() * newCart.quantity.get(2));
-			priceItem3.setText(String.format("%.2f",price3));
-			
-			item4.setText(newCart.foods.get(3).getFoodName());
-			quantityItem4.setText(newCart.quantity.get(3).toString());
-			price4 = (newCart.foods.get(3).getPrice() * newCart.quantity.get(3));
-			priceItem4.setText(String.format("%.2f",price4));
-		}
-		else {
-				item1.setText(newCart.foods.get(0).getFoodName());
-				quantityItem1.setText(newCart.quantity.get(0).toString());
-				price1 = (newCart.foods.get(0).getPrice() * newCart.quantity.get(0));
-				priceItem1.setText(String.format("%.2f",price1));
-				
-				item2.setText(newCart.foods.get(1).getFoodName());
-				quantityItem2.setText(newCart.quantity.get(1).toString());
-				price2 = (newCart.foods.get(1).getPrice() * newCart.quantity.get(1));
-				priceItem2.setText(String.format("%.2f",price2));
-				
-				item3.setText(newCart.foods.get(2).getFoodName());
-				quantityItem3.setText(newCart.quantity.get(2).toString());
-				price3 = (newCart.foods.get(2).getPrice() * newCart.quantity.get(2));
-				priceItem3.setText(String.format("%.2f",price3));
-				
-				item4.setText(newCart.foods.get(3).getFoodName());
-				quantityItem4.setText(newCart.quantity.get(3).toString());
-				price4 = (newCart.foods.get(3).getPrice() * newCart.quantity.get(3));
-				priceItem4.setText(String.format("%.2f",price4));
-				
-				item5.setText(newCart.foods.get(4).getFoodName());
-				quantityItem5.setText(newCart.quantity.get(4).toString());
-				price5 = (newCart.foods.get(4).getPrice() * newCart.quantity.get(4));
-				priceItem5.setText(String.format("%.2f",price5));
-		}
  	}
 
  	private void menu() throws IOException{
@@ -339,13 +194,15 @@ public class cart implements Initializable{
  	private void addQty(foodItem food) throws IOException{	
  		newCart.addFood(food,newCart.quantity.get(newCart.foods.indexOf(food))+1);
 	 	totalprice += food.getPrice();
- 		totalPrice.setText("$"+totalprice.toString());	
+	 	totalPrice.setText(cFmt.format(totalprice));	
+ 		setUserCart();
  	}
  	private void subQty(foodItem food) throws IOException{
  		if(newCart.quantity.get(newCart.foods.indexOf(food)) == 1){	
  			newCart.quantity.set(newCart.foods.indexOf(food),0);
  			totalprice -= food.getPrice();
- 			totalPrice.setText("$"+totalprice.toString());
+ 			totalPrice.setText(cFmt.format(totalprice));
+ 			setUserCart();
  		}
  		else if(newCart.quantity.get(newCart.foods.indexOf(food)) == 0) {
  			
@@ -354,14 +211,10 @@ public class cart implements Initializable{
  			
  			newCart.removeFood(food);
  			totalprice -= food.getPrice();
- 			totalPrice.setText("$"+totalprice.toString());
+ 			totalPrice.setText(cFmt.format(totalprice));
+ 			setUserCart();
  		}
 	
- 	}
-
- 	
- 	private String calcPrice(foodItem food) throws IOException{
- 		return String.format("%.2f", food.getPrice() * newCart.quantity.get(newCart.foods.indexOf(food)));
  	}
 
 
