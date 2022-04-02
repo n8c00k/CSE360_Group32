@@ -26,7 +26,7 @@
                      </image>
                   </ImageView>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-                  <Button id="SaveItemOneButton" fx:id="saveItem1" layoutX="473.0" layoutY="48.0" mnemonicParsing="false" text="Save Item" />
+                  <Button id="SaveItemOneButton" fx:id="saveItem1" layoutX="473.0" layoutY="48.0" mnemonicParsing="false" onAction="#saveItem1Button" text="Save Item" />
                   <ImageView id="menuItemTwoImage" fx:id="strawberryPan" fitHeight="80.0" fitWidth="117.0" layoutX="43.0" layoutY="151.0" pickOnBounds="true">
                      <effect>
                         <Glow />
@@ -35,7 +35,7 @@
                         <Image url="@../Food%20Photos/Strawberry%20Banana%20Pancakes.jpg" />
                      </image>
                   </ImageView>
-                  <Button id="SaveItemTwoButton" fx:id="saveItem2" layoutX="475.0" layoutY="179.0" mnemonicParsing="false" text="Save Item" />
+                  <Button id="SaveItemTwoButton" fx:id="saveItem2" layoutX="475.0" layoutY="179.0" mnemonicParsing="false" onAction="#saveItem2Button" text="Save Item" />
                   <ImageView id="menuItemThreeImage" fx:id="chocolatePan" fitHeight="80.0" fitWidth="117.0" layoutX="40.0" layoutY="285.0" pickOnBounds="true">
                      <effect>
                         <Glow />
@@ -44,7 +44,7 @@
                         <Image url="@../Food%20Photos/Double%20Chocolate%20Chip%20Pancakes.jpg" />
                      </image>
                   </ImageView>
-                  <Button id="SaveItemThreeButton" fx:id="addItem3" layoutX="473.0" layoutY="313.0" mnemonicParsing="false" text="Save Item" />
+                  <Button id="SaveItemThreeButton" fx:id="addItem3" layoutX="473.0" layoutY="313.0" mnemonicParsing="false" onAction="#saveItem3Button" text="Save Item" />
                   <ImageView id="menuItemFourImage" fx:id="crepe" fitHeight="80.0" fitWidth="117.0" layoutX="40.0" layoutY="432.0" pickOnBounds="true">
                      <effect>
                         <Glow />
@@ -67,22 +67,22 @@
                   <Text layoutX="412.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
                   <TextField fx:id="priceItem2" layoutX="450.0" layoutY="152.0" prefHeight="25.0" prefWidth="102.0" />
                   <TextField fx:id="priceItem3" layoutX="450.0" layoutY="286.0" prefHeight="25.0" prefWidth="102.0" />
-                  <Button id="SaveItemFourButton" fx:id="saveItem4" layoutX="473.0" layoutY="455.0" mnemonicParsing="false" text="Save Item" />
+                  <Button id="SaveItemFourButton" fx:id="saveItem4" layoutX="473.0" layoutY="455.0" mnemonicParsing="false" onAction="#saveItem4Button" text="Save Item" />
                   <Text layoutX="412.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
                   <TextField fx:id="priceItem4" layoutX="453.0" layoutY="428.0" prefHeight="25.0" prefWidth="102.0" />
-                  <Button id="SaveItemFiveButton" fx:id="saveItem5" layoutX="473.0" layoutY="610.0" mnemonicParsing="false" text="Save Item" />
+                  <Button id="SaveItemFiveButton" fx:id="saveItem5" layoutX="473.0" layoutY="610.0" mnemonicParsing="false" onAction="#saveItem5Button" text="Save Item" />
                   <Text layoutX="412.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
                   <TextField fx:id="priceItem5" layoutX="453.0" layoutY="583.0" prefHeight="25.0" prefWidth="102.0" />
-                  <TextField layoutX="175.0" layoutY="22.0" prefHeight="78.0" prefWidth="191.0" />
-                  <TextField layoutX="19.0" layoutY="100.0" prefHeight="25.0" prefWidth="150.0" />
-                  <TextField layoutX="175.0" layoutY="152.0" prefHeight="78.0" prefWidth="192.0" />
+                  <TextField fx:id="desItem1" alignment="TOP_LEFT" layoutX="175.0" layoutY="22.0" prefHeight="78.0" prefWidth="191.0" />
+                  <TextField fx:id="nameItem1" layoutX="19.0" layoutY="100.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField fx:id="desItem2" alignment="TOP_LEFT" layoutX="175.0" layoutY="152.0" prefHeight="78.0" prefWidth="192.0" />
                   <TextField fx:id="nameItem2" layoutX="19.0" layoutY="227.0" prefHeight="25.0" prefWidth="150.0" />
-                  <TextField layoutX="175.0" layoutY="286.0" prefHeight="78.0" prefWidth="192.0" />
-                  <TextField layoutX="12.0" layoutY="366.0" prefHeight="25.0" prefWidth="154.0" />
-                  <TextField layoutX="175.0" layoutY="428.0" prefHeight="78.0" prefWidth="192.0" />
-                  <TextField layoutX="175.0" layoutY="583.0" prefHeight="78.0" prefWidth="192.0" />
-                  <TextField layoutX="17.0" layoutY="512.0" prefHeight="25.0" prefWidth="154.0" />
-                  <TextField layoutX="24.0" layoutY="663.0" prefHeight="25.0" prefWidth="154.0" />
+                  <TextField fx:id="desItem3" alignment="TOP_LEFT" layoutX="175.0" layoutY="286.0" prefHeight="78.0" prefWidth="192.0" />
+                  <TextField fx:id="nameItem3" layoutX="12.0" layoutY="366.0" prefHeight="25.0" prefWidth="154.0" />
+                  <TextField fx:id="desItem4" alignment="TOP_LEFT" layoutX="175.0" layoutY="428.0" prefHeight="78.0" prefWidth="192.0" />
+                  <TextField fx:id="desItem5" alignment="TOP_LEFT" layoutX="175.0" layoutY="583.0" prefHeight="78.0" prefWidth="192.0" />
+                  <TextField fx:id="nameItem4" layoutX="17.0" layoutY="512.0" prefHeight="25.0" prefWidth="154.0" />
+                  <TextField fx:id="nameItem5" layoutX="24.0" layoutY="663.0" prefHeight="25.0" prefWidth="154.0" />
                   <Text layoutX="249.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredients " />
                </children>
             </AnchorPane>
