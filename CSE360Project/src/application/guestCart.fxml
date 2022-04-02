@@ -47,7 +47,7 @@
                               <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="22.110885620117188" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Button mnemonicParsing="false" text="+" GridPane.columnIndex="3" />
+                              <Button fx:id="qAddItem1" mnemonicParsing="false" text="+" GridPane.columnIndex="3" />
                               <Button layoutX="481.0" layoutY="18.0" mnemonicParsing="false" text="-" GridPane.columnIndex="3">
                                  <GridPane.margin>
                                     <Insets left="25.0" />
