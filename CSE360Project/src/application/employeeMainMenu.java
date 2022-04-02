@@ -84,7 +84,10 @@ public class employeeMainMenu implements Initializable {
 	
 	
 	public void couponsButton(ActionEvent event) throws IOException{
-		
+		coupons();
+	}
+	public void logoutButton(ActionEvent event) throws IOException{
+		logout();
 	}
 	public void saveItem1Button(ActionEvent event) throws IOException{
  		saveItem(con.getMenu("Breakfast").foods.get(5),nameItem1,desItem1,priceItem1);
@@ -138,6 +141,11 @@ public class employeeMainMenu implements Initializable {
 
  		m.changeScene("existingUserScene.fxml");
  	}
+	private void coupons() throws IOException{
+		Main m = new Main();
+
+// 		m.changeScene("employeeCoupon.fxml");
+	}
 	
 	
 	@Override
