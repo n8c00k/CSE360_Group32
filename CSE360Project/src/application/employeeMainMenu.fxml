@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.menu">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.employeeMainMenu">
    <children>
       <ScrollPane layoutY="74.0" prefHeight="432.0" prefWidth="600.0">
         <content>
@@ -62,26 +62,21 @@
                      </image>
                   </ImageView>
                   <Text layoutX="412.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <TextField id="priceOneText" fx:id="priceItem1" layoutX="450.0" layoutY="19.0" prefHeight="25.0" prefWidth="102.0" />
+                  <TextField fx:id="priceItem1" layoutX="450.0" layoutY="19.0" prefHeight="25.0" prefWidth="102.0" />
                   <Text layoutX="412.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
                   <Text layoutX="412.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <Text id="foodTwoName" fx:id="nameItem2" layoutX="14.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="173.13671875">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Text>
-                  <TextField id="priceTwoText" fx:id="priceItem2" layoutX="450.0" layoutY="152.0" prefHeight="25.0" prefWidth="102.0" />
-                  <TextField id="priceThreeText" fx:id="priceItem3" layoutX="450.0" layoutY="286.0" prefHeight="25.0" prefWidth="102.0" />
+                  <TextField fx:id="priceItem2" layoutX="450.0" layoutY="152.0" prefHeight="25.0" prefWidth="102.0" />
+                  <TextField fx:id="priceItem3" layoutX="450.0" layoutY="286.0" prefHeight="25.0" prefWidth="102.0" />
                   <Button id="SaveItemFourButton" fx:id="saveItem4" layoutX="473.0" layoutY="455.0" mnemonicParsing="false" text="Save Item" />
                   <Text layoutX="412.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <TextField id="priceFoutText" fx:id="priceItem4" layoutX="453.0" layoutY="428.0" prefHeight="25.0" prefWidth="102.0" />
-                  <Button id="SaveItemFiveButton" fx:id="saveItem5" layoutX="473.0" layoutY="610.0" mnemonicParsing="false" onAction="#addItem3" text="Save Item" />
+                  <TextField fx:id="priceItem4" layoutX="453.0" layoutY="428.0" prefHeight="25.0" prefWidth="102.0" />
+                  <Button id="SaveItemFiveButton" fx:id="saveItem5" layoutX="473.0" layoutY="610.0" mnemonicParsing="false" text="Save Item" />
                   <Text layoutX="412.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
-                  <TextField id="priceFiveText" fx:id="priceItem5" layoutX="453.0" layoutY="583.0" prefHeight="25.0" prefWidth="102.0" />
+                  <TextField fx:id="priceItem5" layoutX="453.0" layoutY="583.0" prefHeight="25.0" prefWidth="102.0" />
                   <TextField layoutX="175.0" layoutY="22.0" prefHeight="78.0" prefWidth="191.0" />
                   <TextField layoutX="19.0" layoutY="100.0" prefHeight="25.0" prefWidth="150.0" />
                   <TextField layoutX="175.0" layoutY="152.0" prefHeight="78.0" prefWidth="192.0" />
-                  <TextField layoutX="19.0" layoutY="227.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField fx:id="nameItem2" layoutX="19.0" layoutY="227.0" prefHeight="25.0" prefWidth="150.0" />
                   <TextField layoutX="175.0" layoutY="286.0" prefHeight="78.0" prefWidth="192.0" />
                   <TextField layoutX="12.0" layoutY="366.0" prefHeight="25.0" prefWidth="154.0" />
                   <TextField layoutX="175.0" layoutY="428.0" prefHeight="78.0" prefWidth="192.0" />
@@ -98,7 +93,7 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <Button id="CouponsButton" fx:id="account" layoutX="430.0" layoutY="8.0" mnemonicParsing="false" onAction="#accountButton" text="Coupons" />
-      <Button id="logOutButton" fx:id="logout" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#logoutButton" text="Log Out" />
+      <Button id="CouponsButton" layoutX="430.0" layoutY="8.0" mnemonicParsing="false" text="Coupon" />
+      <Button id="logOutButton" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" text="Log Out" />
    </children>
 </Pane>
