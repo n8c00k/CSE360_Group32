@@ -71,9 +71,6 @@ public class existingUser implements Initializable{
 
  	}
 
-
-
-
  	public void createAccount(ActionEvent event) throws IOException{
  		createNew();
  	}
