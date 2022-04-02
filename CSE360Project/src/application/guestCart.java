@@ -53,50 +53,6 @@ Context con = new Context();
  		menu();
  	}
  	
-
- 	
- 	public void addButton1() throws IOException{
- 		addQty(newCart.foods.get(0));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void addButton2() throws IOException{
- 		addQty(newCart.foods.get(1));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void addButton3() throws IOException{
- 		addQty(newCart.foods.get(2));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void addButton4() throws IOException{
- 		addQty(newCart.foods.get(3));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void addButton5() throws IOException{
- 		addQty(newCart.foods.get(4));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	
- 	public void subButton1() throws IOException{
- 		subQty(newCart.foods.get(0));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void subButton2() throws IOException{
- 		subQty(newCart.foods.get(1));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void subButton3() throws IOException{
- 		subQty(newCart.foods.get(2));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	public void subButton4() throws IOException{
- 		subQty(newCart.foods.get(3));
- 		totalPrice.setText("$"+totalprice);
- 	} 	
- 	public void subButton5() throws IOException{
- 		subQty(newCart.foods.get(4));
- 		totalPrice.setText("$"+totalprice);
- 	}
- 	
  	
  	private void setUserCart(){
  		cartGrid.getChildren().clear();
