@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import application.dataObjects.Cart;
 import application.dataObjects.Customer;
+import application.dataObjects.Manager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -71,8 +72,17 @@ public class Main extends Application {
 	loader.setLocation(getClass().getResource("Checkout.fxml"));
 	Parent pane = loader.load();
 	stg.getScene().setRoot(pane);
-	cart controller = loader.getController();
-	controller.initializeUser(user, userCart, userCart.totalPrice);
+	Checkout controller = loader.getController();
+	controller.initializeUser(user, userCart);
+}
+	public void employeeMain(Manager manager) throws IOException{
+
+	FXMLLoader loader = new FXMLLoader();
+	loader.setLocation(getClass().getResource("employeeMainMenu.fxml"));
+	Parent pane = loader.load();
+	stg.getScene().setRoot(pane);
+	employeeMainMenu controller = loader.getController();
+	controller.initializeUser(manager);
 }
 
 	public static void main(String[] args) {
