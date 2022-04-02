@@ -10,6 +10,7 @@
  * Requesting object(s) that are not in the database will return Null or an empty ArrayList.
  * 
  * TODO final testing, major issues should be gone
+ * TODO add food time/order time to database
  */
 
 package SQLite_db;
@@ -198,15 +199,15 @@ public class Context {
 			if(food.next() == false) {
 				//food does not exist add it to database
 				//add new food item to database
-				String insertStmt = "INSERT INTO Food_item (Dish_Name,Price,Ingreadents,Menu_ID) VALUES ('"+f.getFoodName()+"',"+f.getPrice()+",'"+f.getIngredients()+"',"+m.getUserId()+");";
+				String insertStmt = "INSERT INTO Food_item (Dish_Name,Price,Ingreadents,Cook_time,Menu_ID) VALUES ('"+f.getFoodName()+"',"+f.getPrice()+",'"+f.getIngredients()+"',"+f.getMinToCom()+","+m.getUserId()+");";
 				setData(insertStmt);
 				ResultSet NF = getData("SELECT ID FROM Food_Item WHERE Dish_Name = '" + f.getFoodName() + "';");
 				NF.next();
 				f.setUserId(NF.getInt("ID"));
 			} else {
 				//update it
-				String updateStmt = "UPDATE Food_Item SET Dish_Name = '"+f.getFoodName()+"' , Price = " + f.getPrice() + " , Ingreadents = '" + f.getIngredients()
-									+ "' WHERE ID = " + f.getUserId() + ";";
+				String updateStmt = "UPDATE Food_Item SET Dish_Name = '"+f.getFoodName()+"' , Price = " + f.getPrice() + " , Ingreadents = '" + f.getIngredients() + "', Cook_Time = " + f.getMinToCom()
+									+ " WHERE ID = " + f.getUserId() + ";";
 				setData(updateStmt);
 			}
 		} catch (SQLException e) {
@@ -320,7 +321,7 @@ public class Context {
 			String foodStmt = "SELECT * FROM Food_Item WHERE Menu_ID = " + menuID + ";";
 			ResultSet foods = getData(foodStmt);
 			while(foods.next()) {
-				foodItem f = new foodItem(foods.getString("Dish_Name"), foods.getString("Ingreadents"), foods.getDouble("Price"), 15);
+				foodItem f = new foodItem(foods.getString("Dish_Name"), foods.getString("Ingreadents"), foods.getDouble("Price"), foods.getInt("Cook_Time"));
 				f.setUserId(foods.getInt("ID"));
 				menu.addFoodItem(f);
 			}
@@ -342,7 +343,7 @@ public class Context {
 				return null;
 			}
 			//convert to foodItem
-			f = new foodItem(foods.getString("Dish_Name"),foods.getString("Ingreadents"), foods.getDouble("Price"), 15);
+			f = new foodItem(foods.getString("Dish_Name"),foods.getString("Ingreadents"), foods.getDouble("Price"), foods.getInt("Cook_Time"));
 			f.setUserId(foods.getInt("ID"));
 		} catch (SQLException e) {//add in data
 			System.err.println("Error in getFoodItem");
