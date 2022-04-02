@@ -15,7 +15,7 @@
       <TextField id="newUserLoginFirstNameText" fx:id="firstName" layoutX="88.0" layoutY="64.0" promptText="First Name" />
       <TextField id="newUserLoginLastNameText" fx:id="lastName" layoutX="88.0" layoutY="111.0" promptText="Last Name" />
       <PasswordField id="newUserLoginFirstPasswordText" fx:id="password" layoutX="88.0" layoutY="210.0" promptText="Password" />
-      <PasswordField id="newUserLoginSecondPasswordText" fx:id="confirmPassword" layoutX="87.0" layoutY="257.0" promptText="Password" />
+      <PasswordField id="newUserLoginSecondPasswordText" fx:id="confirmPassword" layoutX="87.0" layoutY="257.0" promptText="Confirm Password" />
       <TextField id="newUserLoginEmailText" fx:id="email" layoutX="88.0" layoutY="161.0" promptText="Email" />
       <Button id="newUserCreateAccountButton" fx:id="createAccount" layoutX="84.0" layoutY="298.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="27.0" prefWidth="156.0" text="Create Account" />
       <Button id="backToMainLogin" fx:id="back" layoutX="84.0" layoutY="332.0" mnemonicParsing="false" onAction="#backButton" prefHeight="27.0" prefWidth="156.0" text="Back" />
