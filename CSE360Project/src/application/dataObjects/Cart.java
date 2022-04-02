@@ -1,7 +1,6 @@
 package application.dataObjects;
 
 import java.util.ArrayList;
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 
@@ -13,7 +12,7 @@ public class Cart {
     public Integer userId;
     public String receipt;
     
-    DecimalFormat dFmt = new DecimalFormat("0.00");
+    NumberFormat cFmt = NumberFormat.getCurrencyInstance();
 
     public Cart() {
     	foods = new ArrayList<>();
@@ -69,9 +68,9 @@ public class Cart {
 		 food = foods.get(i).getFoodName();
 		 quan = "" + quantity.get(i);
 		 price = (double) quantity.get(i) * foods.get(i).getPrice();
-		 ret += food + " " + quan + " " + dFmt.format(price) + "\n";
+		 ret += food + " " + quan + " " + cFmt.format(price) + "\n";
 	}
-	ret += dFmt.format(totalPrice);
+	ret += cFmt.format(totalPrice);
 	return ret;
     	
     }
@@ -80,7 +79,7 @@ public class Cart {
 	public String toString() {
     	
     	return(
-    			"Cart Contains: " + foods.toString()+ " Price: "+ dFmt.format(totalPrice)+
+    			"Cart Contains: " + foods.toString()+ " Price: "+ cFmt.format(totalPrice)+
     			" Quantities: " + quantity.toString());
     }
 }

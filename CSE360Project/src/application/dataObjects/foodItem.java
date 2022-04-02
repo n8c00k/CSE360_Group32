@@ -1,5 +1,5 @@
 package application.dataObjects;
-
+import java.text.NumberFormat;
 
 public class foodItem {
 
@@ -8,6 +8,8 @@ public class foodItem {
     public Double price;
     public Integer userId;
     public Integer minToComplete;
+    
+    NumberFormat cFmt = NumberFormat.getCurrencyInstance();
 
     public foodItem(String foodName, String ingredients, Double price, Integer minToComplete) {
 		this.foodName = foodName;
@@ -65,7 +67,7 @@ public class foodItem {
     
 	@Override
 	public String toString() {
-		return foodName +  " $" + price + " ";
+		return foodName +  cFmt.format(price) + " ";
 	}
 
 }
