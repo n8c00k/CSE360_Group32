@@ -94,24 +94,29 @@ public account() {
 		nameText.setText(user.getName());
 		emailText.setText(user.getEmail());
 		passwordText.setText(user.getPassword());
-		couponTextInput(user);
-		pastOrdersTextInput(user);
-		if(user.card.getCardNumber() == null) {
-			ccNumText.setText("No card on file.");
-		}
-		else {
-			ccNumText.setText(user.card.getCardNumber().toString());
-		}
-		if(user.card.getCcv() == null) {
-		}
-		else {
-			ccNumText.setText(user.card.getCcv().toString());
-		}
-		if(user.card.getExpDate() == null) {
-		}
-		else {
-			ccNumText.setText(user.card.getExpDate().toString());
-		}
+		couponText.setText(couponTextInput(user)); 
+		orderText.setText(pastOrdersTextInput(user)); 
+		ccNumText.setText(con.getPaymentInfo(user).getCardNumber().toString());
+		ccvText.setText(con.getPaymentInfo(user).getCcv().toString());
+		expdateText.setText(con.getPaymentInfo(user).getExpDate().toString());
+//		if(user.card.getCardNumber() == 0) {
+//			ccNumText.setText("No card on file.");
+//		}
+//		else {
+//			ccNumText.setText(user.card.getCardNumber().toString());
+//		}
+//		if(user.card.getCcv() == 0) {
+//			ccvText.setText("No card on file.");
+//		}
+//		else {
+//			ccvText.setText(user.card.getCcv().toString());
+//		}
+//		if(user.card.getExpDate() == 0) {
+//			expdateText.setText("No card on file.");
+//		}
+//		else {
+//			expdateText.setText(user.card.getExpDate().toString());
+//		}
 	}
 	Context con = new Context();
 	
@@ -145,38 +150,28 @@ public account() {
  	}
  	public String pastOrdersTextInput(Customer user) {
  		String ret;
- 		String receipt1;
- 		String receipt2;
- 		String receipt3;
+ 		String[] receipt = new String[3];
+ 		
  		if (con.getCarts(user).size() < 1) {
- 			ret = "No past Orders.";
- 		}
- 		else if(con.getCarts(user).size() < 2){
- 			receipt1 = con.getCarts(user).get(con.getCarts(user).size()).receipt();
- 			ret = receipt1;
- 		}
- 		else if(con.getCarts(user).size() < 3) {
- 			receipt1 = con.getCarts(user).get(con.getCarts(user).size()).receipt();	
- 			receipt2 = con.getCarts(user).get(con.getCarts(user).size()-1).receipt();
- 			ret = receipt1 +"\n"+receipt2;
+ 			return ret = "No past Orders.";
  		}
  		else {
- 			receipt1 = con.getCarts(user).get(con.getCarts(user).size()).receipt();	
- 			receipt2 = con.getCarts(user).get(con.getCarts(user).size()-1).receipt();
- 			receipt3 = con.getCarts(user).get(con.getCarts(user).size()-2).receipt();
- 			ret = receipt1 +"\n"+receipt2 +"\n"+receipt3;
+ 			for(int ii = 0; ii < 3; ii++) {
+ 				receipt[ii] = (con.getCarts(user).get(ii).receipt()+"\n");
+ 			}
  		}
  		
- 		return ret;
+ 		return receipt.toString();
  	}
  	
  	private void updateUser(Customer user) throws IOException{
  		user.setName(nameText.getText());
  		user.setEmail(emailText.getText());
  		user.setPassword(passwordText.getText());
- 		user.card.setCardNumber(Integer.valueOf(ccNumText.getText()));
- 		user.card.setCardNumber(Integer.valueOf(ccNumText.getText()));
- 		user.card.setExpDate(Integer.valueOf(ccvText.getText()));
+ 		user.getCard().setCardNumber(Integer.valueOf(ccNumText.getText()));
+ 		user.getCard().setCcv(Integer.valueOf(ccvText.getText()));
+ 		user.getCard().setExpDate(Integer.valueOf(expdateText.getText()));
+ 		System.out.println(con.getPaymentInfo(user).getCcv());
  		con.setPaymentInfo(user);
  		
  	}

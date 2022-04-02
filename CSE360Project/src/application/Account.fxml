@@ -27,9 +27,9 @@
             <TextField fx:id="emailText" layoutX="79.0" layoutY="40.0" prefHeight="25.0" prefWidth="149.0" />
             <TextField fx:id="passwordText" layoutX="79.0" layoutY="67.0" prefHeight="25.0" prefWidth="149.0" />
             <TextField fx:id="ccNumText" layoutX="79.0" layoutY="96.0" prefHeight="25.0" prefWidth="149.0" />
-            <TextField fx:id="expdateText" layoutX="79.0" layoutY="126.0" prefHeight="25.0" prefWidth="149.0" />
+            <TextField fx:id="ccvText" layoutX="79.0" layoutY="126.0" prefHeight="25.0" prefWidth="149.0" />
+            <TextField fx:id="expdateText" layoutX="79.0" layoutY="158.0" prefHeight="25.0" prefWidth="149.0" />
             <Button fx:id="update" layoutX="88.0" layoutY="214.0" mnemonicParsing="false" onAction="#updateUserInformation" text="Update" />
-            <TextField fx:id="expdateText1" layoutX="79.0" layoutY="158.0" prefHeight="25.0" prefWidth="149.0" />
             <Label fx:id="expdateLabel1" layoutX="15.0" layoutY="162.0" text="Exp Date:" />
          </children>
       </AnchorPane>
@@ -37,14 +37,14 @@
          <children>
             <Label fx:id="couponLabel" layoutX="14.0" layoutY="25.0" prefHeight="31.0" prefWidth="224.0" text="Available Coupons: " textAlignment="CENTER" />
             <Label fx:id="couponText" layoutX="75.0" layoutY="83.0" />
-            <Label fx:id="couponLabel1" layoutX="20.0" layoutY="76.0" prefHeight="31.0" prefWidth="224.0" text="\%key.unspecified" textAlignment="CENTER" />
+            <Label fx:id="couponLabel1" layoutX="20.0" layoutY="76.0" prefHeight="31.0" prefWidth="224.0" textAlignment="CENTER" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="orderPane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;" visible="false">
          <children>
             <Label fx:id="orderLabel" layoutX="14.0" layoutY="6.0" text="Past Orders: " />
             <Label fx:id="orderText" layoutX="69.0" layoutY="45.0" />
-            <Label fx:id="orderLabel1" layoutX="69.0" layoutY="54.0" text="\%key.unspecified" />
+            <Label fx:id="orderLabel1" layoutX="69.0" layoutY="54.0" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="contactPane" layoutX="241.0" layoutY="62.0" prefHeight="200.0" prefWidth="234.0" style="-fx-background-color: #808080;">

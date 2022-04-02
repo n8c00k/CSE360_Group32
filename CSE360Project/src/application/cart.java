@@ -77,11 +77,14 @@ public class cart implements Initializable{
 		if(user.getCard().getCardNumber()== 0) {
 			couponResponse.setTextFill(Color.RED);
 			couponResponse.setText("No card information on file,\nplease go to Account page");
-			System.out.println("fuck lmao");
+			
 		}
 		else {
 			con.addCart(user, newCart);
-			m.checkoutCustomer(user, newCart, totalprice);
+			newCart.foods.clear();
+			newCart.quantity.clear();
+			newCart.totalPrice = 0.00;
+			m.checkoutCustomer(user, newCart);
 		}
 		
 	}

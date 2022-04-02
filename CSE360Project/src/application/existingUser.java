@@ -68,22 +68,7 @@ public class existingUser implements Initializable{
  		}
 
  	}
-// 	private void checkLogin() throws IOException{
-// 		Main m = new Main();
-// 		String cusEmail = email.getText().toString();
-//		String cusPassword = password.getText().toString();
-//
-// 		//if database contains email.getText().toString()
-// 		if(cusEmail.equals(john.getEmail()) && cusPassword.equals(john.getPassword())) {
-//
-// 			System.out.println("logged in successfully");
-// 			m.logInSceneCustomer(john);
-// 		}
-// 		else {
-// 			emailError.setText("Invalid Email or Password");
-// 		}
-//
-// 	}
+
 
 
 
