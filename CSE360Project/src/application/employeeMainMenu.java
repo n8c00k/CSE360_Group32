@@ -3,7 +3,7 @@ package application;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+import application.dataObjects.Manager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,7 +12,17 @@ import javafx.scene.control.TextField;
 
 
 public class employeeMainMenu implements Initializable {
+	
 	public employeeMainMenu() {
+		
+	}
+	
+	
+	private Manager user;
+	
+	public void initializeUser(Manager newUser) {
+
+		user = newUser;
 		
 	}
 	
