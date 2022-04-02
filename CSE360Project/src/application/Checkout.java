@@ -33,7 +33,7 @@ public class Checkout implements Initializable {
 	}
 	
 	public void showReceipt() {
-		
+		//receipt.setText()
 	}
 	
 	public void ordersAhead() {

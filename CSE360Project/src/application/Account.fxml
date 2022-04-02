@@ -22,7 +22,7 @@
             <Label fx:id="emailLabel" layoutX="22.0" layoutY="44.0" text="E-mail:" />
             <Label fx:id="ccNumLabel" layoutX="15.0" layoutY="100.0" text="CC# :" />
             <Label fx:id="passwordLabel" layoutX="16.0" layoutY="71.0" prefHeight="17.0" prefWidth="63.0" text="Password:" />
-            <Label fx:id="expdateLabel" layoutX="14.0" layoutY="130.0" text="CCV: " />
+            <Label fx:id="ccvLabel" layoutX="14.0" layoutY="130.0" text="CCV: " />
             <TextField fx:id="nameText" layoutX="79.0" layoutY="10.0" prefHeight="25.0" prefWidth="149.0" />
             <TextField fx:id="emailText" layoutX="79.0" layoutY="40.0" prefHeight="25.0" prefWidth="149.0" />
             <TextField fx:id="passwordText" layoutX="79.0" layoutY="67.0" prefHeight="25.0" prefWidth="149.0" />
