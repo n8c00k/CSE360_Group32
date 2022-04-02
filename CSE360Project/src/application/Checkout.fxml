@@ -8,15 +8,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button id="backToHomeButton" layoutX="494.0" layoutY="361.0" mnemonicParsing="false" text="Back to home " />
+      <Button id="backToHomeButton" fx:id="backHome" layoutX="494.0" layoutY="361.0" mnemonicParsing="false" text="Back to home " />
       <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receipt: " />
       <Text layoutX="14.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orders Ahead:" />
-      <Label id="ordersAheadText" layoutX="96.0" layoutY="365.0" prefHeight="17.0" prefWidth="157.0" />
+      <Label id="ordersAheadText" fx:id="ordersAhead" layoutX="96.0" layoutY="365.0" prefHeight="17.0" prefWidth="157.0" />
       <Text layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checkout">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <Label id="ReceiptLabel" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="64.0" layoutY="31.0" prefHeight="318.0" prefWidth="443.0" wrapText="true" />
+      <Label id="ReceiptLabel" fx:id="receipt" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="64.0" layoutY="31.0" prefHeight="318.0" prefWidth="443.0" wrapText="true" />
    </children>
 </AnchorPane>
