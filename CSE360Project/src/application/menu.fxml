@@ -149,6 +149,6 @@
       <Button id="menuToCartButton" fx:id="cart" layoutX="450.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
       <Button id="menuToAccountButton" fx:id="account" layoutX="380.0" layoutY="8.0" mnemonicParsing="false" onAction="#accountButton" text="Account" />
       <Button id="logOutButton" fx:id="logout" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#logoutButton" text="Log Out" />
-      <Button id="menuToCartButton" fx:id="cart1" layoutX="325.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Menu" />
+      <Button id="menuToCartButton" fx:id="cart1" disable="true" layoutX="325.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" style="-fx-background-color: grey;" text="Menu" />
    </children>
 </Pane>

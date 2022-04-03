@@ -151,7 +151,7 @@
                </font>
             </Text>
             <Button id="menuToCartButton" fx:id="cart" layoutX="517.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
-            <Button id="menuToCartButton" fx:id="cart1" layoutX="459.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Menu" />
+            <Button id="menuToCartButton" fx:id="cart1" disable="true" layoutX="459.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" style="-fx-background-color: grey;" text="Menu" />
          </children>
       </Pane>
    </children>

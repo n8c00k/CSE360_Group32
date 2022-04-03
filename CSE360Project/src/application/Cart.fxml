@@ -67,7 +67,7 @@
                   <Button fx:id="menu" layoutX="325.0" layoutY="-16.0" mnemonicParsing="false" onAction="#menuButton" text="Menu" />
                   <Button fx:id="logout" layoutX="500.0" layoutY="-16.0" mnemonicParsing="false" onAction="#logoutButton" text="Log Out" />
                   <Button fx:id="account" layoutX="380.0" layoutY="-16.0" mnemonicParsing="false" onAction="#accountButton" text="Account " />
-                  <Button fx:id="account1" layoutX="450.0" layoutY="-16.0" mnemonicParsing="false" onAction="#accountButton" text="Cart" />
+                  <Button fx:id="account1" disable="true" layoutX="450.0" layoutY="-16.0" mnemonicParsing="false" onAction="#accountButton" style="-fx-background-color: grey;" text="Cart" />
                </children>
             </Pane>
          </children>
