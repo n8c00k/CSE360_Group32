@@ -95,5 +95,6 @@
       </Text>
       <Button id="CouponsButton" fx:id="coupons" layoutX="430.0" layoutY="8.0" mnemonicParsing="false" onAction="#couponsButton" text="Coupon" />
       <Button id="logOutButton" fx:id="LogOut" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#logoutButton" text="Log Out" />
+      <Button disable="true" layoutX="374.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: grey;" text="Menu" />
    </children>
 </Pane>
