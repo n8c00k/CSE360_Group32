@@ -9,8 +9,7 @@
  *
  * Requesting object(s) that are not in the database will return Null or an empty ArrayList.
  * 
- * TODO final testing, major issues should be gone
- * TODO add food time/order time to database
+ * TODO hack at food ingerants in db
  */
 
 package SQLite_db;
@@ -251,7 +250,37 @@ public class Context {
 		return u;
 	}
 	
-	//Returns a new user obj from the database, searched by email.
+	//Returns a new Customer obj from the database, searched by email only
+	public Customer getCustomer(String email) {
+		Customer u = null;
+		try {
+			//search database for user by email
+			String stmtCust = "SELECT * FROM User WHERE Role = 0 AND Email = '" + email + "';";
+			ResultSet cust = getData(stmtCust);
+			
+			//move to first data point
+			if(cust.next() == false) {//if result set is of size zero
+				return null;//user does not exist
+			}
+			//add in data
+			u = new Customer(cust.getString("UserName"), cust.getString("Email"), cust.getString("Password"));//make new customer obj
+			u.setUserId(cust.getInt("ID"));
+			//set customer's payment info and coupons
+			u.setCard(getPaymentInfo(u));
+			u.setCoupon(getCoupons(u));
+
+			//get the coustomer's cart
+			u.setCart(getCarts(u));
+			u.pastOrders = u.getCart().size();
+
+		} catch(SQLException e) {
+			System.err.println("Error in getCustomer");
+			e.printStackTrace();
+		}
+		return u;
+	}
+	
+	//Returns a new Customer obj from the database, searched by email and password.
 	public Customer getCustomer(String email, String password) {
 		Customer u = null;
 		try {
