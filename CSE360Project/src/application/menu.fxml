@@ -108,8 +108,8 @@
                         <Font size="14.0" />
                      </font></Text>
                   <Label fx:id="desItem1" layoutX="175.0" layoutY="20.0" prefHeight="102.0" prefWidth="214.0" wrapText="true" />
-                  <Label fx:id="desItem2" layoutX="175.0" layoutY="151.0" prefHeight="103.0" prefWidth="211.0" />
-                  <Label fx:id="desItem3" layoutX="175.0" layoutY="293.0" prefHeight="103.0" prefWidth="206.0" />
+                  <Label fx:id="desItem2" layoutX="175.0" layoutY="151.0" prefHeight="103.0" prefWidth="211.0" wrapText="true" />
+                  <Label fx:id="desItem3" layoutX="175.0" layoutY="293.0" prefHeight="103.0" prefWidth="206.0" wrapText="true" />
                   <Label fx:id="desItem4" layoutX="175.0" layoutY="439.0" prefHeight="97.0" prefWidth="206.0" wrapText="true" />
                   <Label fx:id="desItem5" layoutX="175.0" layoutY="563.0" prefHeight="100.0" prefWidth="211.0" wrapText="true" />
                   <Text id="AddedToCartOne" layoutX="437.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
