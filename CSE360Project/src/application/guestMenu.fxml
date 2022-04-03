@@ -151,8 +151,8 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Button id="menuToCartButton" fx:id="cart" layoutX="450.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
-            <Button id="menuToCartButton" fx:id="cart1" layoutX="325.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Menu" />
+            <Button id="menuToCartButton" fx:id="cart" layoutX="544.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
+            <Button id="menuToCartButton" fx:id="cart1" layoutX="485.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Menu" />
          </children>
       </Pane>
    </children>
