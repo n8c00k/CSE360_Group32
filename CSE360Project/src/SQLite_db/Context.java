@@ -1,7 +1,7 @@
 /*
  * Context.java By: Andrew Erickson
  *
- * Last Modified: 2/24/22
+ * Last Modified: 4/2/22
  *
  * This class is for handling all the data objects the application will need.
  * It also deals with all SQLite interactions.
@@ -9,7 +9,6 @@
  *
  * Requesting object(s) that are not in the database will return Null or an empty ArrayList.
  * 
- * TODO hack at food ingerants in db
  */
 
 package SQLite_db;
@@ -78,11 +77,6 @@ public class Context {
 
 	//Adds/updates a Customer to the database.
 	public void setCustomer(Customer u) {
-		/*//uncomment if we are checking for null data
-		if(u.getName() == "" || u.getEmail() == "" || u.getPassword() == "") {
-			//Customer has bad data throw error
-			throw new InputMismatchException("Null Data not allowed\n" + u.toString());
-		}*/
 		//search to see if user is in database
 		String stmt = "SELECT * FROM User WHERE ID = " + u.getUserId() + ";";
 		ResultSet r = getData(stmt);
