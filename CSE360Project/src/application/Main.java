@@ -84,6 +84,15 @@ public class Main extends Application {
 	employeeMainMenu controller = loader.getController();
 	controller.initializeUser(manager);
 }
+//	public void employeeCoupon(Manager manager) throws IOException{
+//
+//	FXMLLoader loader = new FXMLLoader();
+//	loader.setLocation(getClass().getResource("employeeMainMenu.fxml"));
+//	Parent pane = loader.load();
+//	stg.getScene().setRoot(pane);
+//	employeeCoupon controller = loader.getController();
+//	controller.initializeUser(manager);
+//	}
 	public void guestCartScene(Customer user, Cart userCart,Double total) throws IOException{
 
 	FXMLLoader loader = new FXMLLoader();
