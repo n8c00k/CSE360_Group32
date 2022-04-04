@@ -53,14 +53,15 @@
                            </font>
                         </Label>
                         <Text layoutX="276.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                        <Button fx:id="checkout" layoutX="377.0" layoutY="261.0" mnemonicParsing="false" text="Checkout " />
-                        <Label layoutX="313.0" layoutY="232.0" prefHeight="18.0" prefWidth="145.0" />
+                        <Button fx:id="checkout" layoutX="377.0" layoutY="261.0" mnemonicParsing="false" onAction="#checkoutButton" text="Checkout " />
+                        <Label fx:id="totalPrice" layoutX="313.0" layoutY="232.0" prefHeight="18.0" prefWidth="145.0" />
                         <Text layoutX="276.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total " />
                         <Label layoutX="388.0" layoutY="38.0" prefHeight="17.0" prefWidth="33.0" text="Remove">
                            <font>
                               <Font size="8.0" />
                            </font>
                         </Label>
+                        <Label fx:id="couponResponse" layoutX="168.0" layoutY="265.0" prefHeight="17.0" prefWidth="195.0" />
                      </children>
                   </Pane>
                   <Button fx:id="menu" layoutX="495.0" layoutY="-16.0" mnemonicParsing="false" onAction="#menuButton" text="Menu" />

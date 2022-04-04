@@ -146,7 +146,7 @@ Context con = new Context();
  	private void menu() throws IOException{
  		Main m = new Main();
 
- 		m.menuSceneCustomer(user,newCart,totalprice);
+ 		m.guestMenuScene(user,newCart,totalprice);
  	}
  	
  	private void addQty(foodItem food) throws IOException{	

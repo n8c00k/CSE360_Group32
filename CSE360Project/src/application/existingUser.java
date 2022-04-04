@@ -96,15 +96,6 @@ public class existingUser implements Initializable{
 		m.changeScene("employee.fxml");
  	}
  	
- 	public void contGuest(ActionEvent event) throws IOException{
- 		continueAsGuest();
- 	}
- 	
- 	private void continueAsGuest() throws IOException{
-		Main m = new Main();
-		//when I added this code this fxml file was not created yet.
-		m.changeScene("guestMenu.fxml");
- 	}
 
  	private void contGuest()throws IOException{
  		Main m = new Main();

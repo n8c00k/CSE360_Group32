@@ -23,6 +23,6 @@
             <Image url="@Food%20Photos/Logo.png" />
          </image>
       </ImageView>
-      <Button id="existingSignInButton" fx:id="signIn1" layoutX="74.0" layoutY="223.0" mnemonicParsing="false" onAction="#userSignIn" prefHeight="27.0" prefWidth="158.0" text="Continue as Guest " />
+      <Button id="existingSignInButton" fx:id="contGuest" layoutX="74.0" layoutY="223.0" mnemonicParsing="false" onAction="#contGuestButton" prefHeight="27.0" prefWidth="158.0" text="Continue as Guest " />
    </children>
 </Pane>

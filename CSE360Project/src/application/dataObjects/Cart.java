@@ -66,7 +66,7 @@ public class Cart {
 	String ret = "";
 	for(int i = 0; i < foods.size(); i++) {
 		 food = foods.get(i).getFoodName();
-		 quan = "" + quantity.get(i);
+		 quan = "" + "x " + quantity.get(i);
 		 price = (double) quantity.get(i) * foods.get(i).getPrice();
 		 ret += food + " " + quan + " " + cFmt.format(price) + "\n";
 	}

@@ -103,7 +103,7 @@ public class guestMenu implements Initializable{
 		setMenu("Breakfast");
 		user = newUser;
 		newCart = userCart;
-		totalprice = newCart.totalPrice;
+		totalprice = total;
 	}
 	
 
@@ -171,7 +171,7 @@ public class guestMenu implements Initializable{
  	private void cart() throws IOException{
  		Main m = new Main();
 
- 		m.cartSceneCustomer(user,newCart,totalprice);
+ 		m.guestCartScene(user,newCart,totalprice);
  	}
 
 	@Override

@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 
 import SQLite_db.Context;
+import application.dataObjects.Manager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -15,6 +16,7 @@ public class employee {
 	public employee() {
 
 		}
+	private Manager user;
 
 	@FXML
 	private Button signIn;
@@ -45,8 +47,8 @@ public class employee {
 
  		//if database contains email.getText().toString()
  		if(con.getManager(adminEmail, adminPassword ) != null) {
-
- 			m.employeeMain(con.getManager(adminEmail, adminPassword));
+ 			user = con.getManager(adminEmail, adminPassword);
+ 			m.employeeMain(user);
  		}
  		else {
  			emailError.setText("Invalid Email or Password");

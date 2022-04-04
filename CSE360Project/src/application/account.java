@@ -145,7 +145,7 @@ public account() {
  		updateUser(user);
  	}
  	public String couponTextInput(Customer user) {
- 		String ret = Integer.valueOf(user.quantityOfCoupons()) + " available for use!";
+ 		String ret = Integer.valueOf(con.getCoupons(user).size()) + " available for use!";
  		return ret;
  	}
  	public String pastOrdersTextInput(Customer user) {
@@ -153,7 +153,8 @@ public account() {
  		String[] receipt = new String[3];
  		
  		if (con.getCarts(user).size() < 1) {
- 			return ret = "No past Orders.";
+ 			 ret = "No past Orders.";
+ 			 return ret;
  		}
  		else {
  			for(int ii = 0; ii < 3; ii++) {

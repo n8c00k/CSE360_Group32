@@ -19,13 +19,11 @@ public class employeeMainMenu implements Initializable {
 	public employeeMainMenu() {
 		
 	}
-	
-	
 	private Manager user;
 	
-	public void initializeUser(Manager newUser) {
+	public void initializeUser(Manager manager) {
 
-		user = newUser;
+		user = manager;
 		setMenu("Breakfast");
 		
 	}
@@ -144,7 +142,7 @@ public class employeeMainMenu implements Initializable {
 	private void coupons() throws IOException{
 		Main m = new Main();
 
-// 		m.changeScene("employeeCoupon.fxml");
+ 		m.employeeCoupon(user);
 	}
 	
 	

@@ -16,10 +16,10 @@ import javafx.scene.control.TextField;
 
 public class employeeCoupon implements Initializable{
 	
-	private Manager manager;
-	employeeCoupon(){
+	public employeeCoupon(){
 		
 	}
+	private Manager user;
 
 	@FXML
 	private Button menu;
@@ -48,7 +48,7 @@ public class employeeCoupon implements Initializable{
 
 	private void menu() throws IOException{
  		Main m = new Main();
- 		m.employeeMain(manager);
+ 		m.employeeMain(user);
 	}
 	
 	private void logout() throws IOException{
@@ -58,7 +58,7 @@ public class employeeCoupon implements Initializable{
 	private void awardCoupon() {
 		if(con.getCustomer(cusEmail.getText()) != null) {
 			Coupon newCoup = new Coupon();
-			con.getCustomer(cusEmail.getText()).coupons.add(newCoup);
+			con.addCoupon(newCoup, con.getCustomer(cusEmail.getText()));
 			couponResponse.setText("Coupon has been rewarded!");
 		}
 		else {
@@ -73,8 +73,8 @@ public class employeeCoupon implements Initializable{
 		
 	}
 
-	public void initializeUser(Manager user) {
-		manager = user;
+	public void initializeUser(Manager manager) {
+		user = manager;
 	}
 
 }

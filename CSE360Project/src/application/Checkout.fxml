@@ -17,9 +17,9 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <Label id="ReceiptLabel" fx:id="receipt" alignment="CENTER" contentDisplay="TOP" layoutX="79.0" layoutY="6.0" prefHeight="318.0" prefWidth="443.0" textAlignment="CENTER" wrapText="true">
+      <Label id="ReceiptLabel" fx:id="receipt" alignment="CENTER" contentDisplay="TOP" layoutX="79.0" layoutY="6.0" prefHeight="318.0" prefWidth="443.0" wrapText="true">
          <font>
-            <Font size="24.0" />
+            <Font size="18.0" />
          </font></Label>
    </children>
 </AnchorPane>

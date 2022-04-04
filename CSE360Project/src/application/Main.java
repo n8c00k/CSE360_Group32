@@ -87,7 +87,7 @@ public class Main extends Application {
 	public void employeeCoupon(Manager manager) throws IOException{
 
 	FXMLLoader loader = new FXMLLoader();
-	loader.setLocation(getClass().getResource("employeeMainMenu.fxml"));
+	loader.setLocation(getClass().getResource("employeeCoupon.fxml"));
 	Parent pane = loader.load();
 	stg.getScene().setRoot(pane);
 	employeeCoupon controller = loader.getController();
@@ -96,7 +96,7 @@ public class Main extends Application {
 	public void guestCartScene(Customer user, Cart userCart,Double total) throws IOException{
 
 	FXMLLoader loader = new FXMLLoader();
-	loader.setLocation(getClass().getResource("cart.fxml"));
+	loader.setLocation(getClass().getResource("guestCart.fxml"));
 	Parent pane = loader.load();
 	stg.getScene().setRoot(pane);
 	guestCart controller = loader.getController();
@@ -105,7 +105,7 @@ public class Main extends Application {
 	public void guestMenuScene(Customer user, Cart userCart,Double total) throws IOException{
 
 	FXMLLoader loader = new FXMLLoader();
-	loader.setLocation(getClass().getResource("cart.fxml"));
+	loader.setLocation(getClass().getResource("guestMenu.fxml"));
 	Parent pane = loader.load();
 	stg.getScene().setRoot(pane);
 	guestMenu controller = loader.getController();

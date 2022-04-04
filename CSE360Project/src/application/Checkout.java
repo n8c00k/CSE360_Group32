@@ -42,15 +42,15 @@ public class Checkout implements Initializable {
 	public void backHomeButton(ActionEvent event) throws IOException {
 		Main m = new Main();
 		
-		m.accountSceneCustomer(user, newCart, newCart.totalPrice);
+		m.menuSceneCustomer(user, newCart, newCart.totalPrice);
 	}
 	
 	public void showReceipt() {
 		receipt.setText(newCart.receipt());
-//		con.addCart(user, newCart);
-		newCart.foods.clear();
-		newCart.quantity.clear();
-		newCart.totalPrice = 0.00;
+		con.addCart(user, newCart);
+//		newCart.foods.clear();
+//		newCart.quantity.clear();
+//		newCart.totalPrice = 0.00;
 	}
 	
 	public void ordersAhead() {
