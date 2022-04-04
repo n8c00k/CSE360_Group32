@@ -80,9 +80,9 @@ Context con = new Context();
 		}
 		else {
 			
-			newCart.foods.clear();
-			newCart.quantity.clear();
-			newCart.totalPrice = 0.00;
+//			newCart.foods.clear();
+//			newCart.quantity.clear();
+//			newCart.totalPrice = 0.00;
 			m.checkoutCustomer(user, newCart);
 		}
 		

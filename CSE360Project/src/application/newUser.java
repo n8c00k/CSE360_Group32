@@ -40,6 +40,12 @@ public class newUser {
  	private Label emailError;
  	@FXML
  	private Label passwordError;
+	@FXML
+	private TextField ccNumText;
+	@FXML
+	private TextField ccvText;
+	@FXML
+	private TextField expdateText;
 
 
  	public void createAccount(ActionEvent event) throws IOException{
@@ -54,6 +60,10 @@ public class newUser {
  			String cusEmail = email.getText().toString();
  			String cusPassword = password.getText().toString();
  			String confirmCusPassword = confirmPassword.getText().toString();
+ 			String ccNum = ccNumText.getText();
+ 			String ccv = ccvText.getText();
+ 			String exp = expdateText.getText();
+ 			
 
  		if (con.getUser(cusEmail, confirmCusPassword) != null) {
  			emailError.setText("User already exists");
@@ -63,14 +73,21 @@ public class newUser {
  			passwordError.setText("Passwords do not match");
 
  		}
- 		else if(firstName.getText() == null || lastName.getText() == null || email.getText() == null ||
- 				password.getText() == null || confirmPassword.getText() == null) {
+ 		else if(firstName.getText().isBlank() || lastName.getText().isBlank() || email.getText().isBlank() ||
+ 				password.getText().isBlank() || confirmPassword.getText().isBlank()) {
  			emailError.setText("Please enter your data");
+ 		}
+ 		else if(ccNumText.getText().isBlank() || ccvText.getText().isBlank() || expdateText.getText().isBlank()) {
+ 			emailError.setText("Please enter your data");
+ 			
  		}
  		else {
 			Customer cus = new Customer( fullName, cusEmail, cusPassword);
-
+			cus.card.setCardNumber(Integer.valueOf(ccNum));
+			cus.card.setCcv(Integer.valueOf(ccv));
+			cus.card.setExpDate(Integer.valueOf(exp));
 			con.setCustomer(cus);
+			con.setPaymentInfo(cus);
 
 			backToLogin();
  		}
