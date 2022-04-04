@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import SQLite_db.Context;
@@ -150,19 +151,20 @@ public account() {
  	}
  	public String pastOrdersTextInput(Customer user) {
  		String ret;
- 		String[] receipt = new String[3];
+ 		String receipt = "";
  		
  		if (con.getCarts(user).size() < 1) {
  			 ret = "No past Orders.";
  			 return ret;
  		}
  		else {
- 			for(int ii = 0; ii < 3; ii++) {
- 				receipt[ii] = (con.getCarts(user).get(ii).receipt()+"\n");
+ 			ArrayList<Cart> cart = con.getCarts(user);
+ 			for(int ii = 0; ii < cart.size(); ii++) {
+ 				receipt += (cart.get(ii).receipt()+"\n");
  			}
  		}
  		
- 		return receipt.toString();
+ 		return receipt;
  	}
  	
  	private void updateUser(Customer user) throws IOException{
