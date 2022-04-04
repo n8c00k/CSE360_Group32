@@ -77,7 +77,7 @@ public class Cart {
     public String ordersAhead() {
     	Integer time = 0;
     	for(int ii = 0; ii < foods.size();ii++) {
-    		time += foods.get(ii).getMinToCom();
+    		time += foods.get(ii).getMinToCom() * quantity.get(ii);
     	}
     	return time.toString() + " minutes til pickup ";
     }
