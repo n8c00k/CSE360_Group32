@@ -25,7 +25,7 @@ import application.dataObjects.*;
 
 public class Context {
 	//connection obj that all sqlite interactions are handled through
-	private Connection conn = null;
+	private static Connection conn = null;
 
 	public Context() {
 		try {
@@ -54,6 +54,7 @@ public class Context {
 
 		try {
 			if(r.next() == false) {//if result set is of size zero
+				r.close();//resultset on longer needed
 				//add new record
 				String updateStmt = "INSERT INTO User (Role,UserName,Password,Email) VALUES (-1,'"+u.getName()+"','"+u.getPassword()+"','"+u.getEmail()+"');";
 				setData(updateStmt);
@@ -62,7 +63,9 @@ public class Context {
 				ResultSet newUser = getData("SELECT ID FROM User WHERE Email = '" + u.getEmail() + "';");
 				newUser.next();
 				u.setUserId(newUser.getInt("ID"));
+				newUser.close();
 			} else {
+				r.close();
 				//update record
 				String updateStmt = "UPDATE User SET UserName = '" + u.getName() + "' , Email = '" + u.getEmail() + "' , Password = '" + u.getPassword()
 									+ "' WHERE ID = " + u.getUserId() + ";";
@@ -83,6 +86,7 @@ public class Context {
 
 		try {
 			if(r.next() == false) {//if result set is of size zero
+				r.close();
 				//add new record
 				String updateStmt = "INSERT INTO User (Role,UserName,Password,Email) "+
 									"VALUES (0,'"+u.getName()+"','"+u.getPassword()+"','"+u.getEmail()+"');";
@@ -92,7 +96,9 @@ public class Context {
 				ResultSet newUser = getData("SELECT ID FROM User WHERE Email = '" + u.getEmail() + "';");
 				newUser.next();
 				u.setUserId(newUser.getInt("ID"));
+				newUser.close();
 			} else {
+				r.close();
 				//update record
 				String updateStmt = "UPDATE User SET UserName = '" + u.getName() + "' , Email = '" + u.getEmail() + "' , Password = '" + u.getPassword()
 									+ "' WHERE ID = " + u.getUserId() + ";";
@@ -115,6 +121,7 @@ public class Context {
 
 		try {
 			if(r.next() == false) {//if result set is of size zero
+				r.close();
 				//add new record
 				String updateStmt = "INSERT INTO User (Role,UserName,Password,Email) VALUES (1,'"+u.getName()+"','"+u.getPassword()+"','"+u.getEmail()+"');";
 				setData(updateStmt);
@@ -123,7 +130,9 @@ public class Context {
 				ResultSet newUser = getData("SELECT ID FROM User WHERE Email = '" + u.getEmail() + "';");
 				newUser.next();
 				u.setUserId(newUser.getInt("ID"));
+				newUser.close();
 			} else {
+				r.close();
 				//update record
 				String updateStmt = "UPDATE User SET UserName = '" + u.getName() + "' , Email = '" + u.getEmail() + "' , Password = '" + u.getPassword()
 									+ "' WHERE ID = " + u.getUserId() + ";";
@@ -144,10 +153,12 @@ public class Context {
 		ResultSet r = getData(stmt);
 		try {
 			if(r.next() == false) {//if result set is of size zero
+				r.close();
 				//user needs to be entered into database first
 				System.err.println("Error: Attempted update to payment info of non-exsistent user.\n\t" + u.toString());
 				return;
 			} else if(u.getCard() != null) {
+				r.close();
 				//update record if card is available
 				String updateStmt = "UPDATE User SET CardNum = " + u.getCard().getCardNumber() + " , CCV = " + u.getCard().getCcv() + " , EXPDate = " + u.getCard().getExpDate()
 									+ " WHERE ID = " + u.getUserId() + ";";
@@ -170,6 +181,7 @@ public class Context {
 			ResultSet order = getData("SELECT ID FROM 'Order' WHERE User_ID = " + u.getUserId() + " AND Price = " + c.totalPrice + ";");
 			order.next();
 			int orderID = order.getInt("ID");
+			order.close();
 			//for each food item in cart
 			for(int i = 0; i < c.foods.size(); i++) {
 				//add the transaction to the data basse
@@ -197,12 +209,14 @@ public class Context {
 				ResultSet NF = getData("SELECT ID FROM Food_Item WHERE Dish_Name = '" + f.getFoodName() + "';");
 				NF.next();
 				f.setUserId(NF.getInt("ID"));
+				NF.close();
 			} else {
 				//update it
 				String updateStmt = "UPDATE Food_Item SET Dish_Name = '"+f.getFoodName()+"' , Price = " + f.getPrice() + " , Ingreadents = '" + f.getIngredients() + "', Cook_Time = " + f.getMinToCom()
 									+ " WHERE ID = " + f.getUserId() + ";";
 				setData(updateStmt);
 			}
+			food.close();
 		} catch (SQLException e) {
 			System.err.println("Error in setFoodItem");
 			e.printStackTrace();
@@ -237,6 +251,7 @@ public class Context {
 			//add in data
 			u = new User(r.getString("UserName"), r.getString("Email"), r.getString("Password"));//make new user obj
 			u.setUserId(r.getInt("ID"));
+			r.close();
 		} catch(SQLException e) {
 			System.err.println("Error in getUser");
 			e.printStackTrace();
@@ -259,6 +274,7 @@ public class Context {
 			//add in data
 			u = new Customer(cust.getString("UserName"), cust.getString("Email"), cust.getString("Password"));//make new customer obj
 			u.setUserId(cust.getInt("ID"));
+			cust.close();
 			//set customer's payment info and coupons
 			u.setCard(getPaymentInfo(u));
 			u.setCoupon(getCoupons(u));
@@ -289,6 +305,7 @@ public class Context {
 			//add in data
 			u = new Customer(cust.getString("UserName"), cust.getString("Email"), cust.getString("Password"));//make new customer obj
 			u.setUserId(cust.getInt("ID"));
+			cust.close();
 			//set customer's payment info and coupons
 			u.setCard(getPaymentInfo(u));
 			u.setCoupon(getCoupons(u));
@@ -318,6 +335,7 @@ public class Context {
 			//add in data
 			u = new Manager(r.getString("UserName"), r.getString("Email"), r.getString("Password"));//make new user obj
 			u.setUserId(r.getInt("ID"));
+			r.close();
 			u.menu = getMenu("Breakfast");		//TODO manuly getting menu, if more menus are added change this to a search and add menu[] arg
 		} catch(SQLException e) {
 			System.err.println("Error in getManager");
@@ -338,6 +356,7 @@ public class Context {
 			}
 			int menuID = m.getInt("ID");
 			menu = new Menu(m.getString("Name"));
+			m.close();
 			menu.setUserId(menuID);
 
 			//get each food item with that menuID
@@ -348,6 +367,7 @@ public class Context {
 				f.setUserId(foods.getInt("ID"));
 				menu.addFoodItem(f);
 			}
+			foods.close();
 		} catch(SQLException e) {
 			System.err.println("Error in getMenu");
 			e.printStackTrace();
@@ -368,6 +388,7 @@ public class Context {
 			//convert to foodItem
 			f = new foodItem(foods.getString("Dish_Name"),foods.getString("Ingreadents"), foods.getDouble("Price"), foods.getInt("Cook_Time"));
 			f.setUserId(foods.getInt("ID"));
+			foods.close();
 		} catch (SQLException e) {//add in data
 			System.err.println("Error in getFoodItem");
 			e.printStackTrace();
@@ -389,6 +410,7 @@ public class Context {
 				cou.setId(coupons.getInt("ID"));
 				c.add(cou);
 			}
+			coupons.close();
 		} catch (SQLException e) {//add in data
 			System.err.println("Error in getCoupons");
 			e.printStackTrace();
@@ -408,6 +430,7 @@ public class Context {
 			}
 			//add in data
 			p = new Payment(user.getInt("CardNum"), user.getInt("CCV"), user.getInt("EXPDate"));
+			user.close();
 		} catch (SQLException e) {
 			System.err.println("Error in getPaymentInfo");
 			e.printStackTrace();
@@ -437,10 +460,13 @@ public class Context {
 					food.next();
 					foodItem f = new foodItem(food.getString("Dish_Name"),food.getString("Ingreadents"), food.getDouble("Price"), 15);
 					f.setUserId(food.getInt("ID"));
+					food.close();
 					c.foods.add(f);//add food to cart
 				}
+				trans.close();
 				orders.add(c);
 			}
+			carts.close();
 		} catch (SQLException e) {
 			System.err.println("Error in getCarts");
 			e.printStackTrace();
@@ -453,6 +479,7 @@ public class Context {
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(stmt);
 			pstmt.executeUpdate();
+			pstmt.close();
 		} catch (SQLException e) {
 			System.err.println("ERROR: SQL set Statement failed\nQuerry: "+stmt+"\n\nFull Trace:");
 			e.printStackTrace();
@@ -461,19 +488,17 @@ public class Context {
 	}
 	
 	private ResultSet getData(String stmt) {
-		ResultSet r;
+		ResultSet r = null;
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(stmt);
 			r = pstmt.executeQuery();
-			return r;
 		} catch (SQLException e) {
 			System.err.println("ERROR: SQL get Statement failed\nQuerry: "+stmt+"\n\nFull Trace:");
 			e.printStackTrace();
-			return null;
 		} catch (NullPointerException e) {
 			System.out.println("Null: " + stmt + "\n" + e.getMessage());
-			return null;
 		}
+		return r;
 	}
 
 }
