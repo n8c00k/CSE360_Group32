@@ -152,7 +152,7 @@
             </Text>
             <Button id="menuToCartButton" fx:id="cart" layoutX="451.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
             <Button id="menuToCartButton" fx:id="cart1" disable="true" layoutX="395.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" style="-fx-background-color: grey;" text="Menu" />
-            <Button id="menuToCartButton" fx:id="cart2" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Log in" />
+            <Button id="menuToCartButton" fx:id="logIn" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#logInButton" text="Log In" />
          </children>
       </Pane>
    </children>

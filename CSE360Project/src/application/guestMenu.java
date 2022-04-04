@@ -43,6 +43,8 @@ public class guestMenu implements Initializable{
 	@FXML
 	private Button addItem5;
 	@FXML
+	private Button LogIn;
+	@FXML
 	private TextField qtyItem1;
 	@FXML
 	private TextField qtyItem2;
@@ -109,6 +111,15 @@ public class guestMenu implements Initializable{
 
  	public void cartButton(ActionEvent event) throws IOException{
  		cart();
+ 	}
+ 	public void logInButton(ActionEvent event) throws IOException{
+ 		logIn();
+ 	}
+ 	
+ 	private void logIn() throws IOException{
+ 		Main m = new Main();
+
+ 		m.changeScene("existingUserScene.fxml");
  	}
  	
  	public void setMenu(String menu) {

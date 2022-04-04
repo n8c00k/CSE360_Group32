@@ -66,7 +66,7 @@
                   </Pane>
                   <Button fx:id="menu" layoutX="394.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuButton" text="Menu" />
                   <Button fx:id="menu1" disable="true" layoutX="451.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuButton" style="-fx-background-color: grey;" text="Cart" />
-                  <Button fx:id="menu11" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuButton" text="Log in" />
+                  <Button fx:id="logIn" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#logInButton" text="Log In" />
                </children>
             </Pane>
          </children>

@@ -34,6 +34,8 @@ public class guestCart implements Initializable {
 	@FXML
 	private Button checkout;
 	@FXML
+	private Button logIn;
+	@FXML
 	private Label totalPrice;
 	@FXML
 	private Label couponResponse;
@@ -64,6 +66,11 @@ Context con = new Context();
  	public void checkoutButton(ActionEvent event) throws IOException{
  		checkout();
  	}
+ 	
+ 	public void logInButton(ActionEvent event) throws IOException{
+ 		logIn();
+ 	}
+ 	
 	private void checkout() throws IOException{
  		Main m = new Main();
 		if(ccNumText.getText().isBlank() || ccvText.getText().isBlank() || expDateText.getText().isBlank()) {
@@ -81,6 +88,11 @@ Context con = new Context();
 		
 	}
  	
+	private void logIn() throws IOException{
+ 		Main m = new Main();
+
+ 		m.changeScene("existingUserScene.fxml");
+ 	}
  	
  	private void setUserCart(){
  		cartGrid.getChildren().clear();
