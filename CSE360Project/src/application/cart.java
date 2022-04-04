@@ -93,6 +93,8 @@ public class cart implements Initializable{
  		if(!con.getCoupons(user).isEmpty()) {
  			cartGrid.addColumn(cartGrid.getColumnCount()+1, couponlabel,  qtylabel , pricelabel);
  			totalprice = totalprice -5;
+ 			newCart.totalPrice -= 5;
+ 			//TODO update total price text field.
  			couponResponse.setTextFill(Color.GREEN);
  			couponResponse.setText("Coupon Applied!");
  		}
