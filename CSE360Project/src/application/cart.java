@@ -90,7 +90,7 @@ public class cart implements Initializable{
  		couponlabel.setText("$5 off coupon");
  		Label qtylabel = new Label("1");
  		Label pricelabel = new Label("-5.00");
- 		if(con.getCoupons(user).size() > 0) {
+ 		if(!con.getCoupons(user).isEmpty()) {
  			cartGrid.addColumn(cartGrid.getColumnCount()+1, couponlabel,  qtylabel , pricelabel);
  			totalprice = totalprice -5;
  			couponResponse.setTextFill(Color.GREEN);

@@ -85,7 +85,7 @@
                   <TextField fx:id="nameItem4" layoutX="17.0" layoutY="512.0" prefHeight="25.0" prefWidth="154.0" />
                   <TextField fx:id="nameItem5" layoutX="24.0" layoutY="663.0" prefHeight="25.0" prefWidth="154.0" />
                   <Text layoutX="249.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredients " />
-                  <Label id="itemSavedOne" layoutX="443.0" layoutY="83.0" prefHeight="17.0" prefWidth="117.0" textAlignment="CENTER" />
+                  <Label id="itemSavedOne" fx:id="confirmItem1" layoutX="443.0" layoutY="83.0" prefHeight="17.0" prefWidth="117.0" textAlignment="CENTER" />
                   <Label id="itemSavedTwo" layoutX="416.0" layoutY="223.0" prefHeight="17.0" prefWidth="170.0" textAlignment="CENTER" />
                   <Label id="itemSavedThree" layoutX="435.0" layoutY="356.0" prefHeight="17.0" prefWidth="138.0" textAlignment="CENTER" />
                   <Label id="itemSavedFour" layoutX="444.0" layoutY="498.0" prefHeight="17.0" prefWidth="120.0" textAlignment="CENTER" />

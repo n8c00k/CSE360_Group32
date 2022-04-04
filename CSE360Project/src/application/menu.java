@@ -100,6 +100,17 @@ public class menu implements Initializable {
 	private ImageView crepe;
 	@FXML
 	private ImageView frenchToast;
+	@FXML
+	private Text confirmItem1;
+	@FXML
+	private Text confirmItem2;
+	@FXML
+	private Text confirmItem3;
+	@FXML
+	private Text confirmItem4;
+	@FXML
+	private Text confirmItem5;
+	
 	
 
 
@@ -152,23 +163,28 @@ public class menu implements Initializable {
 
  	public void addItem1(ActionEvent event) throws IOException{
  		addToCart(con.getMenu("Breakfast").foods.get(5),qtyItem1);
+ 		confirmItem1.setText("Added to Cart!");
  	}
  	public void addItem2(ActionEvent event) throws IOException{
  		addToCart(con.getMenu("Breakfast").foods.get(1),qtyItem2);
+ 		confirmItem2.setText("Added to Cart!");
  	}
  	public void addItem3(ActionEvent event) throws IOException{
  		addToCart(con.getMenu("Breakfast").foods.get(2),qtyItem3);
+ 		confirmItem3.setText("Added to Cart!");
  	}
  	public void addItem4(ActionEvent event) throws IOException{
  		addToCart(con.getMenu("Breakfast").foods.get(3),qtyItem4);
+ 		confirmItem4.setText("Added to Cart!");
  	}
  	public void addItem5(ActionEvent event) throws IOException{
  		addToCart(con.getMenu("Breakfast").foods.get(4),qtyItem5);
+ 		confirmItem5.setText("Added to Cart!");
  	}
 
  	private void addToCart(foodItem food, TextField qty) throws IOException{
  		Integer quant = Integer.valueOf(qty.getText());	
- 		if(quant == 0) {
+ 		if(qty.getText().isBlank() || quant == 0) {
  			
  		}
  		else{	

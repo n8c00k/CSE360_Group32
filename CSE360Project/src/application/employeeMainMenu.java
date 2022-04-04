@@ -11,7 +11,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 
 public class employeeMainMenu implements Initializable {
@@ -77,6 +79,16 @@ public class employeeMainMenu implements Initializable {
 	private TextField nameItem4;
 	@FXML
 	private TextField nameItem5;
+	@FXML
+	private Label confirmItem1;
+	@FXML
+	private Label confirmItem2;
+	@FXML
+	private Label confirmItem3;
+	@FXML
+	private Label confirmItem4;
+	@FXML
+	private Label confirmItem5;
 	
 	Context con = new Context();
 	
@@ -89,18 +101,23 @@ public class employeeMainMenu implements Initializable {
 	}
 	public void saveItem1Button(ActionEvent event) throws IOException{
  		saveItem(con.getMenu("Breakfast").foods.get(5),nameItem1,desItem1,priceItem1);
+ 		confirmItem1.setText("Item Updated!");
  	}
 	public void saveItem2Button(ActionEvent event) throws IOException{
 		saveItem(con.getMenu("Breakfast").foods.get(1),nameItem2,desItem2,priceItem2);
+		confirmItem2.setText("Item Updated!");
  	}
 	public void saveItem3Button(ActionEvent event) throws IOException{
 		saveItem(con.getMenu("Breakfast").foods.get(2),nameItem3,desItem3,priceItem3);
+		confirmItem3.setText("Item Updated!");
  	}
 	public void saveItem4Button(ActionEvent event) throws IOException{
 		saveItem(con.getMenu("Breakfast").foods.get(3),nameItem4,desItem4,priceItem4);
+		confirmItem4.setText("Item Updated!");
  	}
 	public void saveItem5Button(ActionEvent event) throws IOException{
 		saveItem(con.getMenu("Breakfast").foods.get(4),nameItem5,desItem5,priceItem5);
+		confirmItem5.setText("Item Updated!");
  	}
 	public void setMenu(String menu) {
  		

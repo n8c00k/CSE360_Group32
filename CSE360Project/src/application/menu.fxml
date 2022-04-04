@@ -112,27 +112,27 @@
                   <Label fx:id="desItem3" layoutX="175.0" layoutY="293.0" prefHeight="103.0" prefWidth="206.0" wrapText="true" />
                   <Label fx:id="desItem4" layoutX="175.0" layoutY="439.0" prefHeight="97.0" prefWidth="206.0" wrapText="true" />
                   <Label fx:id="desItem5" layoutX="175.0" layoutY="563.0" prefHeight="100.0" prefWidth="211.0" wrapText="true" />
-                  <Text id="AddedToCartOne" layoutX="437.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="130.0">
+                  <Text id="AddedToCartOne" fx:id="confirmItem1" layoutX="437.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="130.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <Text id="AssedToCartTwo" layoutX="437.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="130.0">
+                  <Text id="AssedToCartTwo" fx:id="confirmItem2" layoutX="437.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="130.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <Text id="AddedToCartThree" layoutX="437.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="130.0">
+                  <Text id="AddedToCartThree" fx:id="confirmItem3" layoutX="437.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="130.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <Text id="addedToCartFour" layoutX="437.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="130.0">
+                  <Text id="addedToCartFour" fx:id="confirmItem4" layoutX="437.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="130.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
-                  <Text id="addedToCartFive" layoutX="437.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="130.0">
+                  <Text id="addedToCartFive" fx:id="confirmItem5" layoutX="437.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="130.0">
                      <font>
                         <Font size="14.0" />
                      </font>

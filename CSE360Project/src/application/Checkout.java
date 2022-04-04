@@ -25,8 +25,9 @@ public class Checkout implements Initializable {
 
 		user = newUser;
 		newCart = cusCart;
-		showReceipt();
 		ordersAhead();
+		showReceipt();
+		
 	}
 
 	@FXML
@@ -48,9 +49,9 @@ public class Checkout implements Initializable {
 	public void showReceipt() {
 		receipt.setText(newCart.receipt());
 		con.addCart(user, newCart);
-//		newCart.foods.clear();
-//		newCart.quantity.clear();
-//		newCart.totalPrice = 0.00;
+		newCart.foods.clear();
+		newCart.quantity.clear();
+		newCart.totalPrice = 0.00;
 	}
 	
 	public void ordersAhead() {
