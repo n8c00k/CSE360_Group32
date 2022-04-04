@@ -70,9 +70,16 @@ public class Cart {
 		 price = (double) quantity.get(i) * foods.get(i).getPrice();
 		 ret += food + " " + quan + " " + cFmt.format(price) + "\n";
 	}
-	ret += cFmt.format(totalPrice);
+	ret += "Total Price: " + cFmt.format(totalPrice);
 	return ret;
     	
+    }
+    public String ordersAhead() {
+    	Integer time = 0;
+    	for(int ii = 0; ii < foods.size();ii++) {
+    		time += foods.get(ii).getMinToCom();
+    	}
+    	return time.toString() + " minutes til pickup ";
     }
     
     @Override

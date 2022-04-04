@@ -3,7 +3,6 @@ package application;
 import java.io.IOException;
 
 import SQLite_db.Context;
-import application.dataObjects.Manager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -29,30 +28,15 @@ public class employee {
 	private Label emailError;
  	Context con = new Context();
  	
- 	Manager bossMan = new Manager("Mr.Boss", "admin","admin");
- 	
  	
 
  	public void userSignIn(ActionEvent event) throws IOException{
  		checkLogin();
  	}
+	public void backButton(ActionEvent event) throws IOException{
+ 		backToLogin();
+ 	}
 
-// 	private void checkLogin() throws IOException{
-// 		Main m = new Main();
-//
-// 		String adminEmail = email.getText().toString();
-//		String adminPassword = password.getText().toString();
-//
-// 		//if database contains email.getText().toString()
-// 		if(con.getManager(adminEmail, adminPassword ) != null) {
-//
-// 			m.employeeMain(con.getManager(adminEmail, adminPassword));
-// 		}
-// 		else {
-// 			emailError.setText("Invalid Email or Password");
-// 		}
-//
-// 	}
  	private void checkLogin() throws IOException{
  		Main m = new Main();
 
@@ -60,9 +44,9 @@ public class employee {
 		String adminPassword = password.getText().toString();
 
  		//if database contains email.getText().toString()
- 		if(adminEmail.equals(bossMan.getEmail()) && adminPassword.equals(bossMan.getPassword())) {
+ 		if(con.getManager(adminEmail, adminPassword ) != null) {
 
- 			m.employeeMain(bossMan);
+ 			m.employeeMain(con.getManager(adminEmail, adminPassword));
  		}
  		else {
  			emailError.setText("Invalid Email or Password");
@@ -70,10 +54,6 @@ public class employee {
 
  	}
 
- 	
- 	public void backButton(ActionEvent event) throws IOException{
- 		backToLogin();
- 	}
  	private void backToLogin() throws IOException{
  		Main m = new Main();
 		m.changeScene("existingUserScene.fxml");

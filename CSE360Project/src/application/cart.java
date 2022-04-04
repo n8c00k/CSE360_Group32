@@ -74,26 +74,33 @@ public class cart implements Initializable{
  	
  	private void checkout() throws IOException{
  		Main m = new Main();
-		if(user.getCard().getCardNumber()== 0) {
+		if(user.getCard().getCardNumber() == null) {
 			couponResponse.setTextFill(Color.RED);
 			couponResponse.setText("No card information on file,\nplease go to Account page");
 			
 		}
 		else {
-			con.addCart(user, newCart);
-			newCart.foods.clear();
-			newCart.quantity.clear();
-			newCart.totalPrice = 0.00;
+			
 			m.checkoutCustomer(user, newCart);
 		}
 		
 	}
 	private void applyCoupon() throws IOException{
- 		Label couponlabel = new Label("$5 off coupon");
+ 		Label couponlabel = new Label();
+ 		couponlabel.setText("$5 off coupon");
  		Label qtylabel = new Label("1");
  		Label pricelabel = new Label("-5.00");
- 		cartGrid.addColumn(cartGrid.getColumnCount()+1, couponlabel,  qtylabel , pricelabel);
- 		totalprice = totalprice -5;
+ 		if(con.getCoupons(user).size() > 0) {
+ 			cartGrid.addColumn(cartGrid.getColumnCount()+1, couponlabel,  qtylabel , pricelabel);
+ 			totalprice = totalprice -5;
+ 			couponResponse.setTextFill(Color.GREEN);
+ 			couponResponse.setText("Coupon Applied!");
+ 		}
+ 		else {
+ 			couponResponse.setTextFill(Color.RED);
+ 			couponResponse.setText("No available Coupons");
+ 		}
+ 		
 		
  	}
  	private void setUserCart(){

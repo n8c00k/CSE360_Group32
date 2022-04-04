@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 
 import SQLite_db.Context;
 import application.dataObjects.Cart;
+import application.dataObjects.Customer;
 import application.dataObjects.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -70,8 +71,12 @@ public class existingUser implements Initializable{
  		}
 
  	}
+ 	public void contGuestButton(ActionEvent event) throws IOException{
+ 		contGuest();
+ 	}
 
- 	public void createAccount(ActionEvent event) throws IOException{
+
+	public void createAccount(ActionEvent event) throws IOException{
  		createNew();
  	}
 
@@ -101,6 +106,13 @@ public class existingUser implements Initializable{
 		m.changeScene("guestMenu.fxml");
  	}
 
+ 	private void contGuest()throws IOException{
+ 		Main m = new Main();
+ 		Customer guest = new Customer(null,null,null);
+ 		Cart guestCart = new Cart();
+ 		m.guestMenuScene(guest,guestCart,guestCart.totalPrice);
+		
+	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		Image image = new Image(getClass().getResourceAsStream("/Food Photos/Logo.jpg"));

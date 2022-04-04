@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import SQLite_db.Context;
 import application.dataObjects.Cart;
 import application.dataObjects.Customer;
 import javafx.event.ActionEvent;
@@ -24,7 +25,8 @@ public class Checkout implements Initializable {
 
 		user = newUser;
 		newCart = cusCart;
-		
+		showReceipt();
+		ordersAhead();
 	}
 
 	@FXML
@@ -35,7 +37,7 @@ public class Checkout implements Initializable {
 	@FXML
 	private Label receipt;
 	
-	
+	Context con = new Context();
 
 	public void backHomeButton(ActionEvent event) throws IOException {
 		Main m = new Main();
@@ -44,11 +46,15 @@ public class Checkout implements Initializable {
 	}
 	
 	public void showReceipt() {
-		newCart.receipt();
+		receipt.setText(newCart.receipt());
+//		con.addCart(user, newCart);
+		newCart.foods.clear();
+		newCart.quantity.clear();
+		newCart.totalPrice = 0.00;
 	}
 	
 	public void ordersAhead() {
-		
+		ordersAhead.setText(newCart.ordersAhead());
 	}
 	
 	@Override

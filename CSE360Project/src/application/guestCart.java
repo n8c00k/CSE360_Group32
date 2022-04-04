@@ -14,7 +14,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 
 public class guestCart implements Initializable {
 	public guestCart() {
@@ -33,6 +35,14 @@ public class guestCart implements Initializable {
 	private Button checkout;
 	@FXML
 	private Label totalPrice;
+	@FXML
+	private Label couponResponse;
+	@FXML
+	private TextField ccNumText;
+	@FXML
+	private TextField ccvText;
+	@FXML
+	private TextField expDateText;
 	
 Context con = new Context();
 	
@@ -51,6 +61,25 @@ Context con = new Context();
 	public void menuButton(ActionEvent event) throws IOException{
  		menu();
  	}
+ 	public void checkoutButton(ActionEvent event) throws IOException{
+ 		checkout();
+ 	}
+	private void checkout() throws IOException{
+ 		Main m = new Main();
+		if(ccNumText.getText().isBlank() || ccvText.getText().isBlank() || expDateText.getText().isBlank()) {
+			couponResponse.setTextFill(Color.RED);
+			couponResponse.setText("Please fill out payment information");
+			
+		}
+		else {
+			
+			newCart.foods.clear();
+			newCart.quantity.clear();
+			newCart.totalPrice = 0.00;
+			m.checkoutCustomer(user, newCart);
+		}
+		
+	}
  	
  	
  	private void setUserCart(){

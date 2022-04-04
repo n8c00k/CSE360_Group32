@@ -84,15 +84,15 @@ public class Main extends Application {
 	employeeMainMenu controller = loader.getController();
 	controller.initializeUser(manager);
 }
-//	public void employeeCoupon(Manager manager) throws IOException{
-//
-//	FXMLLoader loader = new FXMLLoader();
-//	loader.setLocation(getClass().getResource("employeeMainMenu.fxml"));
-//	Parent pane = loader.load();
-//	stg.getScene().setRoot(pane);
-//	employeeCoupon controller = loader.getController();
-//	controller.initializeUser(manager);
-//	}
+	public void employeeCoupon(Manager manager) throws IOException{
+
+	FXMLLoader loader = new FXMLLoader();
+	loader.setLocation(getClass().getResource("employeeMainMenu.fxml"));
+	Parent pane = loader.load();
+	stg.getScene().setRoot(pane);
+	employeeCoupon controller = loader.getController();
+	controller.initializeUser(manager);
+	}
 	public void guestCartScene(Customer user, Cart userCart,Double total) throws IOException{
 
 	FXMLLoader loader = new FXMLLoader();
@@ -102,15 +102,15 @@ public class Main extends Application {
 	guestCart controller = loader.getController();
 	controller.initializeUser(user, userCart,total);
 }
-//	public void guestMenuScene(Customer user, Cart userCart,Double total) throws IOException{
-//
-//	FXMLLoader loader = new FXMLLoader();
-//	loader.setLocation(getClass().getResource("cart.fxml"));
-//	Parent pane = loader.load();
-//	stg.getScene().setRoot(pane);
-//	guestMenu controller = loader.getController();
-//	controller.initializeUser(user, userCart,total);
-//}
+	public void guestMenuScene(Customer user, Cart userCart,Double total) throws IOException{
+
+	FXMLLoader loader = new FXMLLoader();
+	loader.setLocation(getClass().getResource("cart.fxml"));
+	Parent pane = loader.load();
+	stg.getScene().setRoot(pane);
+	guestMenu controller = loader.getController();
+	controller.initializeUser(user, userCart,total);
+}
 
 	public static void main(String[] args) {
 		launch(args);

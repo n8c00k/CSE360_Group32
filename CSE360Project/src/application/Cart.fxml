@@ -52,11 +52,11 @@
                               <Font size="8.0" />
                            </font>
                         </Label>
-                        <Button fx:id="checkout" layoutX="415.0" layoutY="261.0" mnemonicParsing="false" text="Checkout " />
-                        <Button fx:id="checkout1" layoutX="310.0" layoutY="261.0" mnemonicParsing="false" text="Apply Coupon" />
+                        <Button fx:id="checkout" layoutX="415.0" layoutY="261.0" mnemonicParsing="false" onAction="#checkoutButton" text="Checkout " />
+                        <Button fx:id="applyCoupon" layoutX="310.0" layoutY="261.0" mnemonicParsing="false" onAction="#couponButton" text="Apply Coupon" />
                         <Label fx:id="totalPrice" layoutX="329.0" layoutY="232.0" prefHeight="18.0" prefWidth="73.0" />
                         <Text layoutX="276.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total " />
-                        <Label fx:id="couponResponse" layoutX="208.0" layoutY="264.0" prefHeight="24.0" prefWidth="96.0" textAlignment="CENTER" />
+                        <Label fx:id="couponResponse" layoutX="64.0" layoutY="264.0" prefHeight="24.0" prefWidth="240.0" />
                         <Label layoutX="386.0" layoutY="38.0" prefHeight="17.0" prefWidth="38.0" text="Remove">
                            <font>
                               <Font size="8.0" />
