@@ -16,7 +16,7 @@
    <children>
       <ScrollPane layoutY="74.0" prefHeight="432.0" prefWidth="600.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="715.0" prefWidth="600.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="852.0" prefWidth="600.0">
                <children>
                   <ImageView id="menuItemOneImage" fx:id="waffle" fitHeight="80.0" fitWidth="117.0" layoutX="40.0" layoutY="20.0" pickOnBounds="true">
                      <effect>
