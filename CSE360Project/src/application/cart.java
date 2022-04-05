@@ -84,8 +84,8 @@ public class cart implements Initializable{
 		}
 		else {
 			con.addCart(user, newCart);
-			setUserCart();
-			m.checkoutCustomer(user, newCart);
+//			setUserCart();
+			m.checkoutCustomer(user, newCart, totalprice);
 		}
 		
 	}

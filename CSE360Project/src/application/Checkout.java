@@ -21,10 +21,11 @@ public class Checkout implements Initializable {
 	public Checkout() {
 
 	}
-	public void initializeUser(Customer newUser, Cart cusCart) {
+	public void initializeUser(Customer newUser, Cart cusCart, Double total) {
 
 		user = newUser;
 		newCart = cusCart;
+		newCart.totalPrice = total;
 		ordersAhead();
 		showReceipt();
 		
@@ -43,7 +44,7 @@ public class Checkout implements Initializable {
 	public void backHomeButton(ActionEvent event) throws IOException {
 		Main m = new Main();
 		
-		m.menuSceneCustomer(user, newCart, newCart.totalPrice);
+		m.changeScene("existingUserScene.fxml");
 	}
 	
 	public void showReceipt() {
