@@ -60,9 +60,9 @@
       <Button fx:id="menu" layoutX="409.0" layoutY="13.0" mnemonicParsing="false" onAction="#menuButton" text="Menu" />
       <Button fx:id="menu1" disable="true" layoutX="467.0" layoutY="13.0" mnemonicParsing="false" onAction="#menuButton" style="-fx-background-color: grey;" text="Cart" />
       <Button fx:id="logIn" layoutX="513.0" layoutY="13.0" mnemonicParsing="false" onAction="#logInButton" text="Log In" />
-      <TextField id="CCardNum" layoutX="439.0" layoutY="154.0" promptText="Credit Card Number" />
-      <TextField id="ExpMMYY" layoutX="439.0" layoutY="190.0" prefHeight="26.0" prefWidth="85.0" promptText="Exp MM/YY" />
-      <TextField id="CCV" layoutX="534.0" layoutY="190.0" prefHeight="26.0" prefWidth="53.0" promptText="CCV" />
-      <TextField id="nameOnCardText" layoutX="439.0" layoutY="117.0" promptText="Name as on Credit Card" />
+      <TextField id="CCardNum" fx:id="ccNumText" layoutX="439.0" layoutY="154.0" promptText="Credit Card Number" />
+      <TextField id="ExpMMYY" fx:id="expDateText" layoutX="439.0" layoutY="190.0" prefHeight="26.0" prefWidth="85.0" promptText="Exp MM/YY" />
+      <TextField id="CCV" fx:id="ccvText" layoutX="534.0" layoutY="190.0" prefHeight="26.0" prefWidth="53.0" promptText="CCV" />
+      <TextField id="nameOnCardText" fx:id="name" layoutX="439.0" layoutY="117.0" promptText="Name as on Credit Card" />
    </children>
 </Pane>
