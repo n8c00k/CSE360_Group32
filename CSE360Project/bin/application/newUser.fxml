@@ -22,7 +22,7 @@
       <Label fx:id="emailError" layoutX="143.0" layoutY="147.0" prefHeight="28.0" prefWidth="149.0" textAlignment="CENTER" textFill="RED" />
       <Label fx:id="passwordError" layoutX="143.0" layoutY="195.0" prefHeight="32.0" prefWidth="149.0" textAlignment="CENTER" textFill="RED" />
       <TextField id="CCardNum" fx:id="ccNumText" layoutX="311.0" layoutY="224.0" promptText="Credit Card Number" />
-      <TextField id="ExpMMYY" fx:id="expDateText" layoutX="311.0" layoutY="271.0" prefHeight="26.0" prefWidth="85.0" promptText="Exp MM/YY" />
+      <TextField id="ExpMMYY" fx:id="expdateText" layoutX="311.0" layoutY="271.0" prefHeight="26.0" prefWidth="85.0" promptText="Exp MM/YY" />
       <TextField id="CCV" fx:id="ccvText" layoutX="406.0" layoutY="271.0" prefHeight="26.0" prefWidth="53.0" promptText="CCV" />
    </children>
 </Pane>

@@ -60,9 +60,9 @@ public class newUser {
  			String cusEmail = email.getText().toString();
  			String cusPassword = password.getText().toString();
  			String confirmCusPassword = confirmPassword.getText().toString();
- 			String ccNum = ccNumText.getText();
- 			String ccv = ccvText.getText();
- 			String exp = expdateText.getText();
+ 			String ccNum = ccNumText.getText().toString();
+ 			String ccv = ccvText.getText().toString();
+ 			String exp = expdateText.getText().toString();
  			
 
  		if (con.getUser(cusEmail, confirmCusPassword) != null) {
