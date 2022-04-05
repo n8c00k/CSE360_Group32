@@ -48,7 +48,7 @@ public class Checkout implements Initializable {
 	
 	public void showReceipt() {
 		receipt.setText(newCart.receipt());
-		con.addCart(user, newCart);
+		
 		newCart.foods.clear();
 		newCart.quantity.clear();
 		newCart.totalPrice = 0.00;
