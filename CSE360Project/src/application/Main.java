@@ -66,14 +66,14 @@ public class Main extends Application {
 	cart controller = loader.getController();
 	controller.initializeUser(user, userCart,total);
 }
-	public void checkoutCustomer(Customer user, Cart userCart) throws IOException{
+	public void checkoutCustomer(Customer user, Cart userCart, Double total) throws IOException{
 
 	FXMLLoader loader = new FXMLLoader();
 	loader.setLocation(getClass().getResource("Checkout.fxml"));
 	Parent pane = loader.load();
 	stg.getScene().setRoot(pane);
 	Checkout controller = loader.getController();
-	controller.initializeUser(user, userCart);
+	controller.initializeUser(user, userCart, total);
 }
 	public void employeeMain(Manager manager) throws IOException{
 

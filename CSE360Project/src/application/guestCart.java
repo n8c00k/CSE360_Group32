@@ -89,7 +89,7 @@ Context con = new Context();
 //			newCart.foods.clear();
 //			newCart.quantity.clear();
 //			newCart.totalPrice = 0.00;
-			m.checkoutCustomer(user, newCart);
+			m.checkoutCustomer(user, newCart, totalprice);
 		}
 		
 	}
