@@ -157,6 +157,7 @@ public account() {
  		user.getCard().setCardNumber(Integer.valueOf(ccNumText.getText()));
  		user.getCard().setCcv(Integer.valueOf(ccvText.getText()));
  		user.getCard().setExpDate(Integer.valueOf(expdateText.getText()));
+ 		con.setCustomer(user);
  		con.setPaymentInfo(user);
  		
  	}
