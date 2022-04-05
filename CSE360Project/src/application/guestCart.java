@@ -96,6 +96,15 @@ Context con = new Context();
  	
  	private void setUserCart(){
  		cartGrid.getChildren().clear();
+ 		if(newCart.foods.size() == 0) {
+ 			couponResponse.setText("Your cart is empty!");
+ 	 		cartGrid.getChildren().clear();
+ 	 		totalprice = 0.0;
+ 	 		totalPrice.setText(cFmt.format(0.00));
+
+ 		}
+ 		else {
+ 		
  			for(int jj = 0; jj < newCart.foods.size(); jj++) {
  				Label label = new Label();
  				cartGrid.add(label, 0, jj);
@@ -150,10 +159,12 @@ Context con = new Context();
  				
  				
  			}
+ 		}
  				
  			
  		
  	}
+
 
  	private void menu() throws IOException{
  		Main m = new Main();

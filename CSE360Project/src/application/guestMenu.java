@@ -168,7 +168,11 @@ public class guestMenu implements Initializable{
  		if(quant == 0) {
  			
  		}
+ 		else if(qty.getText().isBlank()) {
+ 			
+ 		}
  		else{	
+ 			
  			newCart.addFood(food,quant);
 //        	newCart.quantity.set(newCart.foods.indexOf(food), quant);
  	 		totalprice += food.getPrice()*newCart.quantity.get(newCart.foods.indexOf(food));
