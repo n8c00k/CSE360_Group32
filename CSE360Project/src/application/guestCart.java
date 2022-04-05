@@ -45,6 +45,8 @@ public class guestCart implements Initializable {
 	private TextField ccvText;
 	@FXML
 	private TextField expDateText;
+	@FXML 
+	private TextField name;
 	
 Context con = new Context();
 	
@@ -77,6 +79,10 @@ Context con = new Context();
 			couponResponse.setTextFill(Color.RED);
 			couponResponse.setText("Please fill out payment information");
 			
+		}
+		else if(name.getText().isBlank()) {
+			couponResponse.setTextFill(Color.RED);
+			couponResponse.setText("Please enter your name");
 		}
 		else {
 			
