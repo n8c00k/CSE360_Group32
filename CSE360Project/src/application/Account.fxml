@@ -39,7 +39,7 @@
       <Button fx:id="menu" layoutX="325.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuButton" text="Menu " />
       <Button fx:id="cart" layoutX="450.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
       <Button fx:id="logout" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#logoutButton" prefHeight="25.0" prefWidth="70.0" text="Log Out " />
-      <Button fx:id="menu1" layoutX="380.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuButton" text="Account " />
+      <Button fx:id="menu1" disable="true" layoutX="380.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuButton" style="-fx-background-color: grey;" text="Account " />
       <AnchorPane fx:id="updatePane" layoutX="241.0" layoutY="62.0" prefHeight="260.0" prefWidth="234.0" style="-fx-background-color: #808080;">
          <children>
             <Label fx:id="nameLabel" layoutX="23.0" layoutY="14.0" text="Name:" />
