@@ -83,6 +83,7 @@ public class cart implements Initializable{
 			couponResponse.setText("Nothing in your cart!");
 		}
 		else {
+			con.addCart(user, newCart);
 			setUserCart();
 			m.checkoutCustomer(user, newCart);
 		}

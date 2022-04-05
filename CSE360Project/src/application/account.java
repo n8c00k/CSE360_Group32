@@ -100,24 +100,7 @@ public account() {
 		ccNumText.setText(con.getPaymentInfo(user).getCardNumber().toString());
 		ccvText.setText(con.getPaymentInfo(user).getCcv().toString());
 		expdateText.setText(con.getPaymentInfo(user).getExpDate().toString());
-//		if(user.card.getCardNumber() == 0) {
-//			ccNumText.setText("No card on file.");
-//		}
-//		else {
-//			ccNumText.setText(user.card.getCardNumber().toString());
-//		}
-//		if(user.card.getCcv() == 0) {
-//			ccvText.setText("No card on file.");
-//		}
-//		else {
-//			ccvText.setText(user.card.getCcv().toString());
-//		}
-//		if(user.card.getExpDate() == 0) {
-//			expdateText.setText("No card on file.");
-//		}
-//		else {
-//			expdateText.setText(user.card.getExpDate().toString());
-//		}
+
 	}
 	Context con = new Context();
 	
