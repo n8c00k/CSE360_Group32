@@ -137,6 +137,7 @@
                         <Font size="14.0" />
                      </font>
                   </Text>
+                  <Text layoutX="187.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredients " />
                </children>
             </AnchorPane>
         </content>
