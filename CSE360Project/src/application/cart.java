@@ -91,13 +91,14 @@ public class cart implements Initializable{
  		Label qtylabel = new Label("1");
  		Label pricelabel = new Label("-5.00");
  		if(!con.getCoupons(user).isEmpty()) {
- 			cartGrid.addColumn(cartGrid.getColumnCount()+1, couponlabel,  qtylabel , pricelabel);
+ 			cartGrid.addColumn(cartGrid.getRowCount()+1, couponlabel,  qtylabel , pricelabel);
  			totalprice = totalprice -5;
  			newCart.totalPrice -= 5;
  			con.removeCoupon(con.getCoupons(user).get(0), user);
  			//TODO update total price text field.
  			couponResponse.setTextFill(Color.GREEN);
  			couponResponse.setText("Coupon Applied!");
+ 			setUserCart();
  		}
  		else {
  			couponResponse.setTextFill(Color.RED);
