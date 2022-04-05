@@ -24,6 +24,5 @@
       <TextField id="CCardNum" fx:id="ccNumText" layoutX="311.0" layoutY="224.0" promptText="Credit Card Number" />
       <TextField id="ExpMMYY" fx:id="expDateText" layoutX="311.0" layoutY="271.0" prefHeight="26.0" prefWidth="85.0" promptText="Exp MM/YY" />
       <TextField id="CCV" fx:id="ccvText" layoutX="406.0" layoutY="271.0" prefHeight="26.0" prefWidth="53.0" promptText="CCV" />
-      <TextField id="nameOnCardText" fx:id="name" layoutX="311.0" layoutY="176.0" promptText="Name as on Credit Card" />
    </children>
 </Pane>

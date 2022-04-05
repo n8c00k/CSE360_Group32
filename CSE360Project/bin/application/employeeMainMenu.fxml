@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.employeeMainMenu">
+   <children>
+      <ScrollPane layoutY="74.0" prefHeight="432.0" prefWidth="600.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="852.0" prefWidth="600.0">
+               <children>
+                  <ImageView id="menuItemOneImage" fx:id="waffle" fitHeight="80.0" fitWidth="117.0" layoutX="40.0" layoutY="20.0" pickOnBounds="true">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <image>
+                        <Image url="@../Food%20Photos/Belgian%20Waffle.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Button id="SaveItemOneButton" fx:id="saveItem1" layoutX="473.0" layoutY="48.0" mnemonicParsing="false" onAction="#saveItem1Button" text="Save Item" />
+                  <ImageView id="menuItemTwoImage" fx:id="strawberryPan" fitHeight="80.0" fitWidth="117.0" layoutX="43.0" layoutY="151.0" pickOnBounds="true">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <image>
+                        <Image url="@../Food%20Photos/Strawberry%20Banana%20Pancakes.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button id="SaveItemTwoButton" fx:id="saveItem2" layoutX="475.0" layoutY="179.0" mnemonicParsing="false" onAction="#saveItem2Button" text="Save Item" />
+                  <ImageView id="menuItemThreeImage" fx:id="chocolatePan" fitHeight="80.0" fitWidth="117.0" layoutX="40.0" layoutY="285.0" pickOnBounds="true">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <image>
+                        <Image url="@../Food%20Photos/Double%20Chocolate%20Chip%20Pancakes.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button id="SaveItemThreeButton" fx:id="addItem3" layoutX="473.0" layoutY="313.0" mnemonicParsing="false" onAction="#saveItem3Button" text="Save Item" />
+                  <ImageView id="menuItemFourImage" fx:id="crepe" fitHeight="80.0" fitWidth="117.0" layoutX="40.0" layoutY="432.0" pickOnBounds="true">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <image>
+                        <Image url="@../Food%20Photos/Strawberries%20Cream%20Crepes.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView id="menuItemFiveImage" fx:id="frenchToast" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="582.0" pickOnBounds="true">
+                     <effect>
+                        <Glow />
+                     </effect>
+                     <image>
+                        <Image url="@../Food%20Photos/French%20Toast.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="412.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                  <TextField fx:id="priceItem1" layoutX="450.0" layoutY="19.0" prefHeight="25.0" prefWidth="102.0" />
+                  <Text layoutX="412.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                  <Text layoutX="412.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                  <TextField fx:id="priceItem2" layoutX="450.0" layoutY="152.0" prefHeight="25.0" prefWidth="102.0" />
+                  <TextField fx:id="priceItem3" layoutX="450.0" layoutY="286.0" prefHeight="25.0" prefWidth="102.0" />
+                  <Button id="SaveItemFourButton" fx:id="saveItem4" layoutX="473.0" layoutY="455.0" mnemonicParsing="false" onAction="#saveItem4Button" text="Save Item" />
+                  <Text layoutX="412.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                  <TextField fx:id="priceItem4" layoutX="453.0" layoutY="428.0" prefHeight="25.0" prefWidth="102.0" />
+                  <Button id="SaveItemFiveButton" fx:id="saveItem5" layoutX="473.0" layoutY="610.0" mnemonicParsing="false" onAction="#saveItem5Button" text="Save Item" />
+                  <Text layoutX="412.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                  <TextField fx:id="priceItem5" layoutX="453.0" layoutY="583.0" prefHeight="25.0" prefWidth="102.0" />
+                  <TextField fx:id="desItem1" alignment="TOP_LEFT" layoutX="175.0" layoutY="22.0" prefHeight="78.0" prefWidth="191.0" />
+                  <TextField fx:id="nameItem1" layoutX="19.0" layoutY="100.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField fx:id="desItem2" alignment="TOP_LEFT" layoutX="175.0" layoutY="152.0" prefHeight="78.0" prefWidth="192.0" />
+                  <TextField fx:id="nameItem2" layoutX="19.0" layoutY="227.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField fx:id="desItem3" alignment="TOP_LEFT" layoutX="175.0" layoutY="286.0" prefHeight="78.0" prefWidth="192.0" />
+                  <TextField fx:id="nameItem3" layoutX="12.0" layoutY="366.0" prefHeight="25.0" prefWidth="154.0" />
+                  <TextField fx:id="desItem4" alignment="TOP_LEFT" layoutX="175.0" layoutY="428.0" prefHeight="78.0" prefWidth="192.0" />
+                  <TextField fx:id="desItem5" alignment="TOP_LEFT" layoutX="175.0" layoutY="583.0" prefHeight="78.0" prefWidth="192.0" />
+                  <TextField fx:id="nameItem4" layoutX="17.0" layoutY="512.0" prefHeight="25.0" prefWidth="154.0" />
+                  <TextField fx:id="nameItem5" layoutX="24.0" layoutY="663.0" prefHeight="25.0" prefWidth="154.0" />
+                  <Text layoutX="249.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredients " />
+                  <Label id="itemSavedOne" fx:id="confirmItem1" layoutX="443.0" layoutY="83.0" prefHeight="17.0" prefWidth="117.0" textAlignment="CENTER" />
+                  <Label id="itemSavedTwo" layoutX="416.0" layoutY="223.0" prefHeight="17.0" prefWidth="170.0" textAlignment="CENTER" />
+                  <Label id="itemSavedThree" layoutX="435.0" layoutY="356.0" prefHeight="17.0" prefWidth="138.0" textAlignment="CENTER" />
+                  <Label id="itemSavedFour" layoutX="444.0" layoutY="498.0" prefHeight="17.0" prefWidth="120.0" textAlignment="CENTER" />
+                  <Label id="itemSavedFive" layoutX="444.0" layoutY="653.0" prefHeight="17.0" prefWidth="121.0" textAlignment="CENTER" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Text layoutX="5.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button id="CouponsButton" fx:id="coupons" layoutX="430.0" layoutY="8.0" mnemonicParsing="false" onAction="#couponsButton" text="Coupon" />
+      <Button id="logOutButton" fx:id="LogOut" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#logoutButton" text="Log Out" />
+      <Button disable="true" layoutX="374.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: grey;" text="Menu" />
+   </children>
+</Pane>

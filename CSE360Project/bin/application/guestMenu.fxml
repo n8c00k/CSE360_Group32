@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.guestMenu">
+   <children>
+      <Pane layoutX="-1.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="600.0">
+         <children>
+            <ScrollPane layoutY="74.0" prefHeight="327.0" prefWidth="600.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="707.0" prefWidth="600.0">
+                     <children>
+                        <ImageView id="menuItemOneImage" fx:id="waffle" fitHeight="80.0" fitWidth="117.0" layoutX="40.0" layoutY="20.0" pickOnBounds="true">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <image>
+                              <Image url="@../Food%20Photos/Belgian%20Waffle.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                        <Button id="menuItemOneAddQtyButton" fx:id="addItem1" layoutX="473.0" layoutY="52.0" mnemonicParsing="false" onAction="#addItem1" text="Add Item(s)" />
+                        <TextField id="menuItemOneQtyTextField" fx:id="qtyItem1" layoutX="409.0" layoutY="52.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
+                        <ImageView id="menuItemTwoImage" fx:id="strawberryPan" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="152.0" pickOnBounds="true">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <image>
+                              <Image url="@../Food%20Photos/Strawberry%20Banana%20Pancakes.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button id="menuItemTwoAddQtyButton" fx:id="addItem2" layoutX="473.0" layoutY="176.0" mnemonicParsing="false" onAction="#addItem2" text="Add Item(s)" />
+                        <TextField id="menuItemTwoQtyTextField" fx:id="qtyItem2" layoutX="409.0" layoutY="177.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
+                        <ImageView id="menuItemThreeImage" fx:id="chocolatePan" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="290.0" pickOnBounds="true">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <image>
+                              <Image url="@../Food%20Photos/Double%20Chocolate%20Chip%20Pancakes.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button id="menuItemThreeAddQtyButton" fx:id="addItem3" layoutX="473.0" layoutY="318.0" mnemonicParsing="false" onAction="#addItem3" text="Add Item(s)" />
+                        <TextField id="menuItemThreeQtyTextField" fx:id="qtyItem3" layoutX="412.0" layoutY="317.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
+                        <ImageView id="menuItemFourImage" fx:id="crepe" fitHeight="80.0" fitWidth="117.0" layoutX="41.0" layoutY="434.0" pickOnBounds="true">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <image>
+                              <Image url="@../Food%20Photos/Strawberries%20Cream%20Crepes.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button id="menuItemFourAddQtyButton" fx:id="addItem4" layoutX="473.0" layoutY="457.0" mnemonicParsing="false" onAction="#addItem4" text="Add Item(s)" />
+                        <TextField id="menuItemFourQtyTextField" fx:id="qtyItem4" layoutX="409.0" layoutY="458.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
+                        <ImageView id="menuItemFiveImage" fx:id="frenchToast" fitHeight="80.0" fitWidth="117.0" layoutX="42.0" layoutY="559.0" pickOnBounds="true">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <image>
+                              <Image url="@../Food%20Photos/French%20Toast.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button id="menuItemFiveAddQtyButton" fx:id="addItem5" layoutX="473.0" layoutY="574.0" mnemonicParsing="false" onAction="#addItem5" text="Add Item(s)" />
+                        <TextField id="menuItemFiveQtyTextField" fx:id="qtyItem5" layoutX="409.0" layoutY="575.0" prefHeight="26.0" prefWidth="55.0" promptText="QTY" />
+                        <Text layoutX="410.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                        <Text id="itemOnePrice" fx:id="priceItem1" layoutX="442.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
+                        <Text layoutX="410.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                        <Text id="itemTwoPrice" fx:id="priceItem2" layoutX="442.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
+                        <Text layoutX="410.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                        <Text id="itemThreePrice" fx:id="priceItem3" layoutX="442.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
+                        <Text layoutX="409.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                        <Text id="itemFourPrice" fx:id="priceItem4" layoutX="442.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
+                        <Text layoutX="409.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" />
+                        <Text id="itemFivePrice" fx:id="priceItem5" layoutX="450.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="127.7366943359375" />
+                        <Text id="foodOneName" fx:id="nameItem1" layoutX="19.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="159.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text id="foodTwoName" fx:id="nameItem2" layoutX="14.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="173.13671875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text id="foodThreeName" fx:id="nameItem3" layoutX="15.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="170.826171875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text id="foodFiveName" fx:id="nameItem5" layoutX="18.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="165.13671875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="nameItem4" layoutX="28.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="141.13671875">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text id="nameItemFive" layoutX="76.0" layoutY="652.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="49.16064453125">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="desItem1" layoutX="175.0" layoutY="20.0" prefHeight="102.0" prefWidth="214.0" wrapText="true" />
+                        <Label fx:id="desItem2" layoutX="175.0" layoutY="151.0" prefHeight="103.0" prefWidth="211.0" wrapText="true" />
+                        <Label fx:id="desItem3" layoutX="175.0" layoutY="293.0" prefHeight="103.0" prefWidth="206.0" wrapText="true" />
+                        <Label fx:id="desItem4" layoutX="175.0" layoutY="439.0" prefHeight="97.0" prefWidth="206.0" wrapText="true" />
+                        <Label fx:id="desItem5" layoutX="175.0" layoutY="563.0" prefHeight="100.0" prefWidth="211.0" wrapText="true" />
+                        <Text id="AddedToCartOne" layoutX="437.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text id="AssedToCartTwo" layoutX="437.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text id="AddedToCartThree" layoutX="437.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text id="addedToCartFour" layoutX="437.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text id="addedToCartFive" layoutX="437.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Added To Cart!" visible="false">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="187.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredients " />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Text layoutX="5.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button id="menuToCartButton" fx:id="cart" layoutX="451.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" text="Cart" />
+            <Button id="menuToCartButton" fx:id="cart1" disable="true" layoutX="395.0" layoutY="8.0" mnemonicParsing="false" onAction="#cartButton" style="-fx-background-color: grey;" text="Menu" />
+            <Button id="menuToCartButton" fx:id="logIn" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#logInButton" text="Log In" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
