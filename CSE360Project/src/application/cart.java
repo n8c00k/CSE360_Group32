@@ -79,8 +79,11 @@ public class cart implements Initializable{
 			couponResponse.setText("No card information on file,\nplease go to Account page");
 			
 		}
+		else if(newCart.foods.size() == 0) {
+			couponResponse.setText("Nothing in your cart!");
+		}
 		else {
-			
+			setUserCart();
 			m.checkoutCustomer(user, newCart);
 		}
 		
@@ -90,15 +93,22 @@ public class cart implements Initializable{
  		couponlabel.setText("$5 off coupon");
  		Label qtylabel = new Label("1");
  		Label pricelabel = new Label("-5.00");
- 		if(!con.getCoupons(user).isEmpty()) {
- 			cartGrid.addRow(cartGrid.getRowCount()+1, couponlabel,  qtylabel , pricelabel);
+ 		if(totalprice == 0) {
+ 			couponResponse.setText("Add food to your cart");
+ 		}
+ 		else if(!con.getCoupons(user).isEmpty()) {
+ 			cartGrid.addRow(cartGrid.getRowCount()+1);
+ 			cartGrid.add(couponlabel,0,cartGrid.getRowCount());
+ 			cartGrid.add(qtylabel,1,cartGrid.getRowCount());
+ 			cartGrid.add(pricelabel,2,cartGrid.getRowCount());
+ 			//cartGrid.addRow(cartGrid.getRowCount()+1, couponlabel,  qtylabel , pricelabel);
  			totalprice = totalprice -5;
- 			newCart.totalPrice -= 5;
+// 			newCart.totalPrice -= 5;
  			con.removeCoupon(con.getCoupons(user).get(0), user);
  			//TODO update total price text field.
  			couponResponse.setTextFill(Color.GREEN);
  			couponResponse.setText("Coupon Applied!");
- 			setUserCart();
+ 			totalPrice.setText(cFmt.format(totalprice));
  		}
  		else {
  			couponResponse.setTextFill(Color.RED);
@@ -109,6 +119,14 @@ public class cart implements Initializable{
  	}
  	private void setUserCart(){
  		cartGrid.getChildren().clear();
+ 		if(newCart.foods.size() == 0) {
+ 			couponResponse.setText("Your cart is empty!");
+ 	 		cartGrid.getChildren().clear();
+ 	 		totalprice = 0.0;
+ 	 		totalPrice.setText(cFmt.format(0.00));
+
+ 		}
+ 		else {
  		
  			for(int jj = 0; jj < newCart.foods.size(); jj++) {
  				Label label = new Label();
@@ -164,6 +182,7 @@ public class cart implements Initializable{
  				
  				
  			}
+ 		}
  				
  			
  		
@@ -192,13 +211,13 @@ public class cart implements Initializable{
  	}
  	private void subQty(foodItem food) throws IOException{
  		if(newCart.quantity.get(newCart.foods.indexOf(food)) == 1){	
- 			newCart.quantity.set(newCart.foods.indexOf(food),0);
- 			totalprice -= food.getPrice();
+ 			newCart.foods.remove(food);
  			totalPrice.setText(cFmt.format(totalprice));
  			setUserCart();
  		}
- 		else if(newCart.quantity.get(newCart.foods.indexOf(food)) == 0) {
- 			
+ 		else if(newCart.quantity.get(newCart.foods.indexOf(food)) == 1 && newCart.foods.size() == 1) {
+ 			newCart.foods.remove(food);
+ 			couponResponse.setText("Your cart is empty!");
  		}
  		else {
  			
