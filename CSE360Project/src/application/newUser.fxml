@@ -10,16 +10,20 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.newUser">
    <children>
-      <Canvas id="newUserLoginImage" height="200.0" layoutX="334.0" layoutY="97.0" width="200.0" />
-      <Text layoutX="127.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New User" />
-      <TextField id="newUserLoginFirstNameText" fx:id="firstName" layoutX="88.0" layoutY="64.0" promptText="First Name" />
-      <TextField id="newUserLoginLastNameText" fx:id="lastName" layoutX="88.0" layoutY="111.0" promptText="Last Name" />
-      <PasswordField id="newUserLoginFirstPasswordText" fx:id="password" layoutX="88.0" layoutY="210.0" promptText="Password" />
-      <PasswordField id="newUserLoginSecondPasswordText" fx:id="confirmPassword" layoutX="87.0" layoutY="257.0" promptText="Confirm Password" />
-      <TextField id="newUserLoginEmailText" fx:id="email" layoutX="88.0" layoutY="161.0" promptText="Email" />
-      <Button id="newUserCreateAccountButton" fx:id="createAccount" layoutX="84.0" layoutY="298.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="27.0" prefWidth="156.0" text="Create Account" />
-      <Button id="backToMainLogin" fx:id="back" layoutX="84.0" layoutY="332.0" mnemonicParsing="false" onAction="#backButton" prefHeight="27.0" prefWidth="156.0" text="Back" />
-      <Label fx:id="emailError" layoutX="89.0" layoutY="133.0" prefHeight="28.0" prefWidth="149.0" textAlignment="CENTER" textFill="RED" />
-      <Label fx:id="passwordError" layoutX="89.0" layoutY="181.0" prefHeight="32.0" prefWidth="149.0" textAlignment="CENTER" textFill="RED" />
+      <Canvas id="newUserLoginImage" height="365.0" layoutX="111.0" layoutY="19.0" width="378.0" />
+      <Text layoutX="181.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New User" />
+      <TextField id="newUserLoginFirstNameText" fx:id="firstName" layoutX="142.0" layoutY="78.0" promptText="First Name" />
+      <TextField id="newUserLoginLastNameText" fx:id="lastName" layoutX="142.0" layoutY="125.0" promptText="Last Name" />
+      <PasswordField id="newUserLoginFirstPasswordText" fx:id="password" layoutX="142.0" layoutY="224.0" promptText="Password" />
+      <PasswordField id="newUserLoginSecondPasswordText" fx:id="confirmPassword" layoutX="141.0" layoutY="271.0" promptText="Confirm Password" />
+      <TextField id="newUserLoginEmailText" fx:id="email" layoutX="142.0" layoutY="175.0" promptText="Email" />
+      <Button id="newUserCreateAccountButton" fx:id="createAccount" layoutX="138.0" layoutY="312.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="27.0" prefWidth="156.0" text="Create Account" />
+      <Button id="backToMainLogin" fx:id="back" layoutX="307.0" layoutY="312.0" mnemonicParsing="false" onAction="#backButton" prefHeight="27.0" prefWidth="156.0" text="Back" />
+      <Label fx:id="emailError" layoutX="143.0" layoutY="147.0" prefHeight="28.0" prefWidth="149.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="passwordError" layoutX="143.0" layoutY="195.0" prefHeight="32.0" prefWidth="149.0" textAlignment="CENTER" textFill="RED" />
+      <TextField id="CCardNum" fx:id="ccNumText" layoutX="311.0" layoutY="224.0" promptText="Credit Card Number" />
+      <TextField id="ExpMMYY" fx:id="expDateText" layoutX="311.0" layoutY="271.0" prefHeight="26.0" prefWidth="85.0" promptText="Exp MM/YY" />
+      <TextField id="CCV" fx:id="ccvText" layoutX="406.0" layoutY="271.0" prefHeight="26.0" prefWidth="53.0" promptText="CCV" />
+      <TextField id="nameOnCardText" fx:id="name" layoutX="311.0" layoutY="176.0" promptText="Name as on Credit Card" />
    </children>
 </Pane>
