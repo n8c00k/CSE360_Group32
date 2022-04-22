@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class PaymentTest {
+	Payment pay = new Payment(11111111, 123, 0210);
 
 	@Test
 	public void testPayment() {
