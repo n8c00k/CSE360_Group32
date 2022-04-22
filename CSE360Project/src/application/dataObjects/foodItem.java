@@ -18,12 +18,12 @@ public class foodItem {
 		this.minToComplete = minToComplete;
 
 	}
-
-    public void updateFoodItem(){
-    	setFoodName(foodName);
-    	setIngredients(ingredients);
-    	setPrice(price);
-    }
+//
+//    public void updateFoodItem(){
+//    	setFoodName(foodName);
+//    	setIngredients(ingredients);
+//    	setPrice(price);
+//    }
 
     public void setFoodName(String name){
     	this.foodName = name;

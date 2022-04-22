@@ -6,29 +6,32 @@ import org.junit.jupiter.api.Test;
 
 class CouponTest {
 
+	
+	Coupon coupon = new Coupon();
+	
 	@Test
 	void testCoupon() {
-		fail("Not yet implemented");
+		Coupon coupon = new Coupon();
+		assertNotNull(coupon, "whatever");
 	}
 
 	@Test
-	void testGetUserId() {
-		fail("Not yet implemented");
+	void testUserId() {
+		coupon.setUserId(12);
+		assertEquals(12,coupon.getUserId());
+		assertNotEquals(null,coupon.userId);
+		coupon.setUserId(null);
+		assertEquals(null,coupon.getUserId());
+	}
+	
+	@Test
+	void testId() {
+		coupon.setId(98);
+		assertEquals(98,coupon.getId());
+		assertNotEquals(null,coupon.Id);
+		coupon.setId(null);
+		assertEquals(null,coupon.getId());
 	}
 
-	@Test
-	void testSetUserId() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetId() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testSetId() {
-		fail("Not yet implemented");
-	}
 
 }

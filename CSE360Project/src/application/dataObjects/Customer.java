@@ -57,16 +57,16 @@ public class Customer extends User {
     	return card;
     }
 
-    public void applyCoupon(){
-    	if (!coupons.isEmpty()){
-    		if (this.cart.get(0).totalPrice - 5 <= 0) {
-            }
-    		else {
-    			this.cart.get(0).totalPrice = cart.get(0).totalPrice - 5;
-    			this.coupons.remove(0);
-    		}
-        }
-    }
+//    public void applyCoupon(){
+//    	if (!coupons.isEmpty()){
+//    		if (this.cart.get(0).totalPrice - 5 <= 0) {
+//            }
+//    		else {
+//    			this.cart.get(0).totalPrice = cart.get(0).totalPrice - 5;
+//    			this.coupons.remove(0);
+//    		}
+//        }
+//    }
     
     public Integer quantityOfCoupons() {
     	return coupons.size();

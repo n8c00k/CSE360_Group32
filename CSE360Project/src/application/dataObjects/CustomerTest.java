@@ -1,79 +1,73 @@
 package application.dataObjects;
 
+
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
 class CustomerTest {
-
+	
+	Customer cus = new Customer("johnny","email.com","123");
+	Payment pay = new Payment(666,89,1997); 
+	ArrayList<Cart> cusCart = new ArrayList<Cart>();
+	
 	@Test
 	void testCustomer() {
-		fail("Not yet implemented");
+		Customer cus = new Customer("johnny","email.com","123");
+		assertNotNull(cus, "whatever");
 	}
 
 	@Test
-	void testSetCart() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetCart() {
-		fail("Not yet implemented");
+	void testCart() {
+		assertEquals(cus.cart,cus.getCart());
+		cus.setCart(cusCart);
+		assertEquals(cusCart,cus.getCart());
 	}
 
 	@Test
 	void testGetCartIndex() {
-		fail("Not yet implemented");
+		Cart foodCart = new Cart();
+		cusCart.add(foodCart);
+		assertEquals(foodCart,cusCart.get(0));
+		assertEquals(0,cusCart.indexOf(foodCart));
 	}
 
 	@Test
-	void testSetCoupon() {
-		fail("Not yet implemented");
+	void testCoupon() {
+		Coupon testCoupon = new Coupon();
+		cus.coupons.add(testCoupon);
+		assertEquals(testCoupon,cus.coupons.get(0));
+		assertEquals(0,cus.coupons.indexOf(testCoupon));
 	}
 
-	@Test
-	void testGetCoupon() {
-		fail("Not yet implemented");
-	}
 
 	@Test
-	void testGetCouponIndex() {
-		fail("Not yet implemented");
+	void testPastOrders() {
+		cus.setPastOrders(4);
+		assertEquals(4,cus.getPastOrders());
+		assertEquals(4,cus.pastOrders);
 	}
 
-	@Test
-	void testSetPastOrders() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetPastOrders() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	void testSetCard() {
-		fail("Not yet implemented");
+		cus.setCard(pay);
+		assertEquals(pay,cus.card);
+		assertEquals(pay,cus.getCard());
 	}
 
-	@Test
-	void testGetCard() {
-		fail("Not yet implemented");
-	}
 
-	@Test
-	void testApplyCoupon() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	void testQuantityOfCoupons() {
-		fail("Not yet implemented");
+		assertEquals(0,cus.coupons.size());
+		cus.coupons.add(null);
+		assertEquals(1,cus.coupons.size());
+		cus.coupons.clear();
+		assertEquals(0,cus.coupons.size());
 	}
 
-	@Test
-	void testToString() {
-		fail("Not yet implemented");
-	}
 
 }

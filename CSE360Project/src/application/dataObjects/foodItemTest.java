@@ -6,69 +6,52 @@ import org.junit.jupiter.api.Test;
 
 class foodItemTest {
 
+	
+	foodItem foodie = new foodItem(null, null, null, null);
+	
 	@Test
 	void testFoodItem() {
-		fail("Not yet implemented");
+		foodItem foodie = new foodItem(null, null, null, null);
+		assertNotNull(foodie, "whatever");
 	}
 
 	@Test
-	void testUpdateFoodItem() {
-		fail("Not yet implemented");
+	void testFoodName() {
+		foodie.setFoodName("burger");
+		assertEquals("burger",foodie.getFoodName());
+		assertNotEquals(null,foodie.getFoodName());
 	}
 
 	@Test
-	void testSetFoodName() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testSetIngredients() {
-		fail("Not yet implemented");
+	void testIngredients() {
+		foodie.setIngredients("buns and cheese");
+		assertEquals("buns and cheese",foodie.getIngredients());
+		assertNotEquals(null,foodie.getIngredients());
 	}
 
 	@Test
 	void testSetPrice() {
-		fail("Not yet implemented");
+		foodie.setPrice(14.00);
+		assertEquals(14.00,foodie.getPrice());
+		assertNotEquals(null,foodie.getPrice());
 	}
 
 	@Test
-	void testSetUserId() {
-		fail("Not yet implemented");
+	void testUserId() {
+		foodie.setUserId(666);
+		assertEquals(666,foodie.userId);
+		assertEquals(foodie.userId,foodie.getUserId());
+		assertNotEquals(null,foodie.userId);
 	}
 
 	@Test
-	void testSetMinToCom() {
-		fail("Not yet implemented");
+	void testMinToCom() {
+		foodie.setMinToCom(90);
+		assertEquals(90,foodie.minToComplete);
+		assertEquals(foodie.minToComplete,foodie.getMinToCom());
+		assertNotEquals(null,foodie.minToComplete);
 	}
 
-	@Test
-	void testGetFoodName() {
-		fail("Not yet implemented");
-	}
 
-	@Test
-	void testGetIngredients() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetPrice() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetUserId() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetMinToCom() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testToString() {
-		fail("Not yet implemented");
-	}
 
 }
