@@ -12,7 +12,7 @@ class foodItemTest {
 	@Test
 	void testFoodItem() {
 		foodItem foodie = new foodItem(null, null, null, null);
-		assertNotNull(foodie, "whatever");
+		assertNotNull(foodie);
 	}
 
 	@Test

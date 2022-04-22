@@ -16,7 +16,7 @@ class CustomerTest {
 	@Test
 	void testCustomer() {
 		Customer cus = new Customer("johnny","email.com","123");
-		assertNotNull(cus, "whatever");
+		assertNotNull(cus);
 	}
 
 	@Test

@@ -12,7 +12,7 @@ class CouponTest {
 	@Test
 	void testCoupon() {
 		Coupon coupon = new Coupon();
-		assertNotNull(coupon, "whatever");
+		assertNotNull(coupon);
 	}
 
 	@Test

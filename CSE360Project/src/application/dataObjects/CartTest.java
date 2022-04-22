@@ -14,7 +14,7 @@ class CartTest {
 	@Test
 	void testCart() {
 		Cart cart = new Cart();
-		assertNotNull(cart, "whatever");
+		assertNotNull(cart);
 	}
 
 	@Test
