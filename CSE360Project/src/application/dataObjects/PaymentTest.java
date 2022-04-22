@@ -1,55 +1,47 @@
 package application.dataObjects;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class PaymentTest {
+class PaymentTest {
+	
 	Payment pay = new Payment(11111111, 123, 0210);
-
+	
 	@Test
-	public void testPayment() {
-		fail("Not yet implemented");
+	void testPayment() {
+		Payment pay = new Payment(11111111, 123, 0210);
+		assertNotNull(pay);
 	}
 
 	@Test
-	public void testUpdatePaymentInfo() {
-		fail("Not yet implemented");
+	void testCardNumber() {
+		//testing get
+		assertEquals(11111111, pay.getCardNumber());
+		//testing set
+		pay.setCardNumber(22222222);
+		assertEquals(22222222, pay.getCardNumber());
+		pay.setCardNumber(null);
+		assertEquals(null, pay.getCardNumber());
 	}
 
 	@Test
-	public void testSetCardNumber() {
-		fail("Not yet implemented");
+	void testCcv() {
+		assertEquals(123, pay.getCcv());
+		pay.setCcv(333);
+		assertEquals(333, pay.getCcv());
+		pay.setCcv(null);
+		assertEquals(null, pay.getCcv());
 	}
 
 	@Test
-	public void testSetCcv() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetExpDate() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetCardNumber() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetCcv() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testGetExpDate() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testToString() {
-		fail("Not yet implemented");
+	void testExpDate() {
+		assertEquals(0210, pay.getExpDate());
+		pay.setExpDate(0310);
+		assertEquals(0310, pay.getExpDate());
+		//formatting could be added in the future, but it wont throw error as of now 
+		pay.setExpDate(04/23);
+		assertEquals(04/23, pay.getExpDate());
 	}
 
 }

@@ -5,15 +5,21 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class ManagerTest {
+	Manager x = new Manager("Boss", "boss@gmail.com", "pass123");
+	Customer y = new Customer(null, null, null);
+	Coupon z = new Coupon();
 
 	@Test
 	void testManager() {
-		fail("Not yet implemented");
+		Manager x = new Manager("Boss", "boss@gmail.com", "pass123");
+		assertNotNull(x);
 	}
 
 	@Test
 	void testApplyCoupon() {
-		fail("Not yet implemented");
+		assertEquals(0, y.coupons.size());
+		x.applyCoupon(y);
+		assertEquals(1, y.coupons.size());
 	}
 
 }

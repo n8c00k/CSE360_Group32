@@ -12,11 +12,11 @@ public class Payment {
     	this.expDate = expDate;
     }
 
-    public void updatePaymentInfo(){
-    	setCardNumber(cardNumber);
-    	setCcv(ccv);
-    	setExpDate(expDate);
-    }
+//    public void updatePaymentInfo(){
+//    	setCardNumber(cardNumber);
+//    	setCcv(ccv);
+//    	setExpDate(expDate);
+//    }
 
     public void setCardNumber(Integer cardNum){
     	this.cardNumber = cardNum;

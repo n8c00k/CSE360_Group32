@@ -5,55 +5,51 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class UserTest {
-
+	User sop = new User("Sophia", "sop@gmail.com", "Password");
+	
 	@Test
 	void testUser() {
-		fail("Not yet implemented");
+		User sop = new User("Sophia", "sop@gmail.com", "Password");
+		assertNotNull(sop);
+	}
+
+
+	@Test
+	void testUserId() {
+		sop.setUserId(12);
+		assertEquals(12, sop.getUserId());
+		sop.setUserId(null);
+		assertEquals(null, sop.getUserId());
 	}
 
 	@Test
-	void testUpdateProfile() {
-		fail("Not yet implemented");
+	void testName() {
+		assertEquals("Sophia", sop.getName());
+		sop.setName("Sofia");
+		assertEquals("Sofia", sop.getName());
+		sop.setName(null);
+		assertEquals(null, sop.getName());
 	}
 
 	@Test
-	void testSetUserId() {
-		fail("Not yet implemented");
+	void testEmail() {
+		assertEquals("sop@gmail.com", sop.getEmail());
+		sop.setEmail("sop123@gmail.com");
+		assertEquals("sop123@gmail.com", sop.getEmail());
+		sop.setEmail(null);
+		assertEquals(null, sop.getEmail());
 	}
 
 	@Test
-	void testSetName() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testSetEmail() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testSetPassword() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetUserId() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetName() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetEmail() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void testGetPassword() {
-		fail("Not yet implemented");
+	void testPassword() {
+		//Password is case sensitive
+		assertNotEquals("password", sop.getPassword());
+		assertEquals("Password", sop.getPassword());
+		
+		sop.setPassword("password123");
+		assertEquals("password123", sop.getPassword());
+		sop.setPassword(null);
+		assertEquals(null, sop.getPassword());
 	}
 
 }

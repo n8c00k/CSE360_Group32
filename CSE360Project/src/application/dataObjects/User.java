@@ -14,12 +14,12 @@ public class User {
     	this.password = password;
     }
 
-    public void updateProfile(){
-    	setUserId(userId);
-    	setName(name);
-    	setEmail(email);
-    	setPassword(password);
-    }
+//    public void updateProfile(){
+//    	setUserId(userId);
+//    	setName(name);
+//    	setEmail(email);
+//    	setPassword(password);
+//    }
     public void setUserId(Integer x){
     	this.userId = x;
     }
